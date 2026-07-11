@@ -672,7 +672,6 @@ function Overview() {
       {/* Bottom stats strip */}
       <div className="reveal mt-10 grid grid-cols-1 gap-4 rounded-2xl border border-border/60 bg-card/70 p-6 backdrop-blur md:grid-cols-3">
         {[
-          
           { label: "Tiến độ trung bình", value: `${avg}%`, color: "text-pink-500" },
           { label: "Nhiệm vụ đã hoàn thành", value: `${completed} / ${TASKS.length}`, color: "text-blue-500" },
           { label: "Mức độ kỹ năng", value: "Từ cơ bản đến nâng cao", color: "text-violet-600" },
