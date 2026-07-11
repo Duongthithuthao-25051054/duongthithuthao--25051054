@@ -1483,6 +1483,19 @@ function Project5() {
         "AI tạo sinh là trợ lý, không thay thế vai trò biên tập và kiểm chứng của người học.",
         "Luôn ghi rõ công cụ AI đã dùng để đảm bảo minh bạch học thuật.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Đầu ra của ChatGPT cho cùng câu hỏi",
+            "Đầu ra của Google Gemini",
+            "Đầu ra của Claude",
+            "Ảnh minh hoạ từ DALL·E",
+            "Ảnh minh hoạ từ Yeri AI",
+            "Poster hoàn thiện trong Canva AI",
+          ]}
+          file="SoSanh_AI_VanBan-HinhAnh.pdf"
+        />
+      }
     >
       <ReviewSection
         good={[
