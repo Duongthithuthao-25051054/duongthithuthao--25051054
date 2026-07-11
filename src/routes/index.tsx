@@ -507,62 +507,51 @@ function About() {
             </div>
           </div>
 
-          {/* Sở thích cá nhân */}
-          <div className="reveal rounded-3xl border border-amber-200/70 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-7 shadow-soft">
-            <div className="flex items-center gap-3">
-              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-amber-400 to-rose-400 text-xl text-white shadow-glow">
-                🌷
-              </div>
-              <h3 className="font-display text-2xl text-foreground">Sở thích cá nhân</h3>
-            </div>
-            <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
-              {[
-                { i: "📚", t: "Đọc sách", d: "Sách kỹ năng & tiểu thuyết nhẹ nhàng." },
-                { i: "🎧", t: "Nghe nhạc", d: "Acoustic, ballad và lo-fi khi học." },
-                { i: "✈️", t: "Du lịch", d: "Khám phá văn hoá và ẩm thực mới." },
-                { i: "🎨", t: "Thiết kế", d: "Chỉnh sửa ảnh, làm slide với Canva." },
-                { i: "💻", t: "Công nghệ", d: "Tìm hiểu công cụ AI và xu hướng số." },
-                { i: "🍰", t: "Nấu ăn & làm bánh", d: "Thư giãn sau giờ học căng thẳng." },
-              ].map((h) => (
-                <div
-                  key={h.t}
-                  className="rounded-2xl border border-white/70 bg-white/70 p-3 backdrop-blur transition hover:-translate-y-0.5 hover:shadow-soft"
-                >
-                  <div className="flex items-center gap-2 font-semibold text-foreground">
-                    <span className="text-lg">{h.i}</span>
-                    <span>{h.t}</span>
-                  </div>
-                  <p className="mt-1 text-xs text-muted-foreground">{h.d}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+        </div>
+      </div>
 
-          {/* Mục tiêu cá nhân */}
-          <div className="reveal rounded-3xl border border-sky-200/70 bg-gradient-to-br from-sky-50 via-indigo-50 to-violet-50 p-7 shadow-soft">
-            <div className="flex items-center gap-3">
-              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-sky-400 to-violet-500 text-xl text-white shadow-glow">
-                🌟
+      {/* Sở thích cá nhân + Mục tiêu cá nhân — full width dưới phần thông tin sinh viên */}
+      <div className="mt-8 grid gap-8 md:grid-cols-2">
+        {/* Sở thích cá nhân */}
+        <div className="reveal rounded-3xl border border-amber-200/70 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-7 shadow-soft">
+          <h3 className="font-display text-2xl text-foreground">Sở thích cá nhân</h3>
+          <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
+            {[
+              { t: "Đọc sách", d: "Sách kỹ năng & tiểu thuyết nhẹ nhàng." },
+              { t: "Nghe nhạc", d: "Acoustic, ballad và lo-fi khi học." },
+              { t: "Du lịch", d: "Khám phá văn hoá và ẩm thực mới." },
+              { t: "Thiết kế", d: "Chỉnh sửa ảnh, làm slide với Canva." },
+              { t: "Công nghệ", d: "Tìm hiểu công cụ AI và xu hướng số." },
+              { t: "Nấu ăn & làm bánh", d: "Thư giãn sau giờ học căng thẳng." },
+            ].map((h) => (
+              <div
+                key={h.t}
+                className="rounded-2xl border border-white/70 bg-white/70 p-3 backdrop-blur transition hover:-translate-y-0.5 hover:shadow-soft"
+              >
+                <div className="font-semibold text-foreground">{h.t}</div>
+                <p className="mt-1 text-xs text-muted-foreground">{h.d}</p>
               </div>
-              <h3 className="font-display text-2xl text-foreground">Mục tiêu cá nhân</h3>
-            </div>
-            <ul className="mt-5 space-y-3 text-sm leading-relaxed text-foreground/85">
-              {[
-                "Trở thành phiên bản tốt hơn mỗi ngày: kỷ luật, chủ động và tích cực trong học tập lẫn cuộc sống.",
-                "Hoàn thiện kỹ năng ngoại ngữ (tiếng Anh) để tự tin giao tiếp và làm việc trong môi trường quốc tế.",
-                "Xây dựng mạng lưới bạn bè, thầy cô và mở rộng cơ hội trải nghiệm, thực tập trong lĩnh vực Kinh tế quốc tế.",
-                "Cân bằng giữa học tập – gia đình – sở thích cá nhân để giữ tinh thần luôn tích cực.",
-                "Định hướng nghề nghiệp rõ ràng, hướng tới công việc kết hợp giữa kinh tế và công nghệ số.",
-              ].map((g) => (
-                <li key={g} className="flex items-start gap-3">
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white/80 text-sky-500 shadow-sm">
-                    ✨
-                  </span>
-                  <span>{g}</span>
-                </li>
-              ))}
-            </ul>
+            ))}
           </div>
+        </div>
+
+        {/* Mục tiêu cá nhân */}
+        <div className="reveal rounded-3xl border border-sky-200/70 bg-gradient-to-br from-sky-50 via-indigo-50 to-violet-50 p-7 shadow-soft">
+          <h3 className="font-display text-2xl text-foreground">Mục tiêu cá nhân</h3>
+          <ul className="mt-5 space-y-3 text-sm leading-relaxed text-foreground/85">
+            {[
+              "Trở thành phiên bản tốt hơn mỗi ngày: kỷ luật, chủ động và tích cực trong học tập lẫn cuộc sống.",
+              "Hoàn thiện kỹ năng ngoại ngữ (tiếng Anh) để tự tin giao tiếp và làm việc trong môi trường quốc tế.",
+              "Xây dựng mạng lưới bạn bè, thầy cô và mở rộng cơ hội trải nghiệm, thực tập trong lĩnh vực Kinh tế quốc tế.",
+              "Cân bằng giữa học tập – gia đình – sở thích cá nhân để giữ tinh thần luôn tích cực.",
+              "Định hướng nghề nghiệp rõ ràng, hướng tới công việc kết hợp giữa kinh tế và công nghệ số.",
+            ].map((g) => (
+              <li key={g} className="flex items-start gap-2">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" />
+                <span>{g}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </Section>
