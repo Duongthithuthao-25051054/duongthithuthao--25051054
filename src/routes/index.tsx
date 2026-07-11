@@ -27,6 +27,7 @@ import bai4Img43 from "@/assets/bai4/bai4-43.png.asset.json";
 import bai4Img44 from "@/assets/bai4/bai4-44.png.asset.json";
 import bai4Img45 from "@/assets/bai4/bai4-45.png.asset.json";
 import bai4Img46 from "@/assets/bai4/bai4-46.png.asset.json";
+import bai4Doc from "@/assets/bai4/KichBan_Video_Nhom.docx.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
