@@ -433,7 +433,7 @@ function About() {
             />
           </div>
           <h3 className="mt-6 text-center font-display text-2xl">Dương Thị Thu Thảo</h3>
-          <p className="mt-1 text-center text-sm text-muted-foreground">Sinh viên ·&nbsp;</p>
+          <p className="mt-1 text-center text-sm text-muted-foreground">Sinh viên · Kinh tế Quốc tế</p>
 
           <dl className="mt-6 space-y-3 text-sm">
             <Row k="Trường&nbsp;" v="Trường Đại Học Kinh Tế-ĐHQGHN" />
@@ -495,17 +495,16 @@ function About() {
             </p>
             <div className="mt-4 space-y-3">
               {[
-                { i: "🧭", t: "Tổng hợp quá trình học tập", d: "Ghi lại toàn bộ hành trình học tập qua các bài tập và dự án của môn học." },
-                { i: "💾", t: "Lưu trữ sản phẩm học tập", d: "Xây dựng kho lưu trữ các minh chứng và sản phẩm đã hoàn thành." },
-                { i: "📈", t: "Thể hiện sự tiến bộ", d: "Minh họa rõ ràng sự phát triển và tiến bộ qua từng bài học." },
-                { i: "🌸", t: "Dấu ấn cá nhân", d: "Thể hiện phong cách, sự tỉ mỉ và tinh thần trách nhiệm của riêng em." },
+                { t: "Tổng hợp quá trình học tập", d: "Ghi lại toàn bộ hành trình học tập qua các bài tập và dự án của môn học." },
+                { t: "Lưu trữ sản phẩm học tập", d: "Xây dựng kho lưu trữ các minh chứng và sản phẩm đã hoàn thành." },
+                { t: "Thể hiện sự tiến bộ", d: "Minh họa rõ ràng sự phát triển và tiến bộ qua từng bài học." },
+                { t: "Dấu ấn cá nhân", d: "Thể hiện phong cách, sự tỉ mỉ và tinh thần trách nhiệm của riêng em." },
               ].map((g) => (
                 <div
                   key={g.t}
                   className="group rounded-2xl border border-border bg-background/60 p-4 transition-all hover:border-rose-300"
                 >
-                  <div className="flex items-center gap-2 font-semibold text-foreground">
-                    <span className="text-lg">{g.i}</span>
+                  <div className="font-semibold text-foreground">
                     <span className="bg-gradient-to-r from-rose-500 to-fuchsia-500 bg-clip-text text-transparent">
                       {g.t}
                     </span>
