@@ -1296,7 +1296,8 @@ function Project2() {
             { label: "09 · NBER — The Economics of Transformative AI (Korinek, 2024)", src: bai2Img10.url },
             { label: "10 · AEA — Generative AI for Economic Research (Korinek, 2023)", src: bai2Img1.url },
           ]}
-          file="TrichDan_Harvard_AI-Trade.docx"
+          file="BaiTap2_AI_KinhTeQuocTe.pdf"
+          fileUrl={bai2Doc.url}
         />
       }
     >
