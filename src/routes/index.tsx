@@ -772,7 +772,7 @@ function EvidencePlaceholder({ label, src }: { label: string; src?: string }) {
     <figure className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
       <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {src ? (
-          <img src={src} alt={label} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+          <img src={src} alt={label} className="absolute inset-0 h-full w-full object-contain p-1" loading="lazy" />
         ) : (
           <>
             <div
