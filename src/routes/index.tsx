@@ -1,6 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import studentAvatar from "@/assets/student-avatar.jpg.asset.json";
+import bai1Img21 from "@/assets/bai1/bai1-21.png.asset.json";
+import bai1Img22 from "@/assets/bai1/bai1-22.png.asset.json";
+import bai1Img23 from "@/assets/bai1/bai1-23.png.asset.json";
+import bai1Img24 from "@/assets/bai1/bai1-24.png.asset.json";
+import bai1Img25 from "@/assets/bai1/bai1-25.png.asset.json";
+import bai1Img26 from "@/assets/bai1/bai1-26.png.asset.json";
+import bai1Img27 from "@/assets/bai1/bai1-27.png.asset.json";
+import bai1Img28 from "@/assets/bai1/bai1-28.png.asset.json";
+import bai1Img29 from "@/assets/bai1/bai1-29.png.asset.json";
+import bai1Img30 from "@/assets/bai1/bai1-30.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
@@ -749,25 +759,29 @@ function Block({ title, children }: { title: string; children: React.ReactNode }
   );
 }
 
-function EvidencePlaceholder({ label }: { label: string }) {
+function EvidencePlaceholder({ label, src }: { label: string; src?: string }) {
   return (
     <figure className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-      <div
-        className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-      >
-        <div
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 14px), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 22px)",
-          }}
-        />
-        <div className="absolute left-3 top-3 flex gap-1.5">
-          <span className="h-2 w-2 rounded-full bg-red-400/70" />
-          <span className="h-2 w-2 rounded-full bg-yellow-400/70" />
-          <span className="h-2 w-2 rounded-full bg-green-400/70" />
-        </div>
-        <div className="absolute inset-0 grid place-items-center text-3xl opacity-70">🖼️</div>
+      <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {src ? (
+          <img src={src} alt={label} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+        ) : (
+          <>
+            <div
+              className="absolute inset-0 opacity-40"
+              style={{
+                backgroundImage:
+                  "repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 14px), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 22px)",
+              }}
+            />
+            <div className="absolute left-3 top-3 flex gap-1.5">
+              <span className="h-2 w-2 rounded-full bg-red-400/70" />
+              <span className="h-2 w-2 rounded-full bg-yellow-400/70" />
+              <span className="h-2 w-2 rounded-full bg-green-400/70" />
+            </div>
+            <div className="absolute inset-0 grid place-items-center text-3xl opacity-70">🖼️</div>
+          </>
+        )}
       </div>
       <figcaption className="border-t border-border bg-secondary/40 px-3 py-2 text-xs font-medium leading-snug text-foreground">
         {label}
@@ -782,16 +796,17 @@ function EvidenceGallery({
   file,
 }: {
   title?: string;
-  items: string[];
+  items: (string | { label: string; src?: string })[];
   file?: string;
 }) {
   return (
     <div className="space-y-3">
       <div className="text-xs font-semibold uppercase tracking-wide text-plum">{title}</div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((it, i) => (
-          <EvidencePlaceholder key={i} label={it} />
-        ))}
+        {items.map((it, i) => {
+          const obj = typeof it === "string" ? { label: it } : it;
+          return <EvidencePlaceholder key={i} label={obj.label} src={obj.src} />;
+        })}
       </div>
       {file && (
         <div className="pt-1">
@@ -803,6 +818,7 @@ function EvidenceGallery({
     </div>
   );
 }
+
 
 
 function ReviewSection({
@@ -960,11 +976,16 @@ function Project1() {
       gallery={
         <EvidenceGallery
           items={[
-            "Mở File Explorer từ thanh tác vụ (Win + E)",
-            "Truy cập PC này và ổ đĩa D:",
-            "Chuột phải → Mới → Cặp để tạo thư mục",
-            "Tệp GhiChuQuanTrong.txt sau khi đổi tên",
-            "Menu chuột phải: Sao chép (Ctrl+C) tệp tin",
+            { label: "Cấu trúc thư mục Thuchanh_Duongthithuthao trên ổ D:", src: bai1Img29.url },
+            { label: "Menu chuột phải → New → Folder tạo thư mục mới", src: bai1Img30.url },
+            { label: "Thư mục sau khi tạo tệp GhiChuQuanTrong.txt & TaiLieu", src: bai1Img26.url },
+            { label: "Sao chép tệp (Copy — Ctrl+C) từ menu chuột phải", src: bai1Img28.url },
+            { label: "Dán tệp (Paste — Ctrl+V) vào thư mục đích", src: bai1Img27.url },
+            { label: "Cắt tệp (Cut — Ctrl+X) để di chuyển", src: bai1Img24.url },
+            { label: "Kết quả sau khi di chuyển & sao chép hoàn tất", src: bai1Img25.url },
+            { label: "Xóa mềm (Delete) tệp GhiChuQuanTrong.txt", src: bai1Img23.url },
+            { label: "Xác nhận xóa vĩnh viễn thư mục (Shift+Delete)", src: bai1Img22.url },
+            { label: "Khôi phục tệp từ Recycle Bin (Restore all items)", src: bai1Img21.url },
           ]}
           file="GhiChuQuanTrong.docx"
         />
