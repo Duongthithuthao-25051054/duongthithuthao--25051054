@@ -1190,7 +1190,7 @@ function Skills() {
     side: "left" | "right";
   }) => (
     <div
-      className={`reveal group flex items-center gap-4 rounded-full border border-violet-200/70 bg-white/80 p-3 pr-5 shadow-[0_8px_30px_-12px_rgba(139,92,246,0.35)] backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_-12px_rgba(139,92,246,0.55)] ${
+      className={`group flex items-center gap-4 rounded-full border border-violet-200/70 bg-white/80 p-3 pr-5 shadow-[0_8px_30px_-12px_rgba(139,92,246,0.35)] backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_-12px_rgba(139,92,246,0.55)] ${
         side === "right" ? "md:flex-row-reverse md:pl-5 md:pr-3" : ""
       }`}
     >
