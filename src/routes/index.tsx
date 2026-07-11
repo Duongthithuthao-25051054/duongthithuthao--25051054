@@ -1042,18 +1042,8 @@ function Project2() {
       tools={["Google Search", "Google Scholar", "IMF / OECD / NBER", "Cambridge University Press", "Zotero"]}
       evidence={
         <div className="space-y-4">
-          <EvidenceGallery
-            items={[
-              "Google Scholar với toán tử filetype:pdf",
-              "Trang IMF Blog — bài của K. Georgieva (2024)",
-              "Kết quả tìm kiếm trên OECD.org",
-              "Thư mục Zotero: nhóm ‘AI & Trade’",
-              "Trang trích dẫn Harvard xuất từ Zotero",
-            ]}
-            file="TrichDan_Harvard_AI-Trade.docx"
-          />
-
           <div className="overflow-hidden rounded-xl border border-border">
+
             <table className="w-full text-xs">
               <thead className="bg-secondary text-secondary-foreground">
                 <tr>
