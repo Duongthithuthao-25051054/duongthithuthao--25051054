@@ -737,15 +737,59 @@ function Block({ title, children }: { title: string; children: React.ReactNode }
 
 function EvidencePlaceholder({ label }: { label: string }) {
   return (
-    <div className="grid aspect-video place-items-center rounded-xl border-2 border-dashed border-primary/40 bg-gradient-to-br from-secondary/50 to-accent/40 p-4 text-center text-xs text-muted-foreground">
-      <div>
-        <div className="text-2xl">🖼️</div>
-        <div className="mt-1 font-medium text-foreground">{label}</div>
-        <div className="mt-1">Thay bằng minh chứng thật</div>
+    <figure className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+      <div
+        className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
+      >
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 14px), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 22px)",
+          }}
+        />
+        <div className="absolute left-3 top-3 flex gap-1.5">
+          <span className="h-2 w-2 rounded-full bg-red-400/70" />
+          <span className="h-2 w-2 rounded-full bg-yellow-400/70" />
+          <span className="h-2 w-2 rounded-full bg-green-400/70" />
+        </div>
+        <div className="absolute inset-0 grid place-items-center text-3xl opacity-70">🖼️</div>
       </div>
+      <figcaption className="border-t border-border bg-secondary/40 px-3 py-2 text-xs font-medium leading-snug text-foreground">
+        {label}
+      </figcaption>
+    </figure>
+  );
+}
+
+function EvidenceGallery({
+  title = "📸 Ảnh minh chứng thực hành",
+  items,
+  file,
+}: {
+  title?: string;
+  items: string[];
+  file?: string;
+}) {
+  return (
+    <div className="space-y-3">
+      <div className="text-xs font-semibold uppercase tracking-wide text-plum">{title}</div>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map((it, i) => (
+          <EvidencePlaceholder key={i} label={it} />
+        ))}
+      </div>
+      {file && (
+        <div className="pt-1">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-plum">
+            📄 Tải tệp minh chứng: {file}
+          </span>
+        </div>
+      )}
     </div>
   );
 }
+
 
 function ReviewSection({
   good,
@@ -867,8 +911,17 @@ function Project1() {
       }
       tools={["File Explorer", "Notepad", "Recycle Bin", "OneDrive"]}
       evidence={
-        <div className="space-y-3">
-          <EvidencePlaceholder label="Ảnh chụp thư mục Thuchanh_Duongthithuthao trên ổ D:" />
+        <div className="space-y-4">
+          <EvidenceGallery
+            items={[
+              "Mở File Explorer từ thanh tác vụ (Win + E)",
+              "Truy cập PC này và ổ đĩa D:",
+              "Chuột phải → Mới → Cặp để tạo thư mục",
+              "Tệp GhiChuQuanTrong.txt sau khi đổi tên",
+              "Menu chuột phải: Sao chép (Ctrl+C) tệp tin",
+            ]}
+            file="GhiChuQuanTrong.docx"
+          />
           <div className="rounded-xl bg-muted/60 p-4 font-mono text-xs leading-relaxed">
             <div>📂 D:\Thuchanh_Duongthithuthao\</div>
             <div className="pl-4">📄 GhiChuQuanTrong.txt</div>
@@ -971,7 +1024,18 @@ function Project2() {
       }
       tools={["Google Search", "Google Scholar", "IMF / OECD / NBER", "Cambridge University Press", "Zotero"]}
       evidence={
-        <div className="space-y-3">
+        <div className="space-y-4">
+          <EvidenceGallery
+            items={[
+              "Google Scholar với toán tử filetype:pdf",
+              "Trang IMF Blog — bài của K. Georgieva (2024)",
+              "Kết quả tìm kiếm trên OECD.org",
+              "Thư mục Zotero: nhóm ‘AI & Trade’",
+              "Trang trích dẫn Harvard xuất từ Zotero",
+            ]}
+            file="TrichDan_Harvard_AI-Trade.docx"
+          />
+
           <div className="overflow-hidden rounded-xl border border-border">
             <table className="w-full text-xs">
               <thead className="bg-secondary text-secondary-foreground">
@@ -1117,7 +1181,15 @@ function Project3() {
               </p>
             </div>
           </div>
-          <EvidencePlaceholder label="Ảnh chụp phản hồi ChatGPT cho 3 cấp độ prompt" />
+          <EvidenceGallery
+            items={[
+              "Phản hồi ChatGPT cho prompt CƠ BẢN",
+              "Phản hồi ChatGPT cho prompt CẢI TIẾN",
+              "Phản hồi ChatGPT cho prompt NÂNG CAO (bảng 4 cột)",
+              "So sánh Gemini · Claude cùng câu hỏi",
+            ]}
+            file="SoSanh_Prompt_3CapDo.pdf"
+          />
         </div>
       }
       analysis={
@@ -1220,7 +1292,16 @@ function Project4() {
       tools={["Asana", "Google Docs", "Google Drive", "Google Meet", "Zapier (tự động hoá)"]}
       evidence={
         <div className="space-y-3">
-          <EvidencePlaceholder label="Ảnh bảng Asana + Google Docs kịch bản video" />
+          <EvidenceGallery
+            items={[
+              "Bảng công việc Asana của nhóm",
+              "Google Docs — kịch bản video",
+              "Google Drive: thư mục dùng chung",
+              "Google Meet họp phân công",
+              "Zapier: luồng tự động hoá thông báo",
+            ]}
+            file="KichBan_Video_Nhom.docx"
+          />
           <div className="overflow-hidden rounded-xl border border-border">
             <table className="w-full text-xs">
               <thead className="bg-secondary">
@@ -1334,7 +1415,17 @@ function Project5() {
       tools={["ChatGPT", "Google Gemini", "Claude", "DALL·E", "Yeri AI", "Canva AI", "Adobe Firefly"]}
       evidence={
         <div className="space-y-3">
-          <EvidencePlaceholder label="Ảnh so sánh đầu ra của ChatGPT / Gemini / Claude cho cùng câu hỏi" />
+          <EvidenceGallery
+            items={[
+              "Đầu ra của ChatGPT cho cùng câu hỏi",
+              "Đầu ra của Google Gemini",
+              "Đầu ra của Claude",
+              "Ảnh minh hoạ từ DALL·E",
+              "Ảnh minh hoạ từ Yeri AI",
+              "Poster hoàn thiện trong Canva AI",
+            ]}
+            file="SoSanh_AI_VanBan-HinhAnh.pdf"
+          />
           <div className="grid gap-3 md:grid-cols-2">
             <div className="rounded-xl bg-sky/25 p-4 text-xs">
               <div className="font-semibold text-plum">Kết luận công cụ văn bản</div>
@@ -1447,7 +1538,18 @@ function Project6() {
       }
       tools={["ChatGPT", "Chính sách nhà trường", "UNESCO AI Guidance", "Canva (Infographic)"]}
       evidence={
-        <div className="space-y-3">
+        <div className="space-y-4">
+          <EvidenceGallery
+            items={[
+              "Slide bài thuyết trình ‘Vai trò của AI trong GDĐH’",
+              "ChatGPT: dàn ý 3 phần cho bài thuyết trình",
+              "Infographic 4 bước ‘Sử dụng AI có trách nhiệm’ trên Canva",
+              "Trích dẫn hướng dẫn của UNESCO về AI trong GD",
+              "Bảng đối chiếu 6 vấn đề đạo đức & giải pháp",
+            ]}
+            file="ThuyetTrinh_AI_GDDH.pptx"
+          />
+
           <div className="rounded-2xl bg-gradient-hero p-5">
             <div className="mb-3 text-sm font-semibold text-plum">7 Nguyên tắc cá nhân sử dụng AI</div>
             <ol className="space-y-2 text-sm">
