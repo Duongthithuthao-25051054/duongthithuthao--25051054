@@ -650,6 +650,7 @@ function ProjectShell({
   analysis,
   lesson,
   skills,
+  gallery,
   children,
 }: {
   id: string;
@@ -663,6 +664,7 @@ function ProjectShell({
   analysis: React.ReactNode;
   lesson: string[];
   skills: string[];
+  gallery?: React.ReactNode;
   children?: React.ReactNode;
 }) {
   return (
