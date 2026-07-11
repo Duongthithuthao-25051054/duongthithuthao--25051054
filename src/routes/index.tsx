@@ -1619,6 +1619,18 @@ function Project6() {
         "Trách nhiệm số là kỹ năng bắt buộc trong thời đại AI.",
         "Sử dụng AI có trách nhiệm bảo vệ tính trung thực và sự sáng tạo cá nhân.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Slide bài thuyết trình ‘Vai trò của AI trong GDĐH’",
+            "ChatGPT: dàn ý 3 phần cho bài thuyết trình",
+            "Infographic 4 bước ‘Sử dụng AI có trách nhiệm’ trên Canva",
+            "Trích dẫn hướng dẫn của UNESCO về AI trong GD",
+            "Bảng đối chiếu 6 vấn đề đạo đức & giải pháp",
+          ]}
+          file="ThuyetTrinh_AI_GDDH.pptx"
+        />
+      }
     >
       <ReviewSection
         good={[
