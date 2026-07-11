@@ -1479,7 +1479,9 @@ function Project4() {
             { label: "Asana — Content calendar phân công 5 nhiệm vụ", src: bai4Img46.url },
           ]}
           file="KichBan_Video_Nhom.docx"
+          video={{ url: "https://youtu.be/YNjjYKzETfA?si=P8oMEMIb2eqw8iax", label: "Video sản phẩm nhóm — AI trong giáo dục tại Việt Nam" }}
         />
+
       }
     >
       <ReviewSection
