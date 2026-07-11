@@ -1181,7 +1181,15 @@ function Project3() {
               </p>
             </div>
           </div>
-          <EvidencePlaceholder label="Ảnh chụp phản hồi ChatGPT cho 3 cấp độ prompt" />
+          <EvidenceGallery
+            items={[
+              "Phản hồi ChatGPT cho prompt CƠ BẢN",
+              "Phản hồi ChatGPT cho prompt CẢI TIẾN",
+              "Phản hồi ChatGPT cho prompt NÂNG CAO (bảng 4 cột)",
+              "So sánh Gemini · Claude cùng câu hỏi",
+            ]}
+            file="SoSanh_Prompt_3CapDo.pdf"
+          />
         </div>
       }
       analysis={
