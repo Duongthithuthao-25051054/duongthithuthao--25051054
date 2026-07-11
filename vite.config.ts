@@ -6,10 +6,17 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// BASE_PATH is injected by the GitHub Pages workflow (e.g. "/repo-name/").
+// Left as "/" for local dev + Lovable preview.
+const basePath = process.env.BASE_PATH || "/";
+
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+  },
+  vite: {
+    base: basePath,
   },
 });
