@@ -423,7 +423,7 @@ function About() {
     <Section id="gioi-thieu" eyebrow="About me" title="Giới thiệu bản thân">
       <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
         {/* Card cá nhân */}
-        <div className="reveal rounded-3xl border border-border bg-card p-8 shadow-soft">
+        <div className="reveal self-start rounded-3xl border border-border bg-card p-8 shadow-soft">
           <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full bg-gradient-brand shadow-glow ring-4 ring-white/60">
             <img
               src={studentAvatar.url}
