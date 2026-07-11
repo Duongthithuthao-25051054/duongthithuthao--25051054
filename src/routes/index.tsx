@@ -1735,8 +1735,6 @@ function Footer() {
           <div className="mb-2 font-semibold text-plum">Liên hệ</div>
           <ul className="space-y-1.5 text-muted-foreground">
             <li>Email: <span className="text-foreground">25051054@vnu.edu.vn</span></li>
-            <li><br /></li>
-            <li><br /></li>
           </ul>
         </div>
       </div>
