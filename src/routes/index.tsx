@@ -805,7 +805,7 @@ function ProjectShell({
           </div>
         </Block>
 
-        <Block title="🖼️ Sản phẩm / Minh chứng">{evidence}</Block>
+        <Block title="">{evidence}</Block>
 
         <div className="space-y-6">
           <Block title="🔍 Phân tích kết quả">{analysis}</Block>
