@@ -19,6 +19,16 @@ import bai1Img35 from "@/assets/bai1/bai1-35.png.asset.json";
 import bai1Img36 from "@/assets/bai1/bai1-36.png.asset.json";
 import bai1Img37 from "@/assets/bai1/bai1-37.png.asset.json";
 import bai1Doc from "@/assets/bai1/GhiChuQuanTrong.docx.asset.json";
+import bai2Img1 from "@/assets/bai2/bai2-1.png.asset.json";
+import bai2Img2 from "@/assets/bai2/bai2-2.png.asset.json";
+import bai2Img3 from "@/assets/bai2/bai2-3.png.asset.json";
+import bai2Img4 from "@/assets/bai2/bai2-4.png.asset.json";
+import bai2Img5 from "@/assets/bai2/bai2-5.png.asset.json";
+import bai2Img6 from "@/assets/bai2/bai2-6.png.asset.json";
+import bai2Img7 from "@/assets/bai2/bai2-7.png.asset.json";
+import bai2Img8 from "@/assets/bai2/bai2-8.png.asset.json";
+import bai2Img9 from "@/assets/bai2/bai2-9.png.asset.json";
+import bai2Img10 from "@/assets/bai2/bai2-10.png.asset.json";
 import bai3Img39 from "@/assets/bai3/bai3-39.png.asset.json";
 import bai3Img40 from "@/assets/bai3/bai3-40.png.asset.json";
 import bai3Img41 from "@/assets/bai3/bai3-41.png.asset.json";
@@ -1274,11 +1284,16 @@ function Project2() {
       gallery={
         <EvidenceGallery
           items={[
-            "Google Scholar với toán tử filetype:pdf",
-            "Trang IMF Blog — bài của K. Georgieva (2024)",
-            "Kết quả tìm kiếm trên OECD.org",
-            "Thư mục Zotero: nhóm ‘AI & Trade’",
-            "Trang trích dẫn Harvard xuất từ Zotero",
+            { label: "01 · NBER — AI and International Trade (Goldfarb & Trefler, 2018)", src: bai2Img2.url },
+            { label: "02 · IMF Blog — AI Will Transform the Global Economy (Georgieva, 2024)", src: bai2Img3.url },
+            { label: "03 · Cambridge — Artificial Intelligence and International Economic Law (2021)", src: bai2Img4.url },
+            { label: "04 · Journal / ResearchGate — Impact of AI Applications on International Economics Major (2025)", src: bai2Img5.url },
+            { label: "05 · Cerity Partners — How AI Is Affecting the Global Economy (2025)", src: bai2Img6.url },
+            { label: "06 · OECD — AI and International Trade: Preliminary Implications (2022)", src: bai2Img7.url },
+            { label: "07 · MIT Sloan — A New Look at the Economics of AI (2025)", src: bai2Img8.url },
+            { label: "08 · WITA / NBER Volume — The Economics of AI: An Agenda (2019)", src: bai2Img9.url },
+            { label: "09 · NBER — The Economics of Transformative AI (Korinek, 2024)", src: bai2Img10.url },
+            { label: "10 · AEA — Generative AI for Economic Research (Korinek, 2023)", src: bai2Img1.url },
           ]}
           file="TrichDan_Harvard_AI-Trade.docx"
         />
