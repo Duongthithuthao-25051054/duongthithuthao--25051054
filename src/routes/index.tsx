@@ -1427,11 +1427,10 @@ function Project4() {
       gallery={
         <EvidenceGallery
           items={[
-            "Bảng công việc Asana của nhóm",
-            "Google Docs — kịch bản video",
-            "Google Drive: thư mục dùng chung",
-            "Google Meet họp phân công",
-            "Zapier: luồng tự động hoá thông báo",
+            { label: "Google Meet — cả nhóm cùng chỉnh sửa kịch bản video", src: bai4Img43.url },
+            { label: "Google Docs — tài liệu 'Công nghệ số (Giữa kì)' đã mở", src: bai4Img44.url },
+            { label: "Kịch bản video: AI trong giáo dục tại Việt Nam", src: bai4Img45.url },
+            { label: "Asana — Content calendar phân công 5 nhiệm vụ", src: bai4Img46.url },
           ]}
           file="KichBan_Video_Nhom.docx"
         />
