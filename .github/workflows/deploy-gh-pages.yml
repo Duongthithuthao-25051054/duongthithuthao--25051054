@@ -62,6 +62,10 @@ jobs:
             exit 1
           fi
 
+          if [ ! -f "dist-gh-pages/index.html" ] && [ -f "dist-gh-pages/index.gh-pages.html" ]; then
+            mv dist-gh-pages/index.gh-pages.html dist-gh-pages/index.html
+          fi
+
           if [ ! -f "dist-gh-pages/index.html" ]; then
             echo "Thiếu index.html trong dist-gh-pages." >&2
             ls -la dist-gh-pages || true
