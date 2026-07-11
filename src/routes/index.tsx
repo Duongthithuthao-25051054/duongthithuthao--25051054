@@ -744,6 +744,103 @@ function EvidencePlaceholder({ label }: { label: string }) {
   );
 }
 
+function ReviewSection({
+  good,
+  improve,
+  takeaway,
+  aiUse,
+  commit,
+}: {
+  good: string[];
+  improve: string[];
+  takeaway: string[];
+  aiUse: string[];
+  commit: string[];
+}) {
+  const Col = ({
+    icon,
+    title,
+    tone,
+    items,
+  }: {
+    icon: string;
+    title: string;
+    tone: "good" | "warn" | "info";
+    items: string[];
+  }) => {
+    const toneCls =
+      tone === "good"
+        ? "border-emerald-200 bg-emerald-50"
+        : tone === "warn"
+          ? "border-amber-200 bg-amber-50"
+          : "border-sky-200 bg-sky-50";
+    const dot =
+      tone === "good" ? "text-emerald-600" : tone === "warn" ? "text-amber-600" : "text-sky-600";
+    return (
+      <div className={`rounded-2xl border p-4 ${toneCls}`}>
+        <div className="mb-2 flex items-center gap-2 text-sm font-semibold text-foreground">
+          <span>{icon}</span>
+          <span>{title}</span>
+        </div>
+        <ul className="space-y-1.5 text-xs leading-relaxed text-foreground/80">
+          {items.map((t, i) => (
+            <li key={i} className="flex gap-2">
+              <span className={`mt-1 ${dot}`}>•</span>
+              <span>{t}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  };
+  return (
+    <div className="border-t border-border bg-muted/30 p-8 md:p-10">
+      <h4 className="mb-4 flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-plum">
+        📊 Phân tích – Đánh giá
+      </h4>
+      <div className="grid gap-3 md:grid-cols-3">
+        <Col icon="✅" title="Điểm tốt" tone="good" items={good} />
+        <Col icon="🛠️" title="Cần cải thiện" tone="warn" items={improve} />
+        <Col icon="💡" title="Bài học rút ra" tone="info" items={takeaway} />
+      </div>
+
+      <div className="mt-6 rounded-2xl border border-border bg-card p-5">
+        <div className="mb-3 flex items-center gap-2 text-sm font-semibold text-plum">
+          🤖 Liêm chính học thuật &amp; Sử dụng AI
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <div>
+            <div className="mb-1.5 text-xs font-semibold uppercase text-muted-foreground">
+              Cách tôi sử dụng AI
+            </div>
+            <ul className="space-y-1 text-xs text-foreground/85">
+              {aiUse.map((t, i) => (
+                <li key={i} className="flex gap-2">
+                  <span className="text-plum">→</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <div className="mb-1.5 text-xs font-semibold uppercase text-muted-foreground">
+              Cam kết liêm chính
+            </div>
+            <ul className="space-y-1 text-xs text-foreground/85">
+              {commit.map((t, i) => (
+                <li key={i} className="flex gap-2">
+                  <span className="text-emerald-600">✓</span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ---------- Dự án 1 ---------- */
 function Project1() {
   return (
