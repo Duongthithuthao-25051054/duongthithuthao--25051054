@@ -1876,13 +1876,12 @@ function Skills() {
             <div className="relative grid h-56 w-56 place-items-center rounded-full bg-gradient-to-br from-violet-200 via-fuchsia-100 to-violet-100 shadow-[0_20px_60px_-20px_rgba(139,92,246,0.6)]">
               <div className="grid h-44 w-44 place-items-center rounded-full bg-white text-center">
                 <div>
-                  <div className="text-4xl">📈</div>
+                  <div className="font-display text-3xl font-black text-plum">100%</div>
                   <div className="mt-2 font-display text-sm font-black tracking-wider text-plum">
                     NĂNG LỰC
                     <br />
                     TOÀN DIỆN
                   </div>
-                  <div className="mt-1 text-violet-400">• • •</div>
                 </div>
               </div>
             </div>
