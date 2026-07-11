@@ -684,26 +684,28 @@ function ProjectShell({
         </div>
       </header>
 
-      <div className="grid gap-8 p-8 md:grid-cols-2 md:p-10">
-        <div>
+      <div className="space-y-6 p-8 md:p-10">
+        <div className="grid gap-6 md:grid-cols-2">
           <Block title="🎯 Mục tiêu">{objective}</Block>
           <Block title="⚙️ Quá trình thực hiện">{process}</Block>
-          <Block title="🧰 Công cụ sử dụng">
-            <div className="flex flex-wrap gap-2">
-              {tools.map((t) => (
-                <span
-                  key={t}
-                  className="rounded-lg border border-border bg-secondary px-3 py-1 text-xs font-medium"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </Block>
         </div>
 
-        <div>
-          <Block title="🖼️ Sản phẩm / Minh chứng">{evidence}</Block>
+        <Block title="🧰 Công cụ sử dụng">
+          <div className="flex flex-wrap gap-2">
+            {tools.map((t) => (
+              <span
+                key={t}
+                className="rounded-lg border border-border bg-secondary px-3 py-1 text-xs font-medium"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        </Block>
+
+        <Block title="🖼️ Sản phẩm / Minh chứng">{evidence}</Block>
+
+        <div className="grid gap-6 md:grid-cols-2">
           <Block title="🔍 Phân tích kết quả">{analysis}</Block>
           <Block title="💡 Bài học rút ra">
             <ul className="space-y-1.5 text-sm text-muted-foreground">
@@ -717,6 +719,7 @@ function ProjectShell({
           </Block>
         </div>
       </div>
+
 
       {children}
     </article>
