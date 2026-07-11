@@ -595,7 +595,7 @@ function Overview() {
   const avg = Math.round(TASKS.reduce((s, t) => s + t.progress, 0) / TASKS.length);
 
   return (
-    <Section id="tong-quan" eyebrow="Learning Journey" title="Tổng quan 6 nhiệm vụ">
+    <Section id="tong-quan" eyebrow={"\n"} title="Tổng quan 6 nhiệm vụ">
       <div className="reveal mt-10 grid gap-10 lg:grid-cols-[280px_1fr]">
         {/* Left title panel */}
         <aside className="lg:sticky lg:top-24 lg:self-start">
