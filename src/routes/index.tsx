@@ -199,7 +199,7 @@ function PortfolioPage() {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className={`fixed bottom-6 right-6 z-50 grid h-12 w-12 place-items-center rounded-full bg-gradient-brand text-white shadow-glow transition-all duration-300 ${
           showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-        } hover:scale-110`}
+        }`}
       >
         <span className="text-lg">↑</span>
       </button>
@@ -321,17 +321,17 @@ function Hero() {
             <strong className="text-foreground">Ứng dụng Trí tuệ nhân tạo</strong> — nơi em lưu trữ, trình bày và tự đánh giá quá trình rèn luyện năng lực số qua sáu sản phẩm học tập hoàn chỉnh.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#gioi-thieu" className="inline-flex items-center gap-2 rounded-2xl bg-gradient-brand px-5 py-3 text-sm font-semibold text-white shadow-soft transition-all hover:shadow-glow hover:-translate-y-0.5">
-              📖 Giới thiệu
+            <a href="#gioi-thieu" className="inline-flex items-center gap-2 rounded-2xl bg-gradient-brand px-5 py-3 text-sm font-semibold text-white shadow-soft transition-all">
+              Giới thiệu
             </a>
             <a href="#du-an" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
-              📁 Dự án học tập
+              Dự án học tập
             </a>
             <a href="#ky-nang" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
-              ✅ Kỹ năng
+              Kỹ năng
             </a>
             <a href="#tong-ket" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
-              📈 Tổng kết
+              Tổng kết
             </a>
           </div>
         </div>
@@ -372,7 +372,7 @@ function Hero() {
                   {tiles.map((t) => (
                     <div
                       key={t.label}
-                      className={`flex aspect-square flex-col items-center justify-center gap-2 rounded-2xl bg-gradient-to-br ${t.bg} ring-1 ${t.ring} shadow-soft transition-transform hover:-translate-y-1`}
+                      className={`flex aspect-square flex-col items-center justify-center gap-2 rounded-2xl bg-gradient-to-br ${t.bg} ring-1 ${t.ring} shadow-soft transition-transform`}
                     >
                       <span className="text-3xl">{t.icon}</span>
                       <span className="text-[11px] font-medium text-plum">{t.label}</span>
@@ -474,10 +474,8 @@ function About() {
                 "Xây dựng thói quen học tập suốt đời và cập nhật kiến thức công nghệ liên tục.",
                 "Đạt điểm Xuất sắc (8.1–10) trong môn Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo.",
               ].map((g) => (
-                <li key={g} className="flex items-start gap-3">
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white/80 text-rose-500 shadow-sm">
-                    💡
-                  </span>
+                <li key={g} className="flex items-start gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400" />
                   <span>{g}</span>
                 </li>
               ))}
@@ -504,7 +502,7 @@ function About() {
               ].map((g) => (
                 <div
                   key={g.t}
-                  className="group rounded-2xl border border-border bg-background/60 p-4 transition-all hover:-translate-y-0.5 hover:border-rose-300 hover:shadow-soft"
+                  className="group rounded-2xl border border-border bg-background/60 p-4 transition-all hover:border-rose-300"
                 >
                   <div className="flex items-center gap-2 font-semibold text-foreground">
                     <span className="text-lg">{g.i}</span>
@@ -537,7 +535,7 @@ function About() {
             ].map((h) => (
               <div
                 key={h.t}
-                className="rounded-2xl border border-white/70 bg-white/70 p-3 backdrop-blur transition hover:-translate-y-0.5 hover:shadow-soft"
+                className="rounded-2xl border border-white/70 bg-white/70 p-3 backdrop-blur transition"
               >
                 <div className="font-semibold text-foreground">{h.t}</div>
                 <p className="mt-1 text-xs text-muted-foreground">{h.d}</p>
@@ -624,7 +622,7 @@ function Overview() {
             return (
               <li
                 key={t.id}
-                className="reveal group relative flex items-start gap-4 rounded-2xl border border-border/50 bg-card/60 p-4 backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-soft md:gap-6 md:p-5"
+                className="reveal group relative flex items-start gap-4 rounded-2xl border border-border/50 bg-card/60 p-4 backdrop-blur transition-all md:gap-6 md:p-5"
               >
                 {/* Step number */}
                 <div className="flex shrink-0 flex-col items-center">
@@ -677,12 +675,9 @@ function Overview() {
                       </span>
                     </div>
                     <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                      <span className="inline-flex items-center gap-1">
-                        📊 <span>Mức độ: <b className="text-foreground/80">{m.level}</b></span>
-                      </span>
-                      <span className="inline-flex items-center gap-1">
-                        ⏱ <span>Thời lượng: <b className="text-foreground/80">{m.duration}</b></span>
-                      </span>
+                      <span>Mức độ: <b className="text-foreground/80">{m.level}</b></span>
+                      <span>·</span>
+                      <span>Thời lượng: <b className="text-foreground/80">{m.duration}</b></span>
                     </div>
                   </div>
                 </div>
@@ -695,17 +690,14 @@ function Overview() {
       {/* Bottom stats strip */}
       <div className="reveal mt-10 grid grid-cols-2 gap-4 rounded-2xl border border-border/60 bg-card/70 p-5 backdrop-blur md:grid-cols-4">
         {[
-          { icon: "⏱", label: "Tổng thời lượng ước tính", value: "12 – 18 giờ", color: "text-violet-500" },
-          { icon: "📈", label: "Tiến độ trung bình", value: `${avg}%`, color: "text-pink-500" },
-          { icon: "🎯", label: "Nhiệm vụ đã hoàn thành", value: `${completed} / ${TASKS.length}`, color: "text-blue-500" },
-          { icon: "🏅", label: "Mức độ kỹ năng", value: "Từ cơ bản đến nâng cao", color: "text-violet-600" },
+          { label: "Tổng thời lượng ước tính", value: "12 – 18 giờ", color: "text-violet-500" },
+          { label: "Tiến độ trung bình", value: `${avg}%`, color: "text-pink-500" },
+          { label: "Nhiệm vụ đã hoàn thành", value: `${completed} / ${TASKS.length}`, color: "text-blue-500" },
+          { label: "Mức độ kỹ năng", value: "Từ cơ bản đến nâng cao", color: "text-violet-600" },
         ].map((s) => (
-          <div key={s.label} className="flex items-center gap-3">
-            <span className={`text-3xl ${s.color}`}>{s.icon}</span>
-            <div className="min-w-0">
-              <div className="text-xs text-muted-foreground">{s.label}</div>
-              <div className={`font-display text-lg font-bold ${s.color}`}>{s.value}</div>
-            </div>
+          <div key={s.label} className="min-w-0">
+            <div className="text-xs text-muted-foreground">{s.label}</div>
+            <div className={`font-display text-lg font-bold ${s.color}`}>{s.value}</div>
           </div>
         ))}
       </div>
@@ -788,11 +780,11 @@ function ProjectShell({
 
       <div className="space-y-6 p-8 md:p-10">
         <div className="grid gap-6 md:grid-cols-2">
-          <Block title="🎯 Mục tiêu">{objective}</Block>
-          <Block title="⚙️ Quá trình thực hiện">{process}</Block>
+          <Block title="Mục tiêu">{objective}</Block>
+          <Block title="Quá trình thực hiện">{process}</Block>
         </div>
 
-        <Block title="🧰 Công cụ sử dụng">
+        <Block title="Công cụ sử dụng">
           <div className="flex flex-wrap gap-2">
             {tools.map((t) => (
               <span
@@ -808,8 +800,8 @@ function ProjectShell({
         <Block title="">{evidence}</Block>
 
         <div className="space-y-6">
-          <Block title="🔍 Phân tích kết quả">{analysis}</Block>
-          <Block title="💡 Bài học rút ra">
+          <Block title="Phân tích kết quả">{analysis}</Block>
+          <Block title="Bài học rút ra">
             <ul className="space-y-1.5 text-sm text-muted-foreground">
               {lesson.map((l, i) => (
                 <li key={i} className="flex gap-2">
@@ -847,7 +839,7 @@ function Block({ title, children }: { title: string; children: React.ReactNode }
 
 function EvidencePlaceholder({ label, src }: { label: string; src?: string }) {
   return (
-    <figure className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+    <figure className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition">
       <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {src ? (
           <img src={src} alt={label} className="absolute inset-0 h-full w-full object-contain p-1" loading="lazy" />
@@ -1845,7 +1837,7 @@ function Skills() {
     side: "left" | "right";
   }) => (
     <div
-      className={`group flex items-center gap-4 rounded-full border border-violet-200/70 bg-white/80 p-3 pr-5 shadow-[0_8px_30px_-12px_rgba(139,92,246,0.35)] backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_-12px_rgba(139,92,246,0.55)] ${
+      className={`group flex items-center gap-4 rounded-full border border-violet-200/70 bg-white/80 p-3 pr-5 shadow-[0_8px_30px_-12px_rgba(139,92,246,0.35)] backdrop-blur transition-all hover:shadow-[0_12px_40px_-12px_rgba(139,92,246,0.55)] ${
         side === "right" ? "md:flex-row-reverse md:pl-5 md:pr-3" : ""
       }`}
     >
@@ -1920,11 +1912,11 @@ function Skills() {
         </div>
 
         <div className="reveal mt-10 flex flex-wrap items-center justify-center gap-3 rounded-full border border-violet-200 bg-white/70 px-6 py-4 text-sm font-semibold text-plum backdrop-blur">
-          <span className="inline-flex items-center gap-2">🎯 Không ngừng học hỏi</span>
+          <span>Không ngừng học hỏi</span>
           <span className="text-violet-300">|</span>
-          <span className="inline-flex items-center gap-2">🧠 Ứng dụng thông minh</span>
+          <span>Ứng dụng thông minh</span>
           <span className="text-violet-300">|</span>
-          <span className="inline-flex items-center gap-2">🌱 Phát triển bền vững</span>
+          <span>Phát triển bền vững</span>
         </div>
       </div>
     </Section>
@@ -1971,7 +1963,7 @@ function Conclusion() {
           <ul className="mt-3 space-y-3 text-sm">
             {difficulties.map((x) => (
               <li key={x.d} className="rounded-xl bg-secondary/60 p-3">
-                <div className="font-medium">⚠️ {x.d}</div>
+                <div className="font-medium">{x.d}</div>
                 <div className="mt-1 text-muted-foreground">→ {x.f}</div>
               </li>
             ))}
