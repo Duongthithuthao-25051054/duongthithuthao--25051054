@@ -139,7 +139,7 @@ function PortfolioPage() {
       <About />
       <Overview />
       <Projects />
-      <Evidence />
+      
       <Skills />
       <Conclusion />
       <Footer />
