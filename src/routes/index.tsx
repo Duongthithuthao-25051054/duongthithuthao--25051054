@@ -670,7 +670,7 @@ function Overview() {
       </div>
 
       {/* Bottom stats strip */}
-      <div className="reveal mt-10 grid grid-cols-2 gap-4 rounded-2xl border border-border/60 bg-card/70 p-5 backdrop-blur md:grid-cols-4">
+      <div className="reveal mt-10 grid grid-cols-1 gap-4 rounded-2xl border border-border/60 bg-card/70 p-6 backdrop-blur md:grid-cols-3">
         {[
           
           { label: "Tiến độ trung bình", value: `${avg}%`, color: "text-pink-500" },
@@ -678,8 +678,8 @@ function Overview() {
           { label: "Mức độ kỹ năng", value: "Từ cơ bản đến nâng cao", color: "text-violet-600" },
         ].map((s) => (
           <div key={s.label} className="min-w-0">
-            <div className="text-xs text-muted-foreground">{s.label}</div>
-            <div className={`font-display text-lg font-bold ${s.color}`}>{s.value}</div>
+            <div className="text-sm font-semibold text-muted-foreground">{s.label}</div>
+            <div className={`font-display text-2xl font-extrabold md:text-3xl ${s.color}`}>{s.value}</div>
           </div>
         ))}
       </div>
