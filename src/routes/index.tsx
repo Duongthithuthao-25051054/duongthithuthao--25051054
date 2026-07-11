@@ -19,6 +19,9 @@ import bai1Img35 from "@/assets/bai1/bai1-35.png.asset.json";
 import bai1Img36 from "@/assets/bai1/bai1-36.png.asset.json";
 import bai1Img37 from "@/assets/bai1/bai1-37.png.asset.json";
 import bai1Doc from "@/assets/bai1/GhiChuQuanTrong.docx.asset.json";
+import bai3Img39 from "@/assets/bai3/bai3-39.png.asset.json";
+import bai3Img40 from "@/assets/bai3/bai3-40.png.asset.json";
+import bai3Img41 from "@/assets/bai3/bai3-41.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
@@ -1285,10 +1288,9 @@ function Project3() {
       gallery={
         <EvidenceGallery
           items={[
-            "Phản hồi ChatGPT cho prompt CƠ BẢN",
-            "Phản hồi ChatGPT cho prompt CẢI TIẾN",
-            "Phản hồi ChatGPT cho prompt NÂNG CAO (bảng 4 cột)",
-            "So sánh Gemini · Claude cùng câu hỏi",
+            { label: "Prompt CƠ BẢN: hạn chế khi dùng trong tác vụ học thuật", src: bai3Img39.url },
+            { label: "Prompt CẢI TIẾN: nêu ≥ 2 lý do vì sao cho kết quả tốt hơn", src: bai3Img40.url },
+            { label: "Prompt NÂNG CAO: phân tích 3 loại prompt theo tiêu chí học thuật", src: bai3Img41.url },
           ]}
           file="SoSanh_Prompt_3CapDo.pdf"
         />
