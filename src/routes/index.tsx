@@ -713,7 +713,7 @@ function ProjectShell({
 
         <Block title="🖼️ Sản phẩm / Minh chứng">{evidence}</Block>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="space-y-6">
           <Block title="🔍 Phân tích kết quả">{analysis}</Block>
           <Block title="💡 Bài học rút ra">
             <ul className="space-y-1.5 text-sm text-muted-foreground">
