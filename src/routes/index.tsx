@@ -926,16 +926,6 @@ function Project1() {
       tools={["File Explorer", "Notepad", "Recycle Bin", "OneDrive"]}
       evidence={
         <div className="space-y-4">
-          <EvidenceGallery
-            items={[
-              "Mở File Explorer từ thanh tác vụ (Win + E)",
-              "Truy cập PC này và ổ đĩa D:",
-              "Chuột phải → Mới → Cặp để tạo thư mục",
-              "Tệp GhiChuQuanTrong.txt sau khi đổi tên",
-              "Menu chuột phải: Sao chép (Ctrl+C) tệp tin",
-            ]}
-            file="GhiChuQuanTrong.docx"
-          />
           <div className="rounded-xl bg-muted/60 p-4 font-mono text-xs leading-relaxed">
             <div>📂 D:\Thuchanh_Duongthithuthao\</div>
             <div className="pl-4">📄 GhiChuQuanTrong.txt</div>
@@ -967,7 +957,20 @@ function Project1() {
         "Hiểu rõ Recycle Bin giúp giảm rủi ro mất dữ liệu bất ngờ.",
         "Đặt tên nhất quán và có cấu trúc là thói quen tiết kiệm thời gian lâu dài.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Mở File Explorer từ thanh tác vụ (Win + E)",
+            "Truy cập PC này và ổ đĩa D:",
+            "Chuột phải → Mới → Cặp để tạo thư mục",
+            "Tệp GhiChuQuanTrong.txt sau khi đổi tên",
+            "Menu chuột phải: Sao chép (Ctrl+C) tệp tin",
+          ]}
+          file="GhiChuQuanTrong.docx"
+        />
+      }
     >
+
       <ReviewSection
         good={[
           "Thực hiện đủ 12 thao tác cơ bản với tệp tin và thư mục",
