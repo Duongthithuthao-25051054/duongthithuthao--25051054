@@ -610,7 +610,7 @@ function Overview() {
             <span className="h-1 w-3 rounded-full bg-violet-400" />
           </div>
           <p className="mt-5 text-sm leading-relaxed text-muted-foreground max-w-xs">
-            Sáu nhiệm vụ được tổ chức theo trình tự phát triển kỹ năng: từ nền tảng
+            6 nhiệm vụ được tổ chức theo trình tự phát triển kỹ năng: từ nền tảng
             quản lý dữ liệu, tìm kiếm và đánh giá thông tin, cho đến khai thác AI,
             hợp tác trực tuyến và sử dụng AI có trách nhiệm.
           </p>
