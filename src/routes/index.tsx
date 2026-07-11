@@ -37,6 +37,7 @@ import bai6Img54 from "@/assets/bai6/bai6-54.png.asset.json";
 import bai6Img55 from "@/assets/bai6/bai6-55.png.asset.json";
 import bai6Img56 from "@/assets/bai6/bai6-56.png.asset.json";
 import bai6Img57 from "@/assets/bai6/bai6-57.png.asset.json";
+import bai6Doc from "@/assets/bai6/BaoCao_AI_GDDH.docx.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
