@@ -376,8 +376,13 @@ function About() {
       <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
         {/* Card cá nhân */}
         <div className="reveal rounded-3xl border border-border bg-card p-8 shadow-soft">
-          <div className="relative mx-auto grid h-32 w-32 place-items-center overflow-hidden rounded-full bg-gradient-brand text-white shadow-glow">
-            <span className="font-display text-5xl">SV</span>
+          <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full bg-gradient-brand shadow-glow ring-4 ring-white/60">
+            <img
+              src={studentAvatar.url}
+              alt="Ảnh đại diện sinh viên Dương Thị Thu Thảo"
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
           </div>
           <h3 className="mt-6 text-center font-display text-2xl">Dương Thị Thu Thảo</h3>
           <p className="mt-1 text-center text-sm text-muted-foreground">Sinh viên ·&nbsp;</p>
