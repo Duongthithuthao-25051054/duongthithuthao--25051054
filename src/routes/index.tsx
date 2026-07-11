@@ -322,16 +322,16 @@ function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#gioi-thieu" className="inline-flex items-center gap-2 rounded-2xl bg-gradient-brand px-5 py-3 text-sm font-semibold text-white shadow-soft transition-all">
-              📖 Giới thiệu
+              Giới thiệu
             </a>
             <a href="#du-an" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
-              📁 Dự án học tập
+              Dự án học tập
             </a>
             <a href="#ky-nang" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
-              ✅ Kỹ năng
+              Kỹ năng
             </a>
             <a href="#tong-ket" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
-              📈 Tổng kết
+              Tổng kết
             </a>
           </div>
         </div>
