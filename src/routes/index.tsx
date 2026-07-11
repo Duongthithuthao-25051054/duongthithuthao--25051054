@@ -1725,8 +1725,8 @@ function Footer() {
         <div className="text-sm">
           <div className="mb-2 font-semibold text-plum">Thông tin</div>
           <ul className="space-y-1.5 text-muted-foreground">
-            <li>Sinh viên: <span className="text-foreground">[Điền tên của bạn]</span></li>
-            <li>Ngành: <span className="text-foreground">[Điền ngành học]</span></li>
+            <li>Sinh viên: <span className="text-foreground">Dương Thị Thu Thảo</span><br />Lớp: KTQT6</li>
+            <li>Khoa: <span className="text-foreground">Kinh Tế Quốc Tế</span></li>
             <li>Môn: Nhập môn Công nghệ số & Ứng dụng AI</li>
             <li>Năm học: 2025 – 2026</li>
           </ul>
@@ -1734,9 +1734,9 @@ function Footer() {
         <div className="text-sm">
           <div className="mb-2 font-semibold text-plum">Liên hệ</div>
           <ul className="space-y-1.5 text-muted-foreground">
-            <li>Email: <span className="text-foreground">[email@example.com]</span></li>
-            <li>GitHub: <span className="text-foreground">github.com/[username]</span></li>
-            <li>LinkedIn: <span className="text-foreground">linkedin.com/in/[username]</span></li>
+            <li>Email: <span className="text-foreground">25051054@vnu.edu.vn</span></li>
+            <li><br /></li>
+            <li><br /></li>
           </ul>
         </div>
       </div>
