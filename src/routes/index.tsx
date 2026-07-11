@@ -1173,47 +1173,6 @@ function Project6() {
 /* ============================================================
  *  EVIDENCE GALLERY
  * ============================================================ */
-function Evidence() {
-  const items = [
-    { t: "Cấu trúc thư mục", d: "Sơ đồ và ảnh chụp cây thư mục môn học.", tag: "Bài 1", href: "#task-1" },
-    { t: "Kết quả tìm kiếm học thuật", d: "Ảnh chụp Google Scholar với operator.", tag: "Bài 2", href: "#task-2" },
-    { t: "So sánh Prompt V1 vs V2", d: "Ảnh chụp phản hồi từ ChatGPT/Gemini.", tag: "Bài 3", href: "#task-3" },
-    { t: "Bảng quản lý công việc nhóm", d: "Ảnh chụp Trello / Notion Kanban.", tag: "Bài 4", href: "#task-4" },
-    { t: "Video sản phẩm AI", d: "Video ngắn ≤ 5 phút giải thích khái niệm.", tag: "Bài 5", href: "#task-5" },
-    { t: "Bộ nguyên tắc AI có trách nhiệm", d: "Poster 7 điều nguyên tắc cá nhân.", tag: "Bài 6", href: "#task-6" },
-  ];
-  return (
-    <Section id="minh-chung" eyebrow="Evidence Gallery" title="Thư viện minh chứng">
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((it) => (
-          <div
-            key={it.t}
-            className="reveal group overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:shadow-soft"
-          >
-            <div className="relative aspect-[4/3] overflow-hidden bg-gradient-hero">
-              <div className="absolute inset-0 grid place-items-center text-5xl opacity-40 transition-transform group-hover:scale-110">
-                🖼️
-              </div>
-              <span className="absolute top-3 left-3 rounded-full bg-white/80 px-3 py-1 text-[10px] font-semibold text-plum backdrop-blur">
-                {it.tag}
-              </span>
-            </div>
-            <div className="p-5">
-              <h4 className="font-display text-lg">{it.t}</h4>
-              <p className="mt-1 text-sm text-muted-foreground">{it.d}</p>
-              <a
-                href={it.href}
-                className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-plum transition-colors hover:text-primary"
-              >
-                Xem chi tiết →
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Section>
-  );
-}
 
 /* ============================================================
  *  SKILLS
