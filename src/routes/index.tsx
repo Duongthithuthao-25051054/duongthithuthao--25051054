@@ -976,11 +976,16 @@ function Project1() {
       gallery={
         <EvidenceGallery
           items={[
-            "Mở File Explorer từ thanh tác vụ (Win + E)",
-            "Truy cập PC này và ổ đĩa D:",
-            "Chuột phải → Mới → Cặp để tạo thư mục",
-            "Tệp GhiChuQuanTrong.txt sau khi đổi tên",
-            "Menu chuột phải: Sao chép (Ctrl+C) tệp tin",
+            { label: "Cấu trúc thư mục Thuchanh_Duongthithuthao trên ổ D:", src: bai1Img29.url },
+            { label: "Menu chuột phải → New → Folder tạo thư mục mới", src: bai1Img30.url },
+            { label: "Thư mục sau khi tạo tệp GhiChuQuanTrong.txt & TaiLieu", src: bai1Img26.url },
+            { label: "Sao chép tệp (Copy — Ctrl+C) từ menu chuột phải", src: bai1Img28.url },
+            { label: "Dán tệp (Paste — Ctrl+V) vào thư mục đích", src: bai1Img27.url },
+            { label: "Cắt tệp (Cut — Ctrl+X) để di chuyển", src: bai1Img24.url },
+            { label: "Kết quả sau khi di chuyển & sao chép hoàn tất", src: bai1Img25.url },
+            { label: "Xóa mềm (Delete) tệp GhiChuQuanTrong.txt", src: bai1Img23.url },
+            { label: "Xác nhận xóa vĩnh viễn thư mục (Shift+Delete)", src: bai1Img22.url },
+            { label: "Khôi phục tệp từ Recycle Bin (Restore all items)", src: bai1Img21.url },
           ]}
           file="GhiChuQuanTrong.docx"
         />
