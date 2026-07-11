@@ -1288,10 +1288,9 @@ function Project3() {
       gallery={
         <EvidenceGallery
           items={[
-            "Phản hồi ChatGPT cho prompt CƠ BẢN",
-            "Phản hồi ChatGPT cho prompt CẢI TIẾN",
-            "Phản hồi ChatGPT cho prompt NÂNG CAO (bảng 4 cột)",
-            "So sánh Gemini · Claude cùng câu hỏi",
+            { label: "Prompt CƠ BẢN: hạn chế khi dùng trong tác vụ học thuật", src: bai3Img39.url },
+            { label: "Prompt CẢI TIẾN: nêu ≥ 2 lý do vì sao cho kết quả tốt hơn", src: bai3Img40.url },
+            { label: "Prompt NÂNG CAO: phân tích 3 loại prompt theo tiêu chí học thuật", src: bai3Img41.url },
           ]}
           file="SoSanh_Prompt_3CapDo.pdf"
         />
