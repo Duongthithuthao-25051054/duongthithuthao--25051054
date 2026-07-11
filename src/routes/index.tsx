@@ -806,17 +806,36 @@ function EvidencePlaceholder({ label, src }: { label: string; src?: string }) {
   );
 }
 
+function getYouTubeEmbedUrl(url: string): string | null {
+  try {
+    const u = new URL(url);
+    if (u.hostname.includes("youtu.be")) {
+      return `https://www.youtube.com/embed/${u.pathname.slice(1)}`;
+    }
+    if (u.hostname.includes("youtube.com")) {
+      const v = u.searchParams.get("v");
+      if (v) return `https://www.youtube.com/embed/${v}`;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 function EvidenceGallery({
   title = "📸 Ảnh minh chứng thực hành",
   items,
   file,
   fileUrl,
+  video,
 }: {
   title?: string;
   items: (string | { label: string; src?: string })[];
   file?: string;
   fileUrl?: string;
+  video?: { url: string; label?: string };
 }) {
+  const embedUrl = video ? getYouTubeEmbedUrl(video.url) : null;
   return (
     <div className="space-y-3">
       <div className="text-xs font-semibold uppercase tracking-wide text-plum">{title}</div>
@@ -826,6 +845,33 @@ function EvidenceGallery({
           return <EvidencePlaceholder key={i} label={obj.label} src={obj.src} />;
         })}
       </div>
+      {video && (
+        <div className="space-y-2 pt-1">
+          {video.label && (
+            <div className="text-xs font-semibold text-plum">🎬 {video.label}</div>
+          )}
+          {embedUrl ? (
+            <div className="relative w-full overflow-hidden rounded-xl border border-primary/30" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                src={embedUrl}
+                title={video.label ?? "Video minh chứng"}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+              />
+            </div>
+          ) : null}
+          <a
+            href={video.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-plum transition hover:bg-primary/20"
+          >
+            ▶️ Xem video trên YouTube
+          </a>
+        </div>
+      )}
       {file && (
         <div className="pt-1">
           {fileUrl ? (
