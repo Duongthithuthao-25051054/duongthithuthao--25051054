@@ -801,10 +801,12 @@ function EvidenceGallery({
   title = "📸 Ảnh minh chứng thực hành",
   items,
   file,
+  fileUrl,
 }: {
   title?: string;
   items: (string | { label: string; src?: string })[];
   file?: string;
+  fileUrl?: string;
 }) {
   return (
     <div className="space-y-3">
@@ -817,9 +819,21 @@ function EvidenceGallery({
       </div>
       {file && (
         <div className="pt-1">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-plum">
-            📄 Tải tệp minh chứng: {file}
-          </span>
+          {fileUrl ? (
+            <a
+              href={fileUrl}
+              download={file}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-plum transition hover:bg-primary/20"
+            >
+              📄 Tải tệp minh chứng: {file}
+            </a>
+          ) : (
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-plum">
+              📄 Tải tệp minh chứng: {file}
+            </span>
+          )}
         </div>
       )}
     </div>
