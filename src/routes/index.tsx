@@ -1109,6 +1109,18 @@ function Project2() {
         "Nguồn peer-reviewed và tổ chức quốc tế (IMF, OECD, NBER) là chuẩn vàng.",
         "Trích dẫn Harvard đúng chuẩn giúp bảo vệ tính học thuật và minh bạch.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Google Scholar với toán tử filetype:pdf",
+            "Trang IMF Blog — bài của K. Georgieva (2024)",
+            "Kết quả tìm kiếm trên OECD.org",
+            "Thư mục Zotero: nhóm ‘AI & Trade’",
+            "Trang trích dẫn Harvard xuất từ Zotero",
+          ]}
+          file="TrichDan_Harvard_AI-Trade.docx"
+        />
+      }
     >
       <ReviewSection
         good={[
