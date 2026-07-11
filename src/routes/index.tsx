@@ -1672,12 +1672,9 @@ function Project5() {
 /* ---------- Dự án 6 ---------- */
 function Project6() {
   const issues = [
-    { i: "Ranh giới hỗ trợ hợp lý ↔ gian lận học thuật", s: "Chỉ dùng AI để gợi ý ý tưởng và chỉnh ngôn ngữ, không để AI làm toàn bộ bài." },
-    { i: "Quyền sở hữu trí tuệ & trích dẫn", s: "Ghi rõ việc dùng AI khi có đóng góp đáng kể; kiểm chứng lại thông tin qua nguồn tin cậy." },
-    { i: "Tác động đến tư duy phản biện", s: "Dùng AI ở bước brainstorm, tự phân tích & kết luận để giữ kỹ năng tư duy." },
-    { i: "Thông tin sai / hallucination", s: "Đối chiếu với ≥ 2 nguồn học thuật (IMF, OECD, Cambridge…) trước khi trích dẫn." },
-    { i: "Quyền riêng tư & dữ liệu cá nhân", s: "Không nhập họ tên, mã sinh viên, tài liệu nội bộ vào công cụ AI." },
-    { i: "Phụ thuộc AI, thui chột kỹ năng viết", s: "Duy trì thói quen tự viết bản nháp đầu tiên trước khi tham khảo AI." },
+    { i: "Ranh giới giữa hỗ trợ hợp lý và gian lận học thuật", s: "Hỗ trợ hợp lý = dùng AI gợi ý ý tưởng, giải thích khái niệm, chỉnh ngôn ngữ. Gian lận = để AI làm toàn bộ bài tập/luận/thi rồi nộp như sản phẩm của mình." },
+    { i: "Quyền sở hữu trí tuệ & trích dẫn", s: "Nội dung do AI tạo ra không nên xem là hoàn toàn của người học. Khi AI đóng góp đáng kể phải ghi rõ; mọi thông tin lấy từ AI đều cần kiểm chứng bằng nguồn đáng tin cậy." },
+    { i: "Tác động đến quá trình học tập & phát triển kỹ năng", s: "Tích cực: tăng hiệu quả, tiết kiệm thời gian, hỗ trợ tìm kiếm & phát triển ý tưởng. Tiêu cực: dễ phụ thuộc, giảm tư duy phản biện, kỹ năng viết và nghiên cứu nếu lạm dụng." },
   ];
   const info4 = [
     { t: "Hiểu rõ công cụ AI", d: "Biết khả năng & giới hạn của mô hình ngôn ngữ, nhận biết rủi ro sai sót." },
