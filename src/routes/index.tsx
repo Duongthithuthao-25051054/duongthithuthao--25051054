@@ -624,7 +624,7 @@ function Overview() {
  * ============================================================ */
 function Projects() {
   return (
-    <Section id="du-an" eyebrow="Projects" title="Sáu dự án học tập">
+    <Section id="du-an" eyebrow="Projects" title="6 Dự Án Học Tập">
       <div className="space-y-16">
         <Project1 />
         <Project2 />
