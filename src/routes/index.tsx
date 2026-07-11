@@ -402,29 +402,66 @@ function About() {
           </div>
         </div>
 
-        {/* Mục tiêu Portfolio */}
-        <div className="reveal space-y-4">
-          <h3 className="font-display text-3xl">Mục tiêu của Portfolio</h3>
-          <p className="text-muted-foreground leading-relaxed">
-            Portfolio này là <strong className="text-foreground">tài liệu tự sự về quá trình học tập</strong> của em — không chỉ
-            trưng bày sản phẩm, mà còn ghi lại cách em suy nghĩ, làm việc, mắc lỗi và tiến bộ khi tiếp cận công nghệ số và AI.
-          </p>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {[
-              { i: "🗂️", t: "Hệ thống hóa", d: "Tập trung toàn bộ bài tập cuối kỳ trong một không gian số duy nhất." },
-              { i: "🤖", t: "Chứng minh năng lực", d: "Thể hiện khả năng sử dụng công cụ số và AI trong học tập." },
-              { i: "🔗", t: "Lưu trữ & chia sẻ", d: "Dễ dàng truy cập, chia sẻ và tiếp tục phát triển trong tương lai." },
-              { i: "🧠", t: "Phản tư bản thân", d: "Rèn luyện kỹ năng phân tích, phản biện và tự đánh giá." },
-            ].map((g) => (
-              <div
-                key={g.t}
-                className="group rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-1 hover:shadow-soft"
-              >
-                <div className="text-2xl">{g.i}</div>
-                <div className="mt-2 font-semibold">{g.t}</div>
-                <p className="mt-1 text-sm text-muted-foreground">{g.d}</p>
+        {/* Cột phải: Mục tiêu học tập + Mục tiêu Portfolio */}
+        <div className="space-y-8">
+          {/* Mục tiêu học tập */}
+          <div className="reveal rounded-3xl border border-rose-200/70 bg-gradient-to-br from-rose-50 via-pink-50 to-fuchsia-50 p-7 shadow-soft">
+            <div className="flex items-center gap-3">
+              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-rose-400 to-fuchsia-500 text-xl text-white shadow-glow">
+                🎯
               </div>
-            ))}
+              <h3 className="font-display text-2xl text-foreground">Mục tiêu học tập</h3>
+            </div>
+            <ul className="mt-5 space-y-3 text-sm leading-relaxed text-foreground/85">
+              {[
+                "Phát triển kỹ năng số để thích ứng với thời đại công nghệ 4.0 và nhu cầu của thị trường lao động.",
+                "Chủ động tiếp cận và ứng dụng AI như ChatGPT để hỗ trợ học tập và nghiên cứu một cách có trách nhiệm.",
+                "Rèn luyện tư duy phản biện, khả năng đánh giá thông tin và giải quyết vấn đề sáng tạo.",
+                "Xây dựng thói quen học tập suốt đời và cập nhật kiến thức công nghệ liên tục.",
+                "Đạt điểm Xuất sắc (8.1–10) trong môn Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo.",
+              ].map((g) => (
+                <li key={g} className="flex items-start gap-3">
+                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white/80 text-rose-500 shadow-sm">
+                    💡
+                  </span>
+                  <span>{g}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Mục tiêu Portfolio */}
+          <div className="reveal rounded-3xl border border-border bg-card p-7 shadow-soft">
+            <div className="flex items-center gap-3">
+              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-violet-400 to-fuchsia-500 text-xl text-white shadow-glow">
+                📖
+              </div>
+              <h3 className="font-display text-2xl">Mục tiêu Portfolio</h3>
+            </div>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Portfolio này được tạo ra với những mục đích sau:
+            </p>
+            <div className="mt-4 space-y-3">
+              {[
+                { i: "🧭", t: "Tổng hợp quá trình học tập", d: "Ghi lại toàn bộ hành trình học tập qua các bài tập và dự án của môn học." },
+                { i: "💾", t: "Lưu trữ sản phẩm học tập", d: "Xây dựng kho lưu trữ các minh chứng và sản phẩm đã hoàn thành." },
+                { i: "📈", t: "Thể hiện sự tiến bộ", d: "Minh họa rõ ràng sự phát triển và tiến bộ qua từng bài học." },
+                { i: "🌸", t: "Dấu ấn cá nhân", d: "Thể hiện phong cách, sự tỉ mỉ và tinh thần trách nhiệm của riêng em." },
+              ].map((g) => (
+                <div
+                  key={g.t}
+                  className="group rounded-2xl border border-border bg-background/60 p-4 transition-all hover:-translate-y-0.5 hover:border-rose-300 hover:shadow-soft"
+                >
+                  <div className="flex items-center gap-2 font-semibold text-foreground">
+                    <span className="text-lg">{g.i}</span>
+                    <span className="bg-gradient-to-r from-rose-500 to-fuchsia-500 bg-clip-text text-transparent">
+                      {g.t}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-sm text-muted-foreground">{g.d}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
