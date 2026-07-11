@@ -56,14 +56,19 @@ jobs:
           BASE_PATH: ${{ env.BASE_PATH }}
 
       - name: Prepare static output
+        shell: bash
         run: |
+          set -e
           if [ ! -d "dist-gh-pages" ]; then
             echo "Không tìm thấy dist-gh-pages sau khi build." >&2
             exit 1
           fi
 
-          if [ ! -f "dist-gh-pages/index.html" ] && [ -f "dist-gh-pages/index.gh-pages.html" ]; then
-            mv dist-gh-pages/index.gh-pages.html dist-gh-pages/index.html
+          ls -la dist-gh-pages
+
+          # Luôn đảm bảo có index.html (Vite output index.gh-pages.html)
+          if [ -f "dist-gh-pages/index.gh-pages.html" ]; then
+            mv -f dist-gh-pages/index.gh-pages.html dist-gh-pages/index.html
           fi
 
           if [ ! -f "dist-gh-pages/index.html" ]; then
