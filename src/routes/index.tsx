@@ -334,7 +334,7 @@ function Hero() {
               <span className="h-3 w-3 rounded-full bg-red-300" />
               <span className="h-3 w-3 rounded-full bg-amber-300" />
               <span className="h-3 w-3 rounded-full bg-emerald-300" />
-              <span className="ml-auto font-mono text-xs text-plum">portfolio.ai</span>
+              <span className="ml-auto font-mono text-xs text-plum">{"\n"}</span>
             </div>
 
             <div className="grid grid-cols-[130px_1fr] gap-4">
