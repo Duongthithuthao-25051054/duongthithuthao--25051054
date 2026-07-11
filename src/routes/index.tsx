@@ -1448,10 +1448,11 @@ function Project4() {
             </table>
           </div>
           <div className="rounded-xl bg-gradient-to-br from-rose-50 to-fuchsia-50 p-4 text-xs">
-            <div className="font-semibold text-plum mb-1">💡 Tự động hoá bổ sung với Zapier</div>
+            <div className="font-semibold text-plum mb-1">🎬 Kịch bản video — trích cấu trúc</div>
             <p>
-              Kết nối <strong>Google Forms → Gmail</strong>: khi có thành viên đăng ký mới, hệ thống tự gửi email chào mừng —
-              hoạt động 24/7, không cần thao tác thủ công.
+              <strong>00:00 – 00:45 · Mở đầu:</strong> TV1 dẫn dắt tại khuôn viên trường, chèn infographic sự phát triển của AI.<br />
+              <strong>00:45 – 02:15 · Ứng dụng thực tế:</strong> TV2 nói về Elsa Speak và các nền tảng tự học có AI định hướng lộ trình — quay màn hình các ứng dụng giáo dục phổ biến.<br />
+              <strong>Demo &amp; Kết luận:</strong> TV4 thao tác prompt trên máy tính; TV5 phân tích lợi ích – thách thức tại Việt Nam; TV1 chốt vấn đề.
             </p>
           </div>
         </div>
