@@ -437,7 +437,7 @@ function About() {
 
           <dl className="mt-6 space-y-3 text-sm">
             <Row k="Trường&nbsp;" v="Trường Đại Học Kinh Tế-ĐHQGHN" />
-            <Row k="Lớp" v="QH-2025-E KTQT CLC 5" />
+            <Row k="Lớp" v="QH2025-E  KTQT 6" />
             <Row k="MSV" v="25051054" />
             <Row k="Môn học" v="Nhập môn Công nghệ số & Ứng dụng AI" />
             <Row k="Năm học" v="2025 – 2026" />
@@ -1095,10 +1095,7 @@ function Project1() {
             <div className="pl-4">📂 TaiLieu\</div>
             <div className="pl-8">📄 GhiChuQuanTrong.txt <span className="text-muted-foreground">(bản sao chép)</span></div>
           </div>
-          <div className="rounded-xl border border-border p-3 text-xs">
-            <span className="font-semibold text-plum">Nhật ký Recycle Bin: </span>
-            GhiChuQuanTrong.txt — xóa 3/7/2026 · vị trí gốc D:\Thuchanh_Duongthithuthao · đã <em>Restore</em>.
-          </div>
+          {"\n"}
         </div>
       }
       analysis={
