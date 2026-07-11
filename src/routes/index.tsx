@@ -1178,32 +1178,99 @@ function Project6() {
  *  SKILLS
  * ============================================================ */
 function Skills() {
+  const icons = ["📁", "🔍", "🛡️", "💬", "👥", "💡", "🤖", "🎯"];
+  const left = SKILLS.slice(0, 4).map((s, i) => ({ ...s, icon: icons[i], no: i + 1 }));
+  const right = SKILLS.slice(4).map((s, i) => ({ ...s, icon: icons[i + 4], no: i + 5 }));
+
+  const Pod = ({
+    s,
+    side,
+  }: {
+    s: { name: string; level: number; use: string; icon: string; no: number };
+    side: "left" | "right";
+  }) => (
+    <div
+      className={`reveal group flex items-center gap-4 rounded-full border border-violet-200/70 bg-white/80 p-3 pr-5 shadow-[0_8px_30px_-12px_rgba(139,92,246,0.35)] backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_-12px_rgba(139,92,246,0.55)] ${
+        side === "right" ? "md:flex-row-reverse md:pl-5 md:pr-3" : ""
+      }`}
+    >
+      <div className="grid h-16 w-16 shrink-0 place-items-center rounded-full border-2 border-violet-300 bg-gradient-to-br from-violet-50 to-white text-2xl text-violet-700 shadow-inner">
+        {s.icon}
+      </div>
+      <div className={`min-w-0 flex-1 ${side === "right" ? "md:text-right" : ""}`}>
+        <div
+          className={`flex items-baseline gap-2 ${side === "right" ? "md:justify-end" : ""}`}
+        >
+          <span className="font-display text-2xl font-black text-violet-300">
+            {String(s.no).padStart(2, "0")}
+          </span>
+          <h4 className="font-display text-base font-bold leading-tight text-plum">
+            {s.name}
+          </h4>
+          <span className="ml-auto text-sm font-bold text-violet-600 md:ml-2">
+            {s.level}%
+          </span>
+        </div>
+        <div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-violet-100">
+          <div
+            className="h-full rounded-full bg-gradient-to-r from-violet-400 to-fuchsia-400"
+            style={{ width: `${s.level}%` }}
+          />
+        </div>
+        <p className="mt-1.5 text-xs text-muted-foreground">
+          <span className="font-semibold text-plum">Ứng dụng: </span>
+          {s.use}
+        </p>
+      </div>
+    </div>
+  );
+
   return (
     <Section id="ky-nang" eyebrow="Skills Matrix" title="Bảng tổng hợp kỹ năng đạt được">
-      <div className="grid gap-5 md:grid-cols-2">
-        {SKILLS.map((s) => (
-          <div
-            key={s.name}
-            className="reveal rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:shadow-soft"
-          >
-            <div className="flex items-center justify-between gap-4">
-              <h4 className="font-display text-lg">{s.name}</h4>
-              <span className="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-plum">
-                {s.level}%
-              </span>
-            </div>
-            <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-muted">
-              <div
-                className="h-full rounded-full bg-gradient-brand transition-all"
-                style={{ width: `${s.level}%` }}
-              />
-            </div>
-            <p className="mt-3 text-sm text-muted-foreground">
-              <span className="font-medium text-foreground">Ứng dụng: </span>
-              {s.use}
-            </p>
+      <p className="reveal -mt-4 mb-10 text-center text-muted-foreground">
+        Tổng kết năng lực theo các lĩnh vực trọng tâm
+      </p>
+
+      <div className="relative">
+        <div className="grid items-center gap-6 lg:grid-cols-[1fr_auto_1fr]">
+          <div className="flex flex-col gap-6">
+            {left.map((s) => (
+              <Pod key={s.name} s={s} side="left" />
+            ))}
           </div>
-        ))}
+
+          <div className="reveal relative mx-auto my-6 grid place-items-center lg:my-0">
+            <div className="absolute inset-0 -m-8 rounded-full border border-dashed border-violet-300/60" />
+            <div className="absolute inset-0 -m-16 rounded-full border border-dashed border-violet-200/50" />
+            <div className="relative grid h-56 w-56 place-items-center rounded-full bg-gradient-to-br from-violet-200 via-fuchsia-100 to-violet-100 shadow-[0_20px_60px_-20px_rgba(139,92,246,0.6)]">
+              <div className="grid h-44 w-44 place-items-center rounded-full bg-white text-center">
+                <div>
+                  <div className="text-4xl">📈</div>
+                  <div className="mt-2 font-display text-sm font-black tracking-wider text-plum">
+                    NĂNG LỰC
+                    <br />
+                    TOÀN DIỆN
+                  </div>
+                  <div className="mt-1 text-violet-400">• • •</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-6">
+            {right.map((s) => (
+              <Pod key={s.name} s={s} side="right" />
+            ))}
+          </div>
+        </div>
+
+        <div className="reveal mt-10 flex flex-wrap items-center justify-center gap-3 rounded-full border border-violet-200 bg-white/70 px-6 py-4 text-sm font-semibold text-plum backdrop-blur">
+          <span className="inline-flex items-center gap-2">🎯 Không ngừng học hỏi</span>
+          <span className="text-violet-300">|</span>
+          <span className="inline-flex items-center gap-2">🧠 Ứng dụng thông minh</span>
+          <span className="text-violet-300">|</span>
+          <span className="inline-flex items-center gap-2">🌱 Phát triển bền vững</span>
+        </div>
       </div>
     </Section>
   );
