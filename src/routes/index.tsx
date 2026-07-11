@@ -124,13 +124,13 @@ const SKILLS = [
 ];
 
 const PRINCIPLES = [
-  "Không dùng AI để gian lận hoặc làm thay toàn bộ bài tập.",
-  "Luôn kiểm chứng thông tin do AI cung cấp qua ít nhất hai nguồn khác.",
-  "Ghi chú minh bạch khi có sử dụng AI trong quá trình học tập.",
-  "Không nhập dữ liệu cá nhân, thông tin nhạy cảm vào công cụ AI.",
-  "Không sao chép nguyên văn nội dung AI khi chưa đọc, hiểu và chỉnh sửa.",
-  "Sử dụng AI để hỗ trợ tư duy — không thay thế tư duy của bản thân.",
-  "Chịu trách nhiệm cuối cùng với mọi sản phẩm học tập của mình.",
+  "Chỉ sử dụng AI như công cụ hỗ trợ, không thay thế tư duy cá nhân.",
+  "Luôn kiểm chứng thông tin AI cung cấp bằng nguồn đáng tin cậy.",
+  "Không sử dụng AI trong các bài kiểm tra hoặc hoạt động bị cấm.",
+  "Minh bạch về việc sử dụng AI khi AI có đóng góp đáng kể vào bài làm.",
+  "Không sao chép nguyên văn nội dung AI tạo ra.",
+  "Chịu trách nhiệm hoàn toàn về sản phẩm học tập cuối cùng.",
+  "Sử dụng AI để nâng cao kỹ năng học tập thay vì phụ thuộc vào nó.",
 ];
 
 /* ============================================================
