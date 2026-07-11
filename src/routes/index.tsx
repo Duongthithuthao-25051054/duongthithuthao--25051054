@@ -614,7 +614,7 @@ function Overview() {
             quản lý dữ liệu, tìm kiếm và đánh giá thông tin, cho đến khai thác AI,
             hợp tác trực tuyến và sử dụng AI có trách nhiệm.
           </p>
-          <div className="mt-8 hidden lg:block text-6xl">💻📋</div>
+          <div className="mt-8 hidden lg:block text-6xl">{"\n"}</div>
         </aside>
 
         {/* Right timeline */}
