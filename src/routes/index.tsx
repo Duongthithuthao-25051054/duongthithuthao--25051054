@@ -90,7 +90,7 @@ const TASKS = [
     icon: "🤝",
     title: "Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm",
     short: "Bảng Kanban giả định trên Trello/Notion với phân công, hạn chót, trạng thái và ghi chú phản hồi.",
-    progress: 95,
+    progress: 100,
     skills: ["Trello/Notion", "Teamwork", "Kanban"],
   },
   {
