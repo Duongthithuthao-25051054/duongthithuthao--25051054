@@ -1231,6 +1231,17 @@ function Project3() {
         "Kỹ thuật Chain-of-Thought giúp AI đi qua từng bước tư duy, hạn chế bịa thông tin.",
         "Đầu tư thời gian viết prompt tốt là đầu tư vào chất lượng đầu ra học tập.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Phản hồi ChatGPT cho prompt CƠ BẢN",
+            "Phản hồi ChatGPT cho prompt CẢI TIẾN",
+            "Phản hồi ChatGPT cho prompt NÂNG CAO (bảng 4 cột)",
+            "So sánh Gemini · Claude cùng câu hỏi",
+          ]}
+          file="SoSanh_Prompt_3CapDo.pdf"
+        />
+      }
     >
       <ReviewSection
         good={[
