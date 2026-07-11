@@ -1293,7 +1293,8 @@ function Project3() {
             { label: "Prompt CẢI TIẾN: nêu ≥ 2 lý do vì sao cho kết quả tốt hơn", src: bai3Img40.url },
             { label: "Prompt NÂNG CAO: phân tích 3 loại prompt theo tiêu chí học thuật", src: bai3Img41.url },
           ]}
-          file="SoSanh_Prompt_3CapDo.pdf"
+          file="SoSanh_Prompt_3CapDo.docx"
+          fileUrl={bai3Doc.url}
         />
       }
     >
