@@ -1017,6 +1017,7 @@ function Project1() {
             { label: "Khôi phục tệp từ Recycle Bin (Restore all items)", src: bai1Img21.url },
           ]}
           file="GhiChuQuanTrong.docx"
+          fileUrl={bai1Doc.url}
         />
       }
     >
