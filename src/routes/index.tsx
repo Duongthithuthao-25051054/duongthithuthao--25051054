@@ -29,6 +29,7 @@ import bai2Img7 from "@/assets/bai2/bai2-7.png.asset.json";
 import bai2Img8 from "@/assets/bai2/bai2-8.png.asset.json";
 import bai2Img9 from "@/assets/bai2/bai2-9.png.asset.json";
 import bai2Img10 from "@/assets/bai2/bai2-10.png.asset.json";
+import bai2Doc from "@/assets/bai2/BaiTap2_AI_KinhTeQuocTe.pdf.asset.json";
 import bai3Img39 from "@/assets/bai3/bai3-39.png.asset.json";
 import bai3Img40 from "@/assets/bai3/bai3-40.png.asset.json";
 import bai3Img41 from "@/assets/bai3/bai3-41.png.asset.json";
@@ -1295,7 +1296,8 @@ function Project2() {
             { label: "09 · NBER — The Economics of Transformative AI (Korinek, 2024)", src: bai2Img10.url },
             { label: "10 · AEA — Generative AI for Economic Research (Korinek, 2023)", src: bai2Img1.url },
           ]}
-          file="TrichDan_Harvard_AI-Trade.docx"
+          file="BaiTap2_AI_KinhTeQuocTe.pdf"
+          fileUrl={bai2Doc.url}
         />
       }
     >
