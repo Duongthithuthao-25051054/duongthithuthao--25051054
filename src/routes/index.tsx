@@ -1,6 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import studentAvatar from "@/assets/student-avatar.jpg.asset.json";
+import bai1Img21 from "@/assets/bai1/bai1-21.png.asset.json";
+import bai1Img22 from "@/assets/bai1/bai1-22.png.asset.json";
+import bai1Img23 from "@/assets/bai1/bai1-23.png.asset.json";
+import bai1Img24 from "@/assets/bai1/bai1-24.png.asset.json";
+import bai1Img25 from "@/assets/bai1/bai1-25.png.asset.json";
+import bai1Img26 from "@/assets/bai1/bai1-26.png.asset.json";
+import bai1Img27 from "@/assets/bai1/bai1-27.png.asset.json";
+import bai1Img28 from "@/assets/bai1/bai1-28.png.asset.json";
+import bai1Img29 from "@/assets/bai1/bai1-29.png.asset.json";
+import bai1Img30 from "@/assets/bai1/bai1-30.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
