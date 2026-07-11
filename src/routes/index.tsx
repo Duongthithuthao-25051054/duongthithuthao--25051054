@@ -11,6 +11,13 @@ import bai1Img27 from "@/assets/bai1/bai1-27.png.asset.json";
 import bai1Img28 from "@/assets/bai1/bai1-28.png.asset.json";
 import bai1Img29 from "@/assets/bai1/bai1-29.png.asset.json";
 import bai1Img30 from "@/assets/bai1/bai1-30.png.asset.json";
+import bai1Img31 from "@/assets/bai1/bai1-31.png.asset.json";
+import bai1Img32 from "@/assets/bai1/bai1-32.png.asset.json";
+import bai1Img33 from "@/assets/bai1/bai1-33.png.asset.json";
+import bai1Img34 from "@/assets/bai1/bai1-34.png.asset.json";
+import bai1Img35 from "@/assets/bai1/bai1-35.png.asset.json";
+import bai1Img36 from "@/assets/bai1/bai1-36.png.asset.json";
+import bai1Img37 from "@/assets/bai1/bai1-37.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
@@ -976,6 +983,13 @@ function Project1() {
       gallery={
         <EvidenceGallery
           items={[
+            { label: "Mở File Explorer từ thanh tác vụ (Win + E)", src: bai1Img31.url },
+            { label: "Truy cập This PC → ổ đĩa D:", src: bai1Img32.url },
+            { label: "Ổ D: trước khi tạo thư mục Thuchanh_Duongthithuthao", src: bai1Img33.url },
+            { label: "Thư mục Thuchanh_Duongthithuthao vừa tạo (còn trống)", src: bai1Img34.url },
+            { label: "Chuột phải → New → Text Document tạo tệp .txt", src: bai1Img35.url },
+            { label: "Menu chuột phải trên tệp: Rename / Copy / Delete…", src: bai1Img36.url },
+            { label: "Chuột phải → New → Folder tạo thư mục con TaiLieu", src: bai1Img37.url },
             { label: "Cấu trúc thư mục Thuchanh_Duongthithuthao trên ổ D:", src: bai1Img29.url },
             { label: "Menu chuột phải → New → Folder tạo thư mục mới", src: bai1Img30.url },
             { label: "Thư mục sau khi tạo tệp GhiChuQuanTrong.txt & TaiLieu", src: bai1Img26.url },
