@@ -1600,12 +1600,10 @@ function Project5() {
       gallery={
         <EvidenceGallery
           items={[
-            "Đầu ra của ChatGPT cho cùng câu hỏi",
-            "Đầu ra của Google Gemini",
-            "Đầu ra của Claude",
-            "Ảnh minh hoạ từ DALL·E",
-            "Ảnh minh hoạ từ Yeri AI",
-            "Poster hoàn thiện trong Canva AI",
+            { label: "ChatGPT — dàn ý bài thuyết trình 'Tồn tại xã hội trong triết học'", src: bai5Img49.url },
+            { label: "Yeri AI — sinh ảnh minh hoạ chủ đề 'Tồn tại xã hội trong môn triết học'", src: bai5Img50.url },
+            { label: "Phân tích ý định & kế hoạch thực hiện 4 ảnh minh hoạ (Intent + Task Planning)", src: bai5Img51.url },
+            { label: "Gemini — tổng hợp 'Tồn tại xã hội & ý thức xã hội' trong triết học Mác – Lênin", src: bai5Img52.url },
           ]}
           file="SoSanh_AI_VanBan-HinhAnh.pdf"
         />
