@@ -1765,7 +1765,8 @@ function Project6() {
             { label: "5 ví dụ thực tế về việc sinh viên sử dụng AI trong học tập", src: bai6Img56.url },
             { label: "Dàn ý bài thuyết trình 10 phút 'Vai trò của AI trong giáo dục đại học'", src: bai6Img57.url },
           ]}
-          file="ThuyetTrinh_AI_GDDH.pptx"
+          file="BaoCao_AI_GDDH.docx"
+          fileUrl={bai6Doc.url}
         />
       }
     >
