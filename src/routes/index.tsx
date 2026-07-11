@@ -421,42 +421,68 @@ function Hero() {
 function About() {
   return (
     <Section id="gioi-thieu" eyebrow="About me" title="Giới thiệu bản thân">
-      <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
-        {/* Card cá nhân */}
-        <div className="reveal self-start rounded-3xl border border-border bg-card p-8 shadow-soft">
-          <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full bg-gradient-brand shadow-glow ring-4 ring-white/60">
-            <img
-              src={studentAvatar.url}
-              alt="Ảnh đại diện sinh viên Dương Thị Thu Thảo"
-              className="h-full w-full object-cover"
-              loading="lazy"
-            />
+      <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-start">
+        {/* Cột trái: Card cá nhân + Sở thích cá nhân */}
+        <div className="space-y-8">
+          {/* Card cá nhân */}
+          <div className="reveal rounded-3xl border border-border bg-card p-8 shadow-soft">
+            <div className="relative mx-auto h-32 w-32 overflow-hidden rounded-full bg-gradient-brand shadow-glow ring-4 ring-white/60">
+              <img
+                src={studentAvatar.url}
+                alt="Ảnh đại diện sinh viên Dương Thị Thu Thảo"
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <h3 className="mt-6 text-center font-display text-2xl">Dương Thị Thu Thảo</h3>
+            <p className="mt-1 text-center text-sm text-muted-foreground">Sinh viên · Kinh tế Quốc tế</p>
+
+            <dl className="mt-6 space-y-3 text-sm">
+              <Row k="Trường&nbsp;" v="Trường Đại Học Kinh Tế-ĐHQGHN" />
+              <Row k="Lớp" v="QH2025-E  KTQT 6" />
+              <Row k="MSV" v="25051054" />
+              <Row k="Môn học" v="Nhập môn Công nghệ số & Ứng dụng AI" />
+              <Row k="Năm học" v="2025 – 2026" />
+              <Row k="Email" v="25051054@vnu.edu.vn" />
+            </dl>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["Học công nghệ số", "Khám phá AI", "Sáng tạo nội dung", "Dữ liệu", "Làm việc nhóm"].map((s) => (
+                <span
+                  key={s}
+                  className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
           </div>
-          <h3 className="mt-6 text-center font-display text-2xl">Dương Thị Thu Thảo</h3>
-          <p className="mt-1 text-center text-sm text-muted-foreground">Sinh viên · Kinh tế Quốc tế</p>
 
-          <dl className="mt-6 space-y-3 text-sm">
-            <Row k="Trường&nbsp;" v="Trường Đại Học Kinh Tế-ĐHQGHN" />
-            <Row k="Lớp" v="QH2025-E  KTQT 6" />
-            <Row k="MSV" v="25051054" />
-            <Row k="Môn học" v="Nhập môn Công nghệ số & Ứng dụng AI" />
-            <Row k="Năm học" v="2025 – 2026" />
-            <Row k="Email" v="25051054@vnu.edu.vn" />
-          </dl>
-
-          <div className="mt-6 flex flex-wrap gap-2">
-            {["Học công nghệ số", "Khám phá AI", "Sáng tạo nội dung", "Dữ liệu", "Làm việc nhóm"].map((s) => (
-              <span
-                key={s}
-                className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
-              >
-                {s}
-              </span>
-            ))}
+          {/* Sở thích cá nhân */}
+          <div className="reveal rounded-3xl border border-amber-200/70 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-7 shadow-soft">
+            <h3 className="font-display text-2xl text-foreground">Sở thích cá nhân</h3>
+            <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
+              {[
+                { t: "Đọc sách", d: "Sách kỹ năng & tiểu thuyết nhẹ nhàng." },
+                { t: "Nghe nhạc", d: "Acoustic, ballad và lo-fi khi học." },
+                { t: "Du lịch", d: "Khám phá văn hoá và ẩm thực mới." },
+                { t: "Thiết kế", d: "Chỉnh sửa ảnh, làm slide với Canva." },
+                { t: "Công nghệ", d: "Tìm hiểu công cụ AI và xu hướng số." },
+                { t: "Nấu ăn & làm bánh", d: "Thư giãn sau giờ học căng thẳng." },
+              ].map((h) => (
+                <div
+                  key={h.t}
+                  className="rounded-2xl border border-white/70 bg-white/70 p-3 backdrop-blur transition"
+                >
+                  <div className="font-semibold text-foreground">{h.t}</div>
+                  <p className="mt-1 text-xs text-muted-foreground">{h.d}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* Cột phải: Mục tiêu học tập + Mục tiêu Portfolio */}
+        {/* Cột phải: Mục tiêu học tập + Mục tiêu Portfolio + Mục tiêu cá nhân */}
         <div className="space-y-8">
           {/* Mục tiêu học tập */}
           <div className="reveal rounded-3xl border border-rose-200/70 bg-gradient-to-br from-rose-50 via-pink-50 to-fuchsia-50 p-7 shadow-soft">
@@ -505,51 +531,24 @@ function About() {
             </div>
           </div>
 
-        </div>
-      </div>
-
-      {/* Sở thích cá nhân + Mục tiêu cá nhân — full width dưới phần thông tin sinh viên */}
-      <div className="mt-8 grid gap-8 md:grid-cols-2">
-        {/* Sở thích cá nhân */}
-        <div className="reveal rounded-3xl border border-amber-200/70 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50 p-7 shadow-soft">
-          <h3 className="font-display text-2xl text-foreground">Sở thích cá nhân</h3>
-          <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
-            {[
-              { t: "Đọc sách", d: "Sách kỹ năng & tiểu thuyết nhẹ nhàng." },
-              { t: "Nghe nhạc", d: "Acoustic, ballad và lo-fi khi học." },
-              { t: "Du lịch", d: "Khám phá văn hoá và ẩm thực mới." },
-              { t: "Thiết kế", d: "Chỉnh sửa ảnh, làm slide với Canva." },
-              { t: "Công nghệ", d: "Tìm hiểu công cụ AI và xu hướng số." },
-              { t: "Nấu ăn & làm bánh", d: "Thư giãn sau giờ học căng thẳng." },
-            ].map((h) => (
-              <div
-                key={h.t}
-                className="rounded-2xl border border-white/70 bg-white/70 p-3 backdrop-blur transition"
-              >
-                <div className="font-semibold text-foreground">{h.t}</div>
-                <p className="mt-1 text-xs text-muted-foreground">{h.d}</p>
-              </div>
-            ))}
+          {/* Mục tiêu cá nhân */}
+          <div className="reveal rounded-3xl border border-sky-200/70 bg-gradient-to-br from-sky-50 via-indigo-50 to-violet-50 p-7 shadow-soft">
+            <h3 className="font-display text-2xl text-foreground">Mục tiêu cá nhân</h3>
+            <ul className="mt-5 space-y-3 text-sm leading-relaxed text-foreground/85">
+              {[
+                "Trở thành phiên bản tốt hơn mỗi ngày: kỷ luật, chủ động và tích cực trong học tập lẫn cuộc sống.",
+                "Hoàn thiện kỹ năng ngoại ngữ (tiếng Anh) để tự tin giao tiếp và làm việc trong môi trường quốc tế.",
+                "Xây dựng mạng lưới bạn bè, thầy cô và mở rộng cơ hội trải nghiệm, thực tập trong lĩnh vực Kinh tế quốc tế.",
+                "Cân bằng giữa học tập – gia đình – sở thích cá nhân để giữ tinh thần luôn tích cực.",
+                "Định hướng nghề nghiệp rõ ràng, hướng tới công việc kết hợp giữa kinh tế và công nghệ số.",
+              ].map((g) => (
+                <li key={g} className="flex items-start gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" />
+                  <span>{g}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
-
-        {/* Mục tiêu cá nhân */}
-        <div className="reveal rounded-3xl border border-sky-200/70 bg-gradient-to-br from-sky-50 via-indigo-50 to-violet-50 p-7 shadow-soft">
-          <h3 className="font-display text-2xl text-foreground">Mục tiêu cá nhân</h3>
-          <ul className="mt-5 space-y-3 text-sm leading-relaxed text-foreground/85">
-            {[
-              "Trở thành phiên bản tốt hơn mỗi ngày: kỷ luật, chủ động và tích cực trong học tập lẫn cuộc sống.",
-              "Hoàn thiện kỹ năng ngoại ngữ (tiếng Anh) để tự tin giao tiếp và làm việc trong môi trường quốc tế.",
-              "Xây dựng mạng lưới bạn bè, thầy cô và mở rộng cơ hội trải nghiệm, thực tập trong lĩnh vực Kinh tế quốc tế.",
-              "Cân bằng giữa học tập – gia đình – sở thích cá nhân để giữ tinh thần luôn tích cực.",
-              "Định hướng nghề nghiệp rõ ràng, hướng tới công việc kết hợp giữa kinh tế và công nghệ số.",
-            ].map((g) => (
-              <li key={g} className="flex items-start gap-2">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-sky-400" />
-                <span>{g}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </Section>
