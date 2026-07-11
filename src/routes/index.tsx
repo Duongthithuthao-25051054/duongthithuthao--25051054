@@ -99,7 +99,7 @@ const TASKS = [
     icon: "🎬",
     title: "Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung",
     short: "Quy trình 6 bước sản xuất một video giải thích ngắn kết hợp AI viết kịch bản, tạo ảnh và giọng đọc.",
-    progress: 90,
+    progress: 100,
     skills: ["Canva", "CapCut", "DALL·E", "AI voice"],
   },
   {
