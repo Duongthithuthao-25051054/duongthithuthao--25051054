@@ -460,12 +460,7 @@ function About() {
         <div className="space-y-8">
           {/* Mục tiêu học tập */}
           <div className="reveal rounded-3xl border border-rose-200/70 bg-gradient-to-br from-rose-50 via-pink-50 to-fuchsia-50 p-7 shadow-soft">
-            <div className="flex items-center gap-3">
-              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-rose-400 to-fuchsia-500 text-xl text-white shadow-glow">
-                🎯
-              </div>
-              <h3 className="font-display text-2xl text-foreground">Mục tiêu học tập</h3>
-            </div>
+            <h3 className="font-display text-2xl text-foreground">Mục tiêu học tập</h3>
             <ul className="mt-5 space-y-3 text-sm leading-relaxed text-foreground/85">
               {[
                 "Phát triển kỹ năng số để thích ứng với thời đại công nghệ 4.0 và nhu cầu của thị trường lao động.",
@@ -484,12 +479,7 @@ function About() {
 
           {/* Mục tiêu Portfolio */}
           <div className="reveal rounded-3xl border border-border bg-card p-7 shadow-soft">
-            <div className="flex items-center gap-3">
-              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-violet-400 to-fuchsia-500 text-xl text-white shadow-glow">
-                📖
-              </div>
-              <h3 className="font-display text-2xl">Mục tiêu Portfolio</h3>
-            </div>
+            <h3 className="font-display text-2xl">Mục tiêu Portfolio</h3>
             <p className="mt-3 text-sm text-muted-foreground">
               Portfolio này được tạo ra với những mục đích sau:
             </p>
