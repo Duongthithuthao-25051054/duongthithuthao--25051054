@@ -168,9 +168,9 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
-    font-size: 1.075rem;
-    font-weight: 500;
-    line-height: 1.7;
+    font-size: 1.185rem;
+    font-weight: 600;
+    line-height: 1.75;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
