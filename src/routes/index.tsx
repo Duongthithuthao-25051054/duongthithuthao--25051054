@@ -1813,24 +1813,23 @@ function Project6() {
  *  SKILLS
  * ============================================================ */
 function Skills() {
-  const icons = ["📁", "🔍", "🛡️", "💬", "👥", "💡", "🤖", "🎯"];
-  const left = SKILLS.slice(0, 4).map((s, i) => ({ ...s, icon: icons[i], no: i + 1 }));
-  const right = SKILLS.slice(4).map((s, i) => ({ ...s, icon: icons[i + 4], no: i + 5 }));
+  const left = SKILLS.slice(0, 4).map((s, i) => ({ ...s, no: i + 1 }));
+  const right = SKILLS.slice(4).map((s, i) => ({ ...s, no: i + 5 }));
 
   const Pod = ({
     s,
     side,
   }: {
-    s: { name: string; level: number; use: string; icon: string; no: number };
+    s: { name: string; level: number; use: string; no: number };
     side: "left" | "right";
   }) => (
     <div
-      className={`group flex items-center gap-4 rounded-full border border-violet-200/70 bg-white/80 p-3 pr-5 shadow-[0_8px_30px_-12px_rgba(139,92,246,0.35)] backdrop-blur transition-all hover:shadow-[0_12px_40px_-12px_rgba(139,92,246,0.55)] ${
-        side === "right" ? "md:flex-row-reverse md:pl-5 md:pr-3" : ""
+      className={`group flex items-center gap-4 rounded-2xl border border-violet-200/70 bg-white/80 p-4 backdrop-blur transition-all ${
+        side === "right" ? "md:flex-row-reverse" : ""
       }`}
     >
-      <div className="grid h-16 w-16 shrink-0 place-items-center rounded-full border-2 border-violet-300 bg-gradient-to-br from-violet-50 to-white text-2xl text-violet-700 shadow-inner">
-        {s.icon}
+      <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-violet-200 bg-gradient-to-br from-violet-50 to-white font-display text-xl font-black text-violet-500">
+        {String(s.no).padStart(2, "0")}
       </div>
       <div className={`min-w-0 flex-1 ${side === "right" ? "md:text-right" : ""}`}>
         <div
