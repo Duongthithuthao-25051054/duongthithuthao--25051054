@@ -1492,46 +1492,7 @@ function Project4() {
         </ol>
       }
       tools={["Asana / Trello", "Google Docs", "Google Drive", "Google Meet"]}
-      evidence={
-        <div className="space-y-3">
-          <div className="overflow-hidden rounded-xl border border-border">
-            <table className="w-full text-xs">
-              <thead className="bg-secondary">
-                <tr>
-                  <th className="px-2 py-2 text-left">Thành viên</th>
-                  <th className="px-2 py-2 text-left">Nhiệm vụ</th>
-                  <th className="px-2 py-2 text-left">Hạn</th>
-                  <th className="px-2 py-2 text-left">Trạng thái</th>
-                  <th className="px-2 py-2 text-left">Ghi chú</th>
-                </tr>
-              </thead>
-              <tbody>
-                {board.map((r) => (
-                  <tr key={r.m} className="border-t border-border">
-                    <td className="px-2 py-2 font-medium">{r.m}</td>
-                    <td className="px-2 py-2">{r.task}</td>
-                    <td className="px-2 py-2 text-muted-foreground">{r.due}</td>
-                    <td className="px-2 py-2">
-                      <span className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${stateColor[r.state]}`}>
-                        {r.state}
-                      </span>
-                    </td>
-                    <td className="px-2 py-2 text-muted-foreground">{r.note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <div className="rounded-xl bg-gradient-to-br from-rose-50 to-fuchsia-50 p-4 text-xs">
-            <div className="font-semibold text-plum mb-1">🎬 Kịch bản video — trích cấu trúc</div>
-            <p>
-              <strong>00:00 – 00:45 · Mở đầu:</strong> TV1 dẫn dắt tại khuôn viên trường, chèn infographic sự phát triển của AI.<br />
-              <strong>00:45 – 02:15 · Ứng dụng thực tế:</strong> TV2 nói về Elsa Speak và các nền tảng tự học có AI định hướng lộ trình — quay màn hình các ứng dụng giáo dục phổ biến.<br />
-              <strong>Demo &amp; Kết luận:</strong> TV4 thao tác prompt trên máy tính; TV5 phân tích lợi ích – thách thức tại Việt Nam; TV1 chốt vấn đề.
-            </p>
-          </div>
-        </div>
-      }
+      evidence={null}
       analysis={
         <div className="space-y-2">
           {challenges.map((c) => (
