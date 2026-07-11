@@ -586,22 +586,15 @@ function Overview() {
       <div className="reveal mt-10 grid gap-10 lg:grid-cols-[280px_1fr]">
         {/* Left title panel */}
         <aside className="lg:sticky lg:top-24 lg:self-start">
-          <div className="text-4xl font-display font-bold tracking-tight text-foreground">
-            TỔNG QUAN
-          </div>
-          <div className="mt-1 text-4xl font-display font-black text-gradient-brand">
-            6 NHIỆM VỤ
-          </div>
-          <div className="mt-3 flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <span className="h-1 w-8 rounded-full bg-pink-400" />
             <span className="h-1 w-3 rounded-full bg-violet-400" />
           </div>
-          <p className="mt-5 text-sm leading-relaxed text-muted-foreground max-w-xs">
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground max-w-xs">
             6 nhiệm vụ được tổ chức theo trình tự phát triển kỹ năng: từ nền tảng
             quản lý dữ liệu, tìm kiếm và đánh giá thông tin, cho đến khai thác AI,
             hợp tác trực tuyến và sử dụng AI có trách nhiệm.
           </p>
-          
         </aside>
 
         {/* Right timeline */}
