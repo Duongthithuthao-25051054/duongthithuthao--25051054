@@ -1382,11 +1382,11 @@ function Project3() {
 /* ---------- Dự án 4 ---------- */
 function Project4() {
   const board = [
-    { m: "Thành viên 1", task: "Dẫn dắt · Giới thiệu & Kết luận video", due: "15/11", state: "Hoàn thành", note: "Đã duyệt kịch bản mở đầu" },
-    { m: "Thành viên 2", task: "Trình bày AI cá nhân hóa học tập", due: "16/11", state: "Đang làm", note: "Đang thu voice-over" },
-    { m: "Thành viên 3", task: "Trình bày AI hỗ trợ giáo viên chấm bài", due: "16/11", state: "Đang làm", note: "Chuẩn bị demo slide" },
-    { m: "Thành viên 4", task: "Demo prompt trên máy tính (B-roll)", due: "17/11", state: "Cần chỉnh sửa", note: "Cần quay lại phần thao tác" },
-    { m: "Thành viên 5", task: "Phân tích lợi ích & thách thức tại VN", due: "18/11", state: "Chưa làm", note: "Chờ nhận số liệu từ TV2" },
+    { m: "Thành viên 1 (Dẫn dắt)", task: "Giới thiệu & Kết luận video", due: "15/11", state: "Hoàn thành", note: "Đã duyệt kịch bản mở đầu (00:00 – 00:45)" },
+    { m: "Thành viên 2 (Chuyên gia 1)", task: "AI cá nhân hoá học tập (Elsa Speak, nền tảng tự học)", due: "16/11", state: "Đang làm", note: "Đang thu voice-over phân cảnh 2" },
+    { m: "Thành viên 3 (Chuyên gia 2)", task: "AI hỗ trợ giáo viên chấm bài / soạn giáo án", due: "16/11", state: "Đang làm", note: "Chuẩn bị demo slide" },
+    { m: "Thành viên 4 (Người thực hành)", task: "Demo công cụ & prompt trên máy tính (B-roll)", due: "17/11", state: "Cần chỉnh sửa", note: "Quay lại phần thao tác máy tính + giải thích" },
+    { m: "Thành viên 5 (Phân tích)", task: "Phân tích lợi ích & thách thức tại Việt Nam", due: "18/11", state: "Chưa làm", note: "Chờ nhận số liệu từ TV2" },
   ];
   const stateColor: Record<string, string> = {
     "Hoàn thành": "bg-emerald-100 text-emerald-700",
@@ -1395,9 +1395,9 @@ function Project4() {
     "Cần chỉnh sửa": "bg-blush/40 text-plum",
   };
   const challenges = [
-    { t: "Khó đồng bộ tiến độ giữa các thành viên", s: "Dùng Asana / Trello: mỗi người tự cập nhật trạng thái, tránh trùng lặp và bỏ sót." },
-    { t: "Khó chỉnh sửa tài liệu cùng lúc", s: "Làm việc trên Google Docs: chỉnh sửa đồng thời, lịch sử phiên bản, bình luận theo dòng." },
-    { t: "Quản lý & chia sẻ tài liệu chưa khoa học", s: "Lưu trữ tập trung trên Google Drive, đặt tên thống nhất, phân quyền theo vai trò." },
+    { t: "Khó đồng bộ tiến độ giữa các thành viên", s: "Dùng Trello/Asana phân chia nhiệm vụ, đặt thời hạn và cập nhật trạng thái. Mỗi thành viên chủ động đánh dấu tiến độ, tránh trùng lặp và bỏ sót nhiệm vụ." },
+    { t: "Khó chỉnh sửa tài liệu cùng lúc", s: "Google Docs cho phép nhiều người cùng chỉnh sửa; lịch sử phiên bản và bình luận giúp theo dõi đóng góp, khôi phục nội dung khi cần và hạn chế ghi đè." },
+    { t: "Quản lý & chia sẻ tài liệu chưa khoa học", s: "Lưu trữ tập trung trên Google Drive theo thư mục nội dung, đặt tên tệp thống nhất và cấp quyền phù hợp — đảm bảo luôn dùng phiên bản mới nhất." },
   ];
   return (
     <ProjectShell
@@ -1406,17 +1406,17 @@ function Project4() {
       icon="🤝"
       title="Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm"
       skills={["Asana / Trello", "Google Docs", "Google Drive", "Google Meet"]}
-      objective="Lập kế hoạch và sản xuất video nhóm “AI trong Giáo dục tại Việt Nam” — phân công 5 thành viên, quản lý tiến độ và tài liệu bằng bộ công cụ cộng tác."
+      objective="Lập kế hoạch và sản xuất video nhóm “AI trong Giáo dục tại Việt Nam” — phân công 5 vai trò (Dẫn dắt, Chuyên gia 1, Chuyên gia 2, Người thực hành, Phân tích) và quản lý tiến độ – tài liệu bằng bộ công cụ cộng tác."
       process={
         <ol className="ml-4 list-decimal space-y-1.5">
-          <li>Chia dự án thành 5 vai trò: Dẫn dắt, Chuyên gia 1, Chuyên gia 2, Người thực hành, Phân tích.</li>
-          <li>Lập bảng Asana theo trạng thái: <em>Chưa làm · Đang làm · Cần chỉnh sửa · Hoàn thành</em>.</li>
-          <li>Soạn thảo kịch bản 4 phân cảnh (Mở đầu → Ứng dụng thực tế → Demo → Kết luận) trên Google Docs.</li>
-          <li>Lưu trữ B-roll, ảnh minh họa và bản dựng video trên Google Drive dùng chung.</li>
-          <li>Họp Google Meet 30 phút/tuần để cập nhật tiến độ và gỡ khó.</li>
+          <li>Phân công 5 vai trò cố định: Dẫn dắt (mở đầu & kết luận), Chuyên gia 1 (AI cá nhân hoá học tập), Chuyên gia 2 (AI hỗ trợ giáo viên), Người thực hành (demo prompt), Phân tích (lợi ích & thách thức tại VN).</li>
+          <li>Lập bảng <strong>Asana / Trello</strong> theo trạng thái <em>Chưa làm · Đang làm · Cần chỉnh sửa · Hoàn thành</em>; mỗi người tự cập nhật tiến độ.</li>
+          <li>Soạn kịch bản chi tiết trên <strong>Google Docs</strong> với các cột: Thời lượng · Phân cảnh · Voice-over/Thoại · Hình ảnh & hiệu ứng B-roll (00:00 – 00:45 Mở đầu; 00:45 – 02:15 Ứng dụng thực tế; Demo; Kết luận).</li>
+          <li>Lưu trữ B-roll, ảnh minh hoạ và bản dựng video trên <strong>Google Drive</strong> dùng chung — phân thư mục theo nội dung, đặt tên tệp thống nhất.</li>
+          <li>Họp <strong>Google Meet</strong> định kỳ để cả nhóm cùng chỉnh sửa kịch bản, cập nhật tiến độ và gỡ khó.</li>
         </ol>
       }
-      tools={["Asana", "Google Docs", "Google Drive", "Google Meet", "Zapier (tự động hoá)"]}
+      tools={["Asana / Trello", "Google Docs", "Google Drive", "Google Meet"]}
       evidence={
         <div className="space-y-3">
           <div className="overflow-hidden rounded-xl border border-border">
@@ -1448,10 +1448,11 @@ function Project4() {
             </table>
           </div>
           <div className="rounded-xl bg-gradient-to-br from-rose-50 to-fuchsia-50 p-4 text-xs">
-            <div className="font-semibold text-plum mb-1">💡 Tự động hoá bổ sung với Zapier</div>
+            <div className="font-semibold text-plum mb-1">🎬 Kịch bản video — trích cấu trúc</div>
             <p>
-              Kết nối <strong>Google Forms → Gmail</strong>: khi có thành viên đăng ký mới, hệ thống tự gửi email chào mừng —
-              hoạt động 24/7, không cần thao tác thủ công.
+              <strong>00:00 – 00:45 · Mở đầu:</strong> TV1 dẫn dắt tại khuôn viên trường, chèn infographic sự phát triển của AI.<br />
+              <strong>00:45 – 02:15 · Ứng dụng thực tế:</strong> TV2 nói về Elsa Speak và các nền tảng tự học có AI định hướng lộ trình — quay màn hình các ứng dụng giáo dục phổ biến.<br />
+              <strong>Demo &amp; Kết luận:</strong> TV4 thao tác prompt trên máy tính; TV5 phân tích lợi ích – thách thức tại Việt Nam; TV1 chốt vấn đề.
             </p>
           </div>
         </div>
@@ -1467,9 +1468,9 @@ function Project4() {
         </div>
       }
       lesson={[
-        "Công cụ hợp tác giúp nhóm minh bạch hóa tiến độ, giảm rủi ro trùng lặp.",
-        "Làm việc song song trên Google Docs tiết kiệm thời gian tổng hợp phiên bản.",
-        "Tự động hoá (Zapier) giải phóng nhân lực khỏi tác vụ lặp đi lặp lại.",
+        "Công cụ hợp tác (Asana/Trello + Google Docs + Drive + Meet) giúp nhóm minh bạch hoá tiến độ, giảm rủi ro trùng lặp và bỏ sót nhiệm vụ.",
+        "Làm việc song song trên Google Docs cùng với lịch sử phiên bản & bình luận giúp tổng hợp nhanh, hạn chế ghi đè.",
+        "Lưu trữ tập trung trên Google Drive với quy tắc đặt tên & phân quyền giúp cả nhóm luôn dùng đúng phiên bản mới nhất.",
       ]}
       gallery={
         <EvidenceGallery
@@ -1488,18 +1489,19 @@ function Project4() {
     >
       <ReviewSection
         good={[
-          "Phân công 5 vai trò rõ ràng cho các thành viên trong nhóm",
-          "Kết hợp nhịp nhàng Asana + Google Docs + Drive + Meet",
-          "Áp dụng Zapier để tự động hoá email chào mừng thành viên",
+          "Phân công rõ 5 vai trò (Dẫn dắt · Chuyên gia 1 · Chuyên gia 2 · Người thực hành · Phân tích) cho từng thành viên",
+          "Kịch bản chi tiết theo bảng Thời lượng – Phân cảnh – Voice-over – B-roll trên Google Docs",
+          "Kết hợp nhịp nhàng Asana/Trello + Google Docs + Google Drive + Google Meet trong suốt dự án",
         ]}
         improve={[
-          "Thành viên cần cập nhật trạng thái trên Asana đều đặn hơn",
-          "Chuẩn hoá quy tắc đặt tên tệp trong Google Drive dùng chung",
+          "Thành viên cần cập nhật trạng thái công việc trên Asana/Trello đều đặn hơn",
+          "Chuẩn hoá quy tắc đặt tên tệp và phân thư mục trên Google Drive dùng chung",
+          "Bổ sung thêm phân cảnh Demo & Kết luận có mốc thời lượng cụ thể như hai phân cảnh đầu",
         ]}
         takeaway={[
           "Công cụ số minh bạch hoá tiến độ, giảm rủi ro bỏ sót đầu việc",
-          "Tự động hoá giải phóng thời gian cho công việc sáng tạo",
-          "Họp ngắn định kỳ hiệu quả hơn nhiều họp dài không có lịch",
+          "Chỉnh sửa đồng thời + lịch sử phiên bản giúp nhóm biên soạn nhanh và hạn chế sai sót",
+          "Lưu trữ tập trung theo quy tắc giúp mọi người luôn dùng đúng phiên bản mới nhất",
         ]}
         aiUse={[
           "Dùng ChatGPT gợi ý cấu trúc kịch bản video 4 phân cảnh",
