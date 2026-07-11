@@ -1763,11 +1763,10 @@ function Project6() {
       gallery={
         <EvidenceGallery
           items={[
-            "Slide bài thuyết trình ‘Vai trò của AI trong GDĐH’",
-            "ChatGPT: dàn ý 3 phần cho bài thuyết trình",
-            "Infographic 4 bước ‘Sử dụng AI có trách nhiệm’ trên Canva",
-            "Trích dẫn hướng dẫn của UNESCO về AI trong GD",
-            "Bảng đối chiếu 6 vấn đề đạo đức & giải pháp",
+            { label: "Infographic 'Sử dụng AI có trách nhiệm trong học thuật' (bản hoàn thiện)", src: bai6Img54.url },
+            { label: "Prompt yêu cầu tạo infographic 4 bước & kết quả trên ChatGPT", src: bai6Img55.url },
+            { label: "5 ví dụ thực tế về việc sinh viên sử dụng AI trong học tập", src: bai6Img56.url },
+            { label: "Dàn ý bài thuyết trình 10 phút 'Vai trò của AI trong giáo dục đại học'", src: bai6Img57.url },
           ]}
           file="ThuyetTrinh_AI_GDDH.pptx"
         />
