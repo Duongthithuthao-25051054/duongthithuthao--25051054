@@ -345,7 +345,7 @@ function Hero() {
               <span className="h-3 w-3 rounded-full bg-red-300" />
               <span className="h-3 w-3 rounded-full bg-amber-300" />
               <span className="h-3 w-3 rounded-full bg-emerald-300" />
-              <span className="ml-auto font-mono text-xs text-plum">{"\n"}</span>
+              <span className="ml-auto font-mono text-xs text-plum">portfolio · digital</span>
             </div>
 
             <div className="grid grid-cols-[130px_1fr] gap-4">
@@ -593,7 +593,7 @@ function Overview() {
   const avg = Math.round(TASKS.reduce((s, t) => s + t.progress, 0) / TASKS.length);
 
   return (
-    <Section id="tong-quan" eyebrow={"\n"} title="Tổng quan 6 nhiệm vụ">
+    <Section id="tong-quan" eyebrow="Overview" title="Tổng quan 6 nhiệm vụ">
       <div className="reveal mt-10 grid gap-10 lg:grid-cols-[280px_1fr]">
         {/* Left title panel */}
         <aside className="lg:sticky lg:top-24 lg:self-start">
@@ -612,7 +612,7 @@ function Overview() {
             quản lý dữ liệu, tìm kiếm và đánh giá thông tin, cho đến khai thác AI,
             hợp tác trực tuyến và sử dụng AI có trách nhiệm.
           </p>
-          <div className="mt-8 hidden lg:block text-6xl">{"\n"}</div>
+          
         </aside>
 
         {/* Right timeline */}
@@ -1087,7 +1087,6 @@ function Project1() {
             <div className="pl-4">📂 TaiLieu\</div>
             <div className="pl-8">📄 GhiChuQuanTrong.txt <span className="text-muted-foreground">(bản sao chép)</span></div>
           </div>
-          {"\n"}
         </div>
       }
       analysis={
