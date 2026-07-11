@@ -178,7 +178,7 @@ function Nav({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: (v: bo
           <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-brand text-white shadow-soft">
             <span className="font-display text-lg">P</span>
           </span>
-          <span className="font-display text-lg font-semibold">Portfolio · NMCNS-AI</span>
+          <span className="font-display text-lg font-semibold">Digital Portfolio</span>
         </a>
         <nav className="hidden items-center gap-1 md:flex">
           {NAV_LINKS.map((l) => (
