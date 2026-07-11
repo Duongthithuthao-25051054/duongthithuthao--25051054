@@ -1689,17 +1689,17 @@ function Project6() {
       icon="🛡️"
       title="Sử dụng AI có trách nhiệm — Bài thuyết trình “Vai trò của AI trong Giáo dục Đại học”"
       skills={["AI Ethics", "Đạo đức học thuật", "Infographic", "Tự phản biện"]}
-      objective="Chuẩn bị bài thuyết trình 10 phút về vai trò AI trong giáo dục đại học, đồng thời xây dựng bộ 7 nguyên tắc cá nhân và infographic “Sử dụng AI có trách nhiệm trong học thuật”."
+      objective="Chuẩn bị bài thuyết trình 10 phút “Vai trò của AI trong Giáo dục Đại học”, kèm phân tích 3 vấn đề đạo đức học thuật, bộ 7 nguyên tắc cá nhân và infographic 4 bước “Sử dụng AI có trách nhiệm trong học thuật”."
       process={
         <ol className="ml-4 list-decimal space-y-1.5">
-          <li>Dùng ChatGPT để lập dàn ý 3 phần (Mở đầu · 8’ nội dung · Kết luận).</li>
-          <li>Dùng prompt bổ sung để lấy 5 ví dụ thực tế sinh viên ứng dụng AI.</li>
-          <li>Đánh giá, chỉnh sửa và tích hợp đầu ra AI — bổ sung ví dụ Việt Nam, kiểm chứng qua giáo trình.</li>
-          <li>Phân tích 3 vấn đề đạo đức: ranh giới hỗ trợ, sở hữu trí tuệ, tác động đến tư duy.</li>
-          <li>Tổng hợp thành 7 nguyên tắc cá nhân + infographic 4 bước.</li>
+          <li><strong>Prompt 1:</strong> yêu cầu ChatGPT lập dàn ý 10 phút (Mở đầu 1’ · Nội dung chính 8’ · Kết luận) — đầu ra gồm khái niệm AI, công cụ (ChatGPT, Gemini, Copilot, Perplexity), lợi ích, thách thức và khuyến nghị.</li>
+          <li><strong>Prompt 2:</strong> đề xuất 5 ví dụ thực tế sinh viên dùng AI (tóm tắt tài liệu · lập dàn ý & phát triển ý tưởng · giải thích khái niệm khó · hỗ trợ học ngoại ngữ · lập kế hoạch học tập – ôn thi).</li>
+          <li>Đánh giá – chỉnh sửa – tích hợp đầu ra AI: kiểm chứng bằng giáo trình, bổ sung ví dụ Việt Nam, chỉnh giọng văn cá nhân, không sao chép nguyên văn.</li>
+          <li>Trích dẫn rõ: “Một phần nội dung được hỗ trợ bởi ChatGPT (OpenAI); toàn bộ nội dung cuối do người thực hiện kiểm chứng và chịu trách nhiệm.”</li>
+          <li>Phân tích 3 vấn đề đạo đức → tổng hợp thành 7 nguyên tắc cá nhân → thiết kế infographic 4 bước, chốt bằng slogan “Hướng tới thành công học thuật bền vững và chính trực”.</li>
         </ol>
       }
-      tools={["ChatGPT", "Chính sách nhà trường", "UNESCO AI Guidance", "Canva (Infographic)"]}
+      tools={["ChatGPT (OpenAI)", "Gemini", "Microsoft Copilot", "Perplexity AI", "Canva (Infographic)"]}
       evidence={
         <div className="space-y-4">
 
