@@ -672,7 +672,7 @@ function Overview() {
       {/* Bottom stats strip */}
       <div className="reveal mt-10 grid grid-cols-2 gap-4 rounded-2xl border border-border/60 bg-card/70 p-5 backdrop-blur md:grid-cols-4">
         {[
-          { label: "Tổng thời lượng ước tính", value: "12 – 18 giờ", color: "text-violet-500" },
+          
           { label: "Tiến độ trung bình", value: `${avg}%`, color: "text-pink-500" },
           { label: "Nhiệm vụ đã hoàn thành", value: `${completed} / ${TASKS.length}`, color: "text-blue-500" },
           { label: "Mức độ kỹ năng", value: "Từ cơ bản đến nâng cao", color: "text-violet-600" },
