@@ -165,7 +165,7 @@ const NAV_LINKS = [
   { href: "#gioi-thieu", label: "Giới thiệu" },
   { href: "#tong-quan", label: "Tổng quan" },
   { href: "#du-an", label: "Dự án" },
-  { href: "#minh-chung", label: "Minh chứng" },
+  
   { href: "#ky-nang", label: "Kỹ năng" },
   { href: "#tong-ket", label: "Tổng kết" },
 ];
