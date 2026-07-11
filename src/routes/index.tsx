@@ -1739,7 +1739,7 @@ function Footer() {
         </div>
       </div>
       <div className="border-t border-border px-6 py-5 text-center text-xs text-muted-foreground">
-        © 2026 · Portfolio cá nhân môn NMCNS-AI · Made with 💜 & AI có trách nhiệm.
+        © 2026 · Portfolio cá nhân môn NMCNS-AI ·
       </div>
     </footer>
   );
