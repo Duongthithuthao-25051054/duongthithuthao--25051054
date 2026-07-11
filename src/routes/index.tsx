@@ -897,7 +897,33 @@ function Project1() {
         "Hiểu rõ Recycle Bin giúp giảm rủi ro mất dữ liệu bất ngờ.",
         "Đặt tên nhất quán và có cấu trúc là thói quen tiết kiệm thời gian lâu dài.",
       ]}
-    />
+    >
+      <ReviewSection
+        good={[
+          "Thực hiện đủ 12 thao tác cơ bản với tệp tin và thư mục",
+          "Chụp màn hình chi tiết từng bước làm minh chứng",
+          "Tổ chức cấu trúc thư mục khoa học, dễ quản lý",
+        ]}
+        improve={[
+          "Cần học thêm các phím tắt (Win+E, Shift+Del) để thao tác nhanh hơn",
+          "Học cách sử dụng tính năng tìm kiếm nâng cao trong File Explorer",
+        ]}
+        takeaway={[
+          "Quản lý tệp tin có tổ chức giúp tiết kiệm thời gian tìm kiếm",
+          "Biết cách sử dụng Recycle Bin để khôi phục tệp tin đã xóa nhầm",
+          "Shortcut giúp truy cập nhanh các thư mục thường dùng",
+        ]}
+        aiUse={[
+          "Không sử dụng AI trong bài tập này",
+          "Tự thực hành trực tiếp trên máy tính theo hướng dẫn của giảng viên",
+        ]}
+        commit={[
+          "Tôi đã tự thực hiện tất cả các thao tác trên máy tính cá nhân",
+          "Ảnh chụp màn hình là minh chứng thực tế từ quá trình thực hành",
+          "Tất cả nội dung báo cáo được viết dựa trên trải nghiệm thực tế",
+        ]}
+      />
+    </ProjectShell>
   );
 }
 
@@ -1009,7 +1035,33 @@ function Project2() {
         "Nguồn peer-reviewed và tổ chức quốc tế (IMF, OECD, NBER) là chuẩn vàng.",
         "Trích dẫn Harvard đúng chuẩn giúp bảo vệ tính học thuật và minh bạch.",
       ]}
-    />
+    >
+      <ReviewSection
+        good={[
+          "Vận dụng thành thạo hơn 6 toán tử tìm kiếm nâng cao",
+          "Đánh giá 10 nguồn theo 6 tiêu chí có bảng biểu rõ ràng",
+          "Trích dẫn Harvard đầy đủ và đúng chuẩn học thuật",
+        ]}
+        improve={[
+          "Bổ sung nguồn tiếng Việt để cân bằng góc nhìn địa phương",
+          "Đọc kỹ hơn phần Phương pháp nghiên cứu của mỗi tài liệu",
+        ]}
+        takeaway={[
+          "Nguồn peer-reviewed (IMF, OECD, NBER) là chuẩn vàng khi trích dẫn",
+          "Luôn kiểm chứng bằng ≥ 2 nguồn độc lập trước khi kết luận",
+          "Chiến lược tìm kiếm theo tầng hiệu quả hơn từ khóa đơn lẻ",
+        ]}
+        aiUse={[
+          "Dùng ChatGPT gợi ý các từ khoá tìm kiếm bằng tiếng Anh",
+          "Dùng AI giải nghĩa nhanh các thuật ngữ kinh tế chuyên ngành",
+        ]}
+        commit={[
+          "Tự đọc và tóm tắt từng nguồn tham khảo, không phụ thuộc AI",
+          "Trích dẫn theo Harvard được viết tay, không copy-paste từ AI",
+          "Điểm đánh giá độ tin cậy dựa trên phán đoán cá nhân",
+        ]}
+      />
+    </ProjectShell>
   );
 }
 
@@ -1094,7 +1146,33 @@ function Project3() {
         "Kỹ thuật Chain-of-Thought giúp AI đi qua từng bước tư duy, hạn chế bịa thông tin.",
         "Đầu tư thời gian viết prompt tốt là đầu tư vào chất lượng đầu ra học tập.",
       ]}
-    />
+    >
+      <ReviewSection
+        good={[
+          "Thiết kế 3 cấp độ prompt cho 3 tác vụ học tập khác nhau",
+          "So sánh kết quả bằng bảng biểu chi tiết, có tiêu chí rõ",
+          "Áp dụng đa dạng kỹ thuật: Role, Few-shot, Chain-of-Thought",
+        ]}
+        improve={[
+          "Thử thêm Gemini và Claude để có so sánh chéo giữa các mô hình",
+          "Đo thời gian phản hồi và số token tiêu tốn cho từng prompt",
+        ]}
+        takeaway={[
+          "Prompt càng có cấu trúc, kết quả AI càng học thuật hơn",
+          "Chain-of-Thought giúp AI đi qua từng bước, hạn chế bịa thông tin",
+          "Đầu tư thời gian viết prompt là đầu tư vào chất lượng đầu ra",
+        ]}
+        aiUse={[
+          "Dùng ChatGPT để chạy thử toàn bộ 9 prompt và ghi lại phản hồi",
+          "AI đóng vai 'đối tượng thử nghiệm', không phải người viết bài",
+        ]}
+        commit={[
+          "Toàn bộ đầu ra AI đã được em đọc và phân tích lại",
+          "Bảng so sánh Cơ bản – Cải tiến – Nâng cao do em tự tổng hợp",
+          "Không sao chép nguyên văn nội dung AI vào báo cáo",
+        ]}
+      />
+    </ProjectShell>
   );
 }
 
@@ -1192,7 +1270,33 @@ function Project4() {
         "Làm việc song song trên Google Docs tiết kiệm thời gian tổng hợp phiên bản.",
         "Tự động hoá (Zapier) giải phóng nhân lực khỏi tác vụ lặp đi lặp lại.",
       ]}
-    />
+    >
+      <ReviewSection
+        good={[
+          "Phân công 5 vai trò rõ ràng cho các thành viên trong nhóm",
+          "Kết hợp nhịp nhàng Asana + Google Docs + Drive + Meet",
+          "Áp dụng Zapier để tự động hoá email chào mừng thành viên",
+        ]}
+        improve={[
+          "Thành viên cần cập nhật trạng thái trên Asana đều đặn hơn",
+          "Chuẩn hoá quy tắc đặt tên tệp trong Google Drive dùng chung",
+        ]}
+        takeaway={[
+          "Công cụ số minh bạch hoá tiến độ, giảm rủi ro bỏ sót đầu việc",
+          "Tự động hoá giải phóng thời gian cho công việc sáng tạo",
+          "Họp ngắn định kỳ hiệu quả hơn nhiều họp dài không có lịch",
+        ]}
+        aiUse={[
+          "Dùng ChatGPT gợi ý cấu trúc kịch bản video 4 phân cảnh",
+          "Không dùng AI thay thế phần đóng góp của mỗi thành viên",
+        ]}
+        commit={[
+          "Kịch bản và bảng phân công là sản phẩm của cả nhóm",
+          "Mỗi thành viên chịu trách nhiệm phần việc của mình",
+          "Ghi rõ nguồn khi tham khảo tài liệu bên ngoài",
+        ]}
+      />
+    </ProjectShell>
   );
 }
 
@@ -1273,7 +1377,34 @@ function Project5() {
         "AI tạo sinh là trợ lý, không thay thế vai trò biên tập và kiểm chứng của người học.",
         "Luôn ghi rõ công cụ AI đã dùng để đảm bảo minh bạch học thuật.",
       ]}
-    />
+    >
+      <ReviewSection
+        good={[
+          "So sánh song song 3 AI văn bản + 2 AI ảnh + 2 AI thiết kế",
+          "Chỉ ra rõ ưu – nhược điểm cụ thể của từng công cụ",
+          "Kết hợp AI tạo sinh với bước biên tập cá nhân",
+        ]}
+        improve={[
+          "Thử thêm Midjourney, Adobe Firefly để mở rộng phạm vi so sánh",
+          "Đối chiếu chi phí giữa các phiên bản miễn phí và trả phí",
+        ]}
+        takeaway={[
+          "Mỗi AI có thế mạnh riêng — biết chọn đúng công cụ cho đúng việc",
+          "Hình ảnh AI vẫn cần con người kiểm chứng chi tiết & lỗi chính tả",
+          "Sản phẩm chất lượng luôn cần bước biên tập cuối của người dùng",
+        ]}
+        aiUse={[
+          "Dùng ChatGPT / Gemini / Claude sinh nội dung Triết Mác – Lênin",
+          "Dùng DALL·E và Yeri AI tạo ảnh minh họa 'Tồn tại xã hội'",
+          "Dùng Canva AI phối slide và bố cục trình bày",
+        ]}
+        commit={[
+          "Ghi rõ công cụ AI đã dùng cho từng phần trong sản phẩm",
+          "Nội dung cuối cùng đã được em biên tập và kiểm chứng lại",
+          "Chịu trách nhiệm hoàn toàn về sản phẩm cuối cùng",
+        ]}
+      />
+    </ProjectShell>
   );
 }
 
@@ -1368,7 +1499,33 @@ function Project6() {
         "Trách nhiệm số là kỹ năng bắt buộc trong thời đại AI.",
         "Sử dụng AI có trách nhiệm bảo vệ tính trung thực và sự sáng tạo cá nhân.",
       ]}
-    />
+    >
+      <ReviewSection
+        good={[
+          "Xây dựng bộ 7 nguyên tắc cá nhân sử dụng AI rõ ràng",
+          "Phân tích 6 vấn đề đạo đức kèm giải pháp cụ thể",
+          "Thiết kế infographic 4 bước dễ nhớ, dễ chia sẻ",
+        ]}
+        improve={[
+          "Bổ sung ví dụ vi phạm học thuật thực tế để minh hoạ",
+          "Cập nhật chính sách AI mới nhất của nhà trường và UNESCO",
+        ]}
+        takeaway={[
+          "Trách nhiệm số bảo vệ sự trung thực trong học thuật",
+          "AI là trợ lý — không thay thế được tư duy phản biện",
+          "Minh bạch khi dùng AI là chuẩn mực bắt buộc, không phải tuỳ chọn",
+        ]}
+        aiUse={[
+          "Dùng ChatGPT lập dàn ý bài thuyết trình 10 phút",
+          "Dùng AI gợi ý 5 ví dụ thực tế sinh viên ứng dụng AI",
+        ]}
+        commit={[
+          "Đã kiểm chứng thông tin AI bằng giáo trình và nguồn học thuật",
+          "Toàn bộ nội dung cuối đã được em chỉnh sửa và biên tập lại",
+          "Chịu trách nhiệm hoàn toàn về sản phẩm bài học",
+        ]}
+      />
+    </ProjectShell>
   );
 }
 
