@@ -474,10 +474,8 @@ function About() {
                 "Xây dựng thói quen học tập suốt đời và cập nhật kiến thức công nghệ liên tục.",
                 "Đạt điểm Xuất sắc (8.1–10) trong môn Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo.",
               ].map((g) => (
-                <li key={g} className="flex items-start gap-3">
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white/80 text-rose-500 shadow-sm">
-                    💡
-                  </span>
+                <li key={g} className="flex items-start gap-2">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400" />
                   <span>{g}</span>
                 </li>
               ))}
@@ -677,12 +675,9 @@ function Overview() {
                       </span>
                     </div>
                     <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                      <span className="inline-flex items-center gap-1">
-                        📊 <span>Mức độ: <b className="text-foreground/80">{m.level}</b></span>
-                      </span>
-                      <span className="inline-flex items-center gap-1">
-                        ⏱ <span>Thời lượng: <b className="text-foreground/80">{m.duration}</b></span>
-                      </span>
+                      <span>Mức độ: <b className="text-foreground/80">{m.level}</b></span>
+                      <span>·</span>
+                      <span>Thời lượng: <b className="text-foreground/80">{m.duration}</b></span>
                     </div>
                   </div>
                 </div>
@@ -695,17 +690,14 @@ function Overview() {
       {/* Bottom stats strip */}
       <div className="reveal mt-10 grid grid-cols-2 gap-4 rounded-2xl border border-border/60 bg-card/70 p-5 backdrop-blur md:grid-cols-4">
         {[
-          { icon: "⏱", label: "Tổng thời lượng ước tính", value: "12 – 18 giờ", color: "text-violet-500" },
-          { icon: "📈", label: "Tiến độ trung bình", value: `${avg}%`, color: "text-pink-500" },
-          { icon: "🎯", label: "Nhiệm vụ đã hoàn thành", value: `${completed} / ${TASKS.length}`, color: "text-blue-500" },
-          { icon: "🏅", label: "Mức độ kỹ năng", value: "Từ cơ bản đến nâng cao", color: "text-violet-600" },
+          { label: "Tổng thời lượng ước tính", value: "12 – 18 giờ", color: "text-violet-500" },
+          { label: "Tiến độ trung bình", value: `${avg}%`, color: "text-pink-500" },
+          { label: "Nhiệm vụ đã hoàn thành", value: `${completed} / ${TASKS.length}`, color: "text-blue-500" },
+          { label: "Mức độ kỹ năng", value: "Từ cơ bản đến nâng cao", color: "text-violet-600" },
         ].map((s) => (
-          <div key={s.label} className="flex items-center gap-3">
-            <span className={`text-3xl ${s.color}`}>{s.icon}</span>
-            <div className="min-w-0">
-              <div className="text-xs text-muted-foreground">{s.label}</div>
-              <div className={`font-display text-lg font-bold ${s.color}`}>{s.value}</div>
-            </div>
+          <div key={s.label} className="min-w-0">
+            <div className="text-xs text-muted-foreground">{s.label}</div>
+            <div className={`font-display text-lg font-bold ${s.color}`}>{s.value}</div>
           </div>
         ))}
       </div>
@@ -788,11 +780,11 @@ function ProjectShell({
 
       <div className="space-y-6 p-8 md:p-10">
         <div className="grid gap-6 md:grid-cols-2">
-          <Block title="🎯 Mục tiêu">{objective}</Block>
-          <Block title="⚙️ Quá trình thực hiện">{process}</Block>
+          <Block title="Mục tiêu">{objective}</Block>
+          <Block title="Quá trình thực hiện">{process}</Block>
         </div>
 
-        <Block title="🧰 Công cụ sử dụng">
+        <Block title="Công cụ sử dụng">
           <div className="flex flex-wrap gap-2">
             {tools.map((t) => (
               <span
@@ -808,8 +800,8 @@ function ProjectShell({
         <Block title="">{evidence}</Block>
 
         <div className="space-y-6">
-          <Block title="🔍 Phân tích kết quả">{analysis}</Block>
-          <Block title="💡 Bài học rút ra">
+          <Block title="Phân tích kết quả">{analysis}</Block>
+          <Block title="Bài học rút ra">
             <ul className="space-y-1.5 text-sm text-muted-foreground">
               {lesson.map((l, i) => (
                 <li key={i} className="flex gap-2">
@@ -1920,11 +1912,11 @@ function Skills() {
         </div>
 
         <div className="reveal mt-10 flex flex-wrap items-center justify-center gap-3 rounded-full border border-violet-200 bg-white/70 px-6 py-4 text-sm font-semibold text-plum backdrop-blur">
-          <span className="inline-flex items-center gap-2">🎯 Không ngừng học hỏi</span>
+          <span>Không ngừng học hỏi</span>
           <span className="text-violet-300">|</span>
-          <span className="inline-flex items-center gap-2">🧠 Ứng dụng thông minh</span>
+          <span>Ứng dụng thông minh</span>
           <span className="text-violet-300">|</span>
-          <span className="inline-flex items-center gap-2">🌱 Phát triển bền vững</span>
+          <span>Phát triển bền vững</span>
         </div>
       </div>
     </Section>
@@ -1971,7 +1963,7 @@ function Conclusion() {
           <ul className="mt-3 space-y-3 text-sm">
             {difficulties.map((x) => (
               <li key={x.d} className="rounded-xl bg-secondary/60 p-3">
-                <div className="font-medium">⚠️ {x.d}</div>
+                <div className="font-medium">{x.d}</div>
                 <div className="mt-1 text-muted-foreground">→ {x.f}</div>
               </li>
             ))}
