@@ -383,6 +383,8 @@ function About() {
 
           <dl className="mt-6 space-y-3 text-sm">
             <Row k="Trường&nbsp;" v="Trường Đại Học Kinh Tế-ĐHQGHN" />
+            <Row k="Lớp" v="QH-2025-E KTQT CLC 5" />
+            <Row k="MSV" v="25051054" />
             <Row k="Môn học" v="Nhập môn Công nghệ số & Ứng dụng AI" />
             <Row k="Năm học" v="2025 – 2026" />
             <Row k="Email" v="25051054@vnu.edu.vn" />
