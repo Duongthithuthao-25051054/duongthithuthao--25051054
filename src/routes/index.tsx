@@ -37,6 +37,7 @@ import bai6Img54 from "@/assets/bai6/bai6-54.png.asset.json";
 import bai6Img55 from "@/assets/bai6/bai6-55.png.asset.json";
 import bai6Img56 from "@/assets/bai6/bai6-56.png.asset.json";
 import bai6Img57 from "@/assets/bai6/bai6-57.png.asset.json";
+import bai6Doc from "@/assets/bai6/BaoCao_AI_GDDH.docx.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
@@ -124,13 +125,13 @@ const SKILLS = [
 ];
 
 const PRINCIPLES = [
-  "Không dùng AI để gian lận hoặc làm thay toàn bộ bài tập.",
-  "Luôn kiểm chứng thông tin do AI cung cấp qua ít nhất hai nguồn khác.",
-  "Ghi chú minh bạch khi có sử dụng AI trong quá trình học tập.",
-  "Không nhập dữ liệu cá nhân, thông tin nhạy cảm vào công cụ AI.",
-  "Không sao chép nguyên văn nội dung AI khi chưa đọc, hiểu và chỉnh sửa.",
-  "Sử dụng AI để hỗ trợ tư duy — không thay thế tư duy của bản thân.",
-  "Chịu trách nhiệm cuối cùng với mọi sản phẩm học tập của mình.",
+  "Chỉ sử dụng AI như công cụ hỗ trợ, không thay thế tư duy cá nhân.",
+  "Luôn kiểm chứng thông tin AI cung cấp bằng nguồn đáng tin cậy.",
+  "Không sử dụng AI trong các bài kiểm tra hoặc hoạt động bị cấm.",
+  "Minh bạch về việc sử dụng AI khi AI có đóng góp đáng kể vào bài làm.",
+  "Không sao chép nguyên văn nội dung AI tạo ra.",
+  "Chịu trách nhiệm hoàn toàn về sản phẩm học tập cuối cùng.",
+  "Sử dụng AI để nâng cao kỹ năng học tập thay vì phụ thuộc vào nó.",
 ];
 
 /* ============================================================
@@ -1672,12 +1673,9 @@ function Project5() {
 /* ---------- Dự án 6 ---------- */
 function Project6() {
   const issues = [
-    { i: "Ranh giới hỗ trợ hợp lý ↔ gian lận học thuật", s: "Chỉ dùng AI để gợi ý ý tưởng và chỉnh ngôn ngữ, không để AI làm toàn bộ bài." },
-    { i: "Quyền sở hữu trí tuệ & trích dẫn", s: "Ghi rõ việc dùng AI khi có đóng góp đáng kể; kiểm chứng lại thông tin qua nguồn tin cậy." },
-    { i: "Tác động đến tư duy phản biện", s: "Dùng AI ở bước brainstorm, tự phân tích & kết luận để giữ kỹ năng tư duy." },
-    { i: "Thông tin sai / hallucination", s: "Đối chiếu với ≥ 2 nguồn học thuật (IMF, OECD, Cambridge…) trước khi trích dẫn." },
-    { i: "Quyền riêng tư & dữ liệu cá nhân", s: "Không nhập họ tên, mã sinh viên, tài liệu nội bộ vào công cụ AI." },
-    { i: "Phụ thuộc AI, thui chột kỹ năng viết", s: "Duy trì thói quen tự viết bản nháp đầu tiên trước khi tham khảo AI." },
+    { i: "Ranh giới giữa hỗ trợ hợp lý và gian lận học thuật", s: "Hỗ trợ hợp lý = dùng AI gợi ý ý tưởng, giải thích khái niệm, chỉnh ngôn ngữ. Gian lận = để AI làm toàn bộ bài tập/luận/thi rồi nộp như sản phẩm của mình." },
+    { i: "Quyền sở hữu trí tuệ & trích dẫn", s: "Nội dung do AI tạo ra không nên xem là hoàn toàn của người học. Khi AI đóng góp đáng kể phải ghi rõ; mọi thông tin lấy từ AI đều cần kiểm chứng bằng nguồn đáng tin cậy." },
+    { i: "Tác động đến quá trình học tập & phát triển kỹ năng", s: "Tích cực: tăng hiệu quả, tiết kiệm thời gian, hỗ trợ tìm kiếm & phát triển ý tưởng. Tiêu cực: dễ phụ thuộc, giảm tư duy phản biện, kỹ năng viết và nghiên cứu nếu lạm dụng." },
   ];
   const info4 = [
     { t: "Hiểu rõ công cụ AI", d: "Biết khả năng & giới hạn của mô hình ngôn ngữ, nhận biết rủi ro sai sót." },
@@ -1692,17 +1690,17 @@ function Project6() {
       icon="🛡️"
       title="Sử dụng AI có trách nhiệm — Bài thuyết trình “Vai trò của AI trong Giáo dục Đại học”"
       skills={["AI Ethics", "Đạo đức học thuật", "Infographic", "Tự phản biện"]}
-      objective="Chuẩn bị bài thuyết trình 10 phút về vai trò AI trong giáo dục đại học, đồng thời xây dựng bộ 7 nguyên tắc cá nhân và infographic “Sử dụng AI có trách nhiệm trong học thuật”."
+      objective="Chuẩn bị bài thuyết trình 10 phút “Vai trò của AI trong Giáo dục Đại học”, kèm phân tích 3 vấn đề đạo đức học thuật, bộ 7 nguyên tắc cá nhân và infographic 4 bước “Sử dụng AI có trách nhiệm trong học thuật”."
       process={
         <ol className="ml-4 list-decimal space-y-1.5">
-          <li>Dùng ChatGPT để lập dàn ý 3 phần (Mở đầu · 8’ nội dung · Kết luận).</li>
-          <li>Dùng prompt bổ sung để lấy 5 ví dụ thực tế sinh viên ứng dụng AI.</li>
-          <li>Đánh giá, chỉnh sửa và tích hợp đầu ra AI — bổ sung ví dụ Việt Nam, kiểm chứng qua giáo trình.</li>
-          <li>Phân tích 3 vấn đề đạo đức: ranh giới hỗ trợ, sở hữu trí tuệ, tác động đến tư duy.</li>
-          <li>Tổng hợp thành 7 nguyên tắc cá nhân + infographic 4 bước.</li>
+          <li><strong>Prompt 1:</strong> yêu cầu ChatGPT lập dàn ý 10 phút (Mở đầu 1’ · Nội dung chính 8’ · Kết luận) — đầu ra gồm khái niệm AI, công cụ (ChatGPT, Gemini, Copilot, Perplexity), lợi ích, thách thức và khuyến nghị.</li>
+          <li><strong>Prompt 2:</strong> đề xuất 5 ví dụ thực tế sinh viên dùng AI (tóm tắt tài liệu · lập dàn ý & phát triển ý tưởng · giải thích khái niệm khó · hỗ trợ học ngoại ngữ · lập kế hoạch học tập – ôn thi).</li>
+          <li>Đánh giá – chỉnh sửa – tích hợp đầu ra AI: kiểm chứng bằng giáo trình, bổ sung ví dụ Việt Nam, chỉnh giọng văn cá nhân, không sao chép nguyên văn.</li>
+          <li>Trích dẫn rõ: “Một phần nội dung được hỗ trợ bởi ChatGPT (OpenAI); toàn bộ nội dung cuối do người thực hiện kiểm chứng và chịu trách nhiệm.”</li>
+          <li>Phân tích 3 vấn đề đạo đức → tổng hợp thành 7 nguyên tắc cá nhân → thiết kế infographic 4 bước, chốt bằng slogan “Hướng tới thành công học thuật bền vững và chính trực”.</li>
         </ol>
       }
-      tools={["ChatGPT", "Chính sách nhà trường", "UNESCO AI Guidance", "Canva (Infographic)"]}
+      tools={["ChatGPT (OpenAI)", "Gemini", "Microsoft Copilot", "Perplexity AI", "Canva (Infographic)"]}
       evidence={
         <div className="space-y-4">
 
@@ -1768,28 +1766,30 @@ function Project6() {
             { label: "5 ví dụ thực tế về việc sinh viên sử dụng AI trong học tập", src: bai6Img56.url },
             { label: "Dàn ý bài thuyết trình 10 phút 'Vai trò của AI trong giáo dục đại học'", src: bai6Img57.url },
           ]}
-          file="ThuyetTrinh_AI_GDDH.pptx"
+          file="BaoCao_AI_GDDH.docx"
+          fileUrl={bai6Doc.url}
         />
       }
     >
       <ReviewSection
         good={[
-          "Xây dựng bộ 7 nguyên tắc cá nhân sử dụng AI rõ ràng",
-          "Phân tích 6 vấn đề đạo đức kèm giải pháp cụ thể",
-          "Thiết kế infographic 4 bước dễ nhớ, dễ chia sẻ",
+          "Chuẩn bị đầy đủ dàn ý 10 phút + 5 ví dụ thực tế sinh viên dùng AI",
+          "Xây dựng bộ 7 nguyên tắc cá nhân sử dụng AI có trách nhiệm rõ ràng",
+          "Phân tích 3 vấn đề đạo đức trọng tâm + infographic 4 bước dễ chia sẻ",
         ]}
         improve={[
-          "Bổ sung ví dụ vi phạm học thuật thực tế để minh hoạ",
-          "Cập nhật chính sách AI mới nhất của nhà trường và UNESCO",
+          "Bổ sung dẫn chứng chính sách AI mới nhất của nhà trường và UNESCO",
+          "Đưa thêm ví dụ vi phạm học thuật thực tế để tăng tính cảnh báo",
         ]}
         takeaway={[
-          "Trách nhiệm số bảo vệ sự trung thực trong học thuật",
-          "AI là trợ lý — không thay thế được tư duy phản biện",
+          "AI là trợ lý — không thay thế được tư duy phản biện của người học",
           "Minh bạch khi dùng AI là chuẩn mực bắt buộc, không phải tuỳ chọn",
+          "Trách nhiệm cuối cùng về sản phẩm học tập luôn thuộc về người thực hiện",
         ]}
         aiUse={[
-          "Dùng ChatGPT lập dàn ý bài thuyết trình 10 phút",
-          "Dùng AI gợi ý 5 ví dụ thực tế sinh viên ứng dụng AI",
+          "Prompt 1 (ChatGPT): dàn ý bài thuyết trình 10 phút về AI trong GDĐH",
+          "Prompt 2 (ChatGPT): 5 ví dụ thực tế sinh viên ứng dụng AI trong học tập",
+          "Trích dẫn rõ trong sản phẩm cuối: một phần nội dung do ChatGPT hỗ trợ",
         ]}
         commit={[
           "Đã kiểm chứng thông tin AI bằng giáo trình và nguồn học thuật",
