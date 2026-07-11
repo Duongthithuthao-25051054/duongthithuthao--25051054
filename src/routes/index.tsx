@@ -737,15 +737,59 @@ function Block({ title, children }: { title: string; children: React.ReactNode }
 
 function EvidencePlaceholder({ label }: { label: string }) {
   return (
-    <div className="grid aspect-video place-items-center rounded-xl border-2 border-dashed border-primary/40 bg-gradient-to-br from-secondary/50 to-accent/40 p-4 text-center text-xs text-muted-foreground">
-      <div>
-        <div className="text-2xl">🖼️</div>
-        <div className="mt-1 font-medium text-foreground">{label}</div>
-        <div className="mt-1">Thay bằng minh chứng thật</div>
+    <figure className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+      <div
+        className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
+      >
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 14px), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 22px)",
+          }}
+        />
+        <div className="absolute left-3 top-3 flex gap-1.5">
+          <span className="h-2 w-2 rounded-full bg-red-400/70" />
+          <span className="h-2 w-2 rounded-full bg-yellow-400/70" />
+          <span className="h-2 w-2 rounded-full bg-green-400/70" />
+        </div>
+        <div className="absolute inset-0 grid place-items-center text-3xl opacity-70">🖼️</div>
       </div>
+      <figcaption className="border-t border-border bg-secondary/40 px-3 py-2 text-xs font-medium leading-snug text-foreground">
+        {label}
+      </figcaption>
+    </figure>
+  );
+}
+
+function EvidenceGallery({
+  title = "📸 Ảnh minh chứng thực hành",
+  items,
+  file,
+}: {
+  title?: string;
+  items: string[];
+  file?: string;
+}) {
+  return (
+    <div className="space-y-3">
+      <div className="text-xs font-semibold uppercase tracking-wide text-plum">{title}</div>
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {items.map((it, i) => (
+          <EvidencePlaceholder key={i} label={it} />
+        ))}
+      </div>
+      {file && (
+        <div className="pt-1">
+          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-plum">
+            📄 Tải tệp minh chứng: {file}
+          </span>
+        </div>
+      )}
     </div>
   );
 }
+
 
 function ReviewSection({
   good,
