@@ -1564,16 +1564,6 @@ function Project6() {
       tools={["ChatGPT", "Chính sách nhà trường", "UNESCO AI Guidance", "Canva (Infographic)"]}
       evidence={
         <div className="space-y-4">
-          <EvidenceGallery
-            items={[
-              "Slide bài thuyết trình ‘Vai trò của AI trong GDĐH’",
-              "ChatGPT: dàn ý 3 phần cho bài thuyết trình",
-              "Infographic 4 bước ‘Sử dụng AI có trách nhiệm’ trên Canva",
-              "Trích dẫn hướng dẫn của UNESCO về AI trong GD",
-              "Bảng đối chiếu 6 vấn đề đạo đức & giải pháp",
-            ]}
-            file="ThuyetTrinh_AI_GDDH.pptx"
-          />
 
           <div className="rounded-2xl bg-gradient-hero p-5">
             <div className="mb-3 text-sm font-semibold text-plum">7 Nguyên tắc cá nhân sử dụng AI</div>
