@@ -278,8 +278,8 @@ function Hero() {
             <a href="#du-an" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
               📁 Dự án học tập
             </a>
-            <a href="#minh-chung" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
-              ✅ Minh chứng
+            <a href="#ky-nang" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
+              ✅ Kỹ năng
             </a>
             <a href="#tong-ket" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
               📈 Tổng kết
