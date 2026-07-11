@@ -1629,7 +1629,8 @@ function Project5() {
             { label: "Phân tích ý định & kế hoạch thực hiện 4 ảnh minh hoạ (Intent + Task Planning)", src: bai5Img51.url },
             { label: "Gemini — tổng hợp 'Tồn tại xã hội & ý thức xã hội' trong triết học Mác – Lênin", src: bai5Img52.url },
           ]}
-          file="SoSanh_AI_VanBan-HinhAnh.pdf"
+          file="BaoCao_AI_TonTaiXaHoi.docx"
+          fileUrl={bai5Doc.url}
         />
       }
     >
