@@ -650,6 +650,7 @@ function ProjectShell({
   analysis,
   lesson,
   skills,
+  gallery,
   children,
 }: {
   id: string;
@@ -663,6 +664,7 @@ function ProjectShell({
   analysis: React.ReactNode;
   lesson: string[];
   skills: string[];
+  gallery?: React.ReactNode;
   children?: React.ReactNode;
 }) {
   return (
@@ -728,6 +730,12 @@ function ProjectShell({
 
 
       {children}
+
+      {gallery && (
+        <div className="border-t border-border bg-gradient-to-b from-transparent to-secondary/30 p-8 md:p-10">
+          {gallery}
+        </div>
+      )}
     </article>
   );
 }
@@ -918,16 +926,6 @@ function Project1() {
       tools={["File Explorer", "Notepad", "Recycle Bin", "OneDrive"]}
       evidence={
         <div className="space-y-4">
-          <EvidenceGallery
-            items={[
-              "Mở File Explorer từ thanh tác vụ (Win + E)",
-              "Truy cập PC này và ổ đĩa D:",
-              "Chuột phải → Mới → Cặp để tạo thư mục",
-              "Tệp GhiChuQuanTrong.txt sau khi đổi tên",
-              "Menu chuột phải: Sao chép (Ctrl+C) tệp tin",
-            ]}
-            file="GhiChuQuanTrong.docx"
-          />
           <div className="rounded-xl bg-muted/60 p-4 font-mono text-xs leading-relaxed">
             <div>📂 D:\Thuchanh_Duongthithuthao\</div>
             <div className="pl-4">📄 GhiChuQuanTrong.txt</div>
@@ -959,7 +957,20 @@ function Project1() {
         "Hiểu rõ Recycle Bin giúp giảm rủi ro mất dữ liệu bất ngờ.",
         "Đặt tên nhất quán và có cấu trúc là thói quen tiết kiệm thời gian lâu dài.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Mở File Explorer từ thanh tác vụ (Win + E)",
+            "Truy cập PC này và ổ đĩa D:",
+            "Chuột phải → Mới → Cặp để tạo thư mục",
+            "Tệp GhiChuQuanTrong.txt sau khi đổi tên",
+            "Menu chuột phải: Sao chép (Ctrl+C) tệp tin",
+          ]}
+          file="GhiChuQuanTrong.docx"
+        />
+      }
     >
+
       <ReviewSection
         good={[
           "Thực hiện đủ 12 thao tác cơ bản với tệp tin và thư mục",
@@ -1031,18 +1042,8 @@ function Project2() {
       tools={["Google Search", "Google Scholar", "IMF / OECD / NBER", "Cambridge University Press", "Zotero"]}
       evidence={
         <div className="space-y-4">
-          <EvidenceGallery
-            items={[
-              "Google Scholar với toán tử filetype:pdf",
-              "Trang IMF Blog — bài của K. Georgieva (2024)",
-              "Kết quả tìm kiếm trên OECD.org",
-              "Thư mục Zotero: nhóm ‘AI & Trade’",
-              "Trang trích dẫn Harvard xuất từ Zotero",
-            ]}
-            file="TrichDan_Harvard_AI-Trade.docx"
-          />
-
           <div className="overflow-hidden rounded-xl border border-border">
+
             <table className="w-full text-xs">
               <thead className="bg-secondary text-secondary-foreground">
                 <tr>
@@ -1108,6 +1109,18 @@ function Project2() {
         "Nguồn peer-reviewed và tổ chức quốc tế (IMF, OECD, NBER) là chuẩn vàng.",
         "Trích dẫn Harvard đúng chuẩn giúp bảo vệ tính học thuật và minh bạch.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Google Scholar với toán tử filetype:pdf",
+            "Trang IMF Blog — bài của K. Georgieva (2024)",
+            "Kết quả tìm kiếm trên OECD.org",
+            "Thư mục Zotero: nhóm ‘AI & Trade’",
+            "Trang trích dẫn Harvard xuất từ Zotero",
+          ]}
+          file="TrichDan_Harvard_AI-Trade.docx"
+        />
+      }
     >
       <ReviewSection
         good={[
@@ -1187,15 +1200,6 @@ function Project3() {
               </p>
             </div>
           </div>
-          <EvidenceGallery
-            items={[
-              "Phản hồi ChatGPT cho prompt CƠ BẢN",
-              "Phản hồi ChatGPT cho prompt CẢI TIẾN",
-              "Phản hồi ChatGPT cho prompt NÂNG CAO (bảng 4 cột)",
-              "So sánh Gemini · Claude cùng câu hỏi",
-            ]}
-            file="SoSanh_Prompt_3CapDo.pdf"
-          />
         </div>
       }
       analysis={
@@ -1227,6 +1231,17 @@ function Project3() {
         "Kỹ thuật Chain-of-Thought giúp AI đi qua từng bước tư duy, hạn chế bịa thông tin.",
         "Đầu tư thời gian viết prompt tốt là đầu tư vào chất lượng đầu ra học tập.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Phản hồi ChatGPT cho prompt CƠ BẢN",
+            "Phản hồi ChatGPT cho prompt CẢI TIẾN",
+            "Phản hồi ChatGPT cho prompt NÂNG CAO (bảng 4 cột)",
+            "So sánh Gemini · Claude cùng câu hỏi",
+          ]}
+          file="SoSanh_Prompt_3CapDo.pdf"
+        />
+      }
     >
       <ReviewSection
         good={[
@@ -1298,16 +1313,6 @@ function Project4() {
       tools={["Asana", "Google Docs", "Google Drive", "Google Meet", "Zapier (tự động hoá)"]}
       evidence={
         <div className="space-y-3">
-          <EvidenceGallery
-            items={[
-              "Bảng công việc Asana của nhóm",
-              "Google Docs — kịch bản video",
-              "Google Drive: thư mục dùng chung",
-              "Google Meet họp phân công",
-              "Zapier: luồng tự động hoá thông báo",
-            ]}
-            file="KichBan_Video_Nhom.docx"
-          />
           <div className="overflow-hidden rounded-xl border border-border">
             <table className="w-full text-xs">
               <thead className="bg-secondary">
@@ -1360,6 +1365,18 @@ function Project4() {
         "Làm việc song song trên Google Docs tiết kiệm thời gian tổng hợp phiên bản.",
         "Tự động hoá (Zapier) giải phóng nhân lực khỏi tác vụ lặp đi lặp lại.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Bảng công việc Asana của nhóm",
+            "Google Docs — kịch bản video",
+            "Google Drive: thư mục dùng chung",
+            "Google Meet họp phân công",
+            "Zapier: luồng tự động hoá thông báo",
+          ]}
+          file="KichBan_Video_Nhom.docx"
+        />
+      }
     >
       <ReviewSection
         good={[
@@ -1421,17 +1438,6 @@ function Project5() {
       tools={["ChatGPT", "Google Gemini", "Claude", "DALL·E", "Yeri AI", "Canva AI", "Adobe Firefly"]}
       evidence={
         <div className="space-y-3">
-          <EvidenceGallery
-            items={[
-              "Đầu ra của ChatGPT cho cùng câu hỏi",
-              "Đầu ra của Google Gemini",
-              "Đầu ra của Claude",
-              "Ảnh minh hoạ từ DALL·E",
-              "Ảnh minh hoạ từ Yeri AI",
-              "Poster hoàn thiện trong Canva AI",
-            ]}
-            file="SoSanh_AI_VanBan-HinhAnh.pdf"
-          />
           <div className="grid gap-3 md:grid-cols-2">
             <div className="rounded-xl bg-sky/25 p-4 text-xs">
               <div className="font-semibold text-plum">Kết luận công cụ văn bản</div>
@@ -1477,6 +1483,19 @@ function Project5() {
         "AI tạo sinh là trợ lý, không thay thế vai trò biên tập và kiểm chứng của người học.",
         "Luôn ghi rõ công cụ AI đã dùng để đảm bảo minh bạch học thuật.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Đầu ra của ChatGPT cho cùng câu hỏi",
+            "Đầu ra của Google Gemini",
+            "Đầu ra của Claude",
+            "Ảnh minh hoạ từ DALL·E",
+            "Ảnh minh hoạ từ Yeri AI",
+            "Poster hoàn thiện trong Canva AI",
+          ]}
+          file="SoSanh_AI_VanBan-HinhAnh.pdf"
+        />
+      }
     >
       <ReviewSection
         good={[
@@ -1545,16 +1564,6 @@ function Project6() {
       tools={["ChatGPT", "Chính sách nhà trường", "UNESCO AI Guidance", "Canva (Infographic)"]}
       evidence={
         <div className="space-y-4">
-          <EvidenceGallery
-            items={[
-              "Slide bài thuyết trình ‘Vai trò của AI trong GDĐH’",
-              "ChatGPT: dàn ý 3 phần cho bài thuyết trình",
-              "Infographic 4 bước ‘Sử dụng AI có trách nhiệm’ trên Canva",
-              "Trích dẫn hướng dẫn của UNESCO về AI trong GD",
-              "Bảng đối chiếu 6 vấn đề đạo đức & giải pháp",
-            ]}
-            file="ThuyetTrinh_AI_GDDH.pptx"
-          />
 
           <div className="rounded-2xl bg-gradient-hero p-5">
             <div className="mb-3 text-sm font-semibold text-plum">7 Nguyên tắc cá nhân sử dụng AI</div>
@@ -1610,6 +1619,18 @@ function Project6() {
         "Trách nhiệm số là kỹ năng bắt buộc trong thời đại AI.",
         "Sử dụng AI có trách nhiệm bảo vệ tính trung thực và sự sáng tạo cá nhân.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Slide bài thuyết trình ‘Vai trò của AI trong GDĐH’",
+            "ChatGPT: dàn ý 3 phần cho bài thuyết trình",
+            "Infographic 4 bước ‘Sử dụng AI có trách nhiệm’ trên Canva",
+            "Trích dẫn hướng dẫn của UNESCO về AI trong GD",
+            "Bảng đối chiếu 6 vấn đề đạo đức & giải pháp",
+          ]}
+          file="ThuyetTrinh_AI_GDDH.pptx"
+        />
+      }
     >
       <ReviewSection
         good={[
