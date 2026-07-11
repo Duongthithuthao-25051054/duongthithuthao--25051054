@@ -223,103 +223,141 @@ function Nav({ menuOpen, setMenuOpen }: { menuOpen: boolean; setMenuOpen: (v: bo
  *  HERO
  * ============================================================ */
 function Hero() {
+  const sidebar = [
+    { icon: "🏠", label: "Tổng quan", active: true },
+    { icon: "📁", label: "Dự án" },
+    { icon: "📄", label: "Minh chứng" },
+    { icon: "⭐", label: "Kỹ năng" },
+    { icon: "📊", label: "Tổng kết" },
+    { icon: "⚙️", label: "Cài đặt" },
+  ];
+  const tiles = [
+    { icon: "📁", label: "Dự án", bg: "from-amber-100 to-amber-50", ring: "ring-amber-200" },
+    { icon: "🔎", label: "Tìm kiếm", bg: "from-fuchsia-100 to-pink-50", ring: "ring-fuchsia-200" },
+    { icon: "💬", label: "Ghi chú", bg: "from-violet-100 to-purple-50", ring: "ring-violet-200" },
+    { icon: "💡", label: "Ý tưởng", bg: "from-yellow-100 to-amber-50", ring: "ring-yellow-200" },
+    { icon: "🎬", label: "Sản phẩm", bg: "from-indigo-100 to-violet-50", ring: "ring-indigo-200" },
+    { icon: "🛡️", label: "Bảo mật", bg: "from-sky-100 to-blue-50", ring: "ring-sky-200" },
+  ];
+  const stats = [
+    { n: "6", l: "Dự án cuối kỳ", sub: "Hoàn thành đầy đủ các dự án học tập", icon: "📁", color: "text-plum", bg: "bg-violet-100" },
+    { n: "8", l: "Kỹ năng số", sub: "Rèn luyện và phát triển năng lực số toàn diện", icon: "⭐", color: "text-pink-500", bg: "bg-pink-100" },
+    { n: "7", l: "Nguyên tắc AI", sub: "Ứng dụng AI có trách nhiệm và hiệu quả", icon: "✅", color: "text-sky-500", bg: "bg-sky-100" },
+    { n: "100%", l: "Tiến độ tổng thể", sub: "Hoàn thành xuất sắc nhiệm vụ học tập", icon: "🏅", color: "text-emerald-500", bg: "bg-emerald-100" },
+  ];
+
   return (
-    <section id="top" className="relative overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
+    <section id="top" className="relative overflow-hidden pt-28 pb-16 md:pt-36 md:pb-24">
       {/* Nền pastel */}
       <div className="absolute inset-0 -z-10 bg-gradient-hero opacity-70" />
       <div className="absolute -top-24 -left-24 -z-10 h-96 w-96 rounded-full bg-blush blur-3xl opacity-40 float-slow" />
       <div className="absolute top-32 -right-24 -z-10 h-[28rem] w-[28rem] rounded-full bg-sky blur-3xl opacity-40 float-slow" />
       <div className="absolute bottom-0 left-1/3 -z-10 h-72 w-72 rounded-full bg-lilac blur-3xl opacity-40" />
 
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-[1.15fr_0.85fr]">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 md:grid-cols-[0.95fr_1.05fr]">
+        {/* LEFT */}
         <div className="reveal">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-white/60 px-4 py-1.5 text-xs font-medium text-plum backdrop-blur">
-            <span className="h-2 w-2 rounded-full bg-gradient-brand" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-white/70 px-4 py-1.5 text-xs font-medium text-plum backdrop-blur">
+            <span className="grid h-5 w-5 place-items-center rounded-full bg-gradient-brand text-[10px] text-white">🎓</span>
             Học kỳ · Nhập môn CNS & Ứng dụng AI
           </span>
-          <h1 className="mt-6 font-display text-5xl leading-[1.05] md:text-7xl">
+          <h1 className="mt-6 font-display text-5xl leading-[1.05] md:text-6xl lg:text-7xl">
             Portfolio <span className="text-gradient-brand italic">Kỹ thuật số</span> cá nhân
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Hành trình học tập môn <strong className="text-foreground">Nhập môn Công nghệ số và Ứng dụng Trí tuệ nhân tạo</strong> —
-            nơi em lưu trữ, trình bày và tự đánh giá quá trình rèn luyện năng lực số qua sáu sản phẩm học tập hoàn chỉnh.
+          <div className="mt-6 h-1 w-32 rounded-full bg-gradient-brand" />
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+            Hành trình học tập môn <strong className="text-foreground">Nhập môn Công nghệ số</strong> và{" "}
+            <strong className="text-foreground">Ứng dụng Trí tuệ nhân tạo</strong> — nơi em lưu trữ, trình bày và tự đánh giá quá trình rèn luyện năng lực số qua sáu sản phẩm học tập hoàn chỉnh.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#gioi-thieu"
-              className="rounded-full bg-gradient-brand px-6 py-3 text-sm font-semibold text-white shadow-soft transition-all hover:shadow-glow hover:-translate-y-0.5"
-            >
-              Giới thiệu
+            <a href="#gioi-thieu" className="inline-flex items-center gap-2 rounded-2xl bg-gradient-brand px-5 py-3 text-sm font-semibold text-white shadow-soft transition-all hover:shadow-glow hover:-translate-y-0.5">
+              📖 Giới thiệu
             </a>
-            <a
-              href="#du-an"
-              className="rounded-full border border-border bg-white/70 px-6 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white"
-            >
-              Dự án học tập →
+            <a href="#du-an" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
+              📁 Dự án học tập
             </a>
-            <a
-              href="#minh-chung"
-              className="rounded-full border border-border bg-white/70 px-6 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white"
-            >
-              Minh chứng
+            <a href="#minh-chung" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
+              ✅ Minh chứng
             </a>
-            <a
-              href="#tong-ket"
-              className="rounded-full border border-border bg-white/70 px-6 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white"
-            >
-              Tổng kết
+            <a href="#tong-ket" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
+              📈 Tổng kết
             </a>
           </div>
-
-          <dl className="mt-12 grid grid-cols-3 gap-6 max-w-md">
-            {[
-              { n: "6", l: "Dự án cuối kỳ" },
-              { n: "8", l: "Kỹ năng số" },
-              { n: "7", l: "Nguyên tắc AI" },
-            ].map((s) => (
-              <div key={s.l}>
-                <dt className="font-display text-3xl text-plum">{s.n}</dt>
-                <dd className="text-xs text-muted-foreground">{s.l}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
 
-        {/* Illustration */}
-        <div className="reveal relative mx-auto aspect-square w-full max-w-md">
-          <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-brand blur-2xl opacity-30" />
-          <div className="relative h-full w-full rounded-[2.5rem] border border-white/60 bg-white/70 p-6 shadow-glow backdrop-blur-xl">
-            <div className="flex h-full flex-col justify-between">
-              <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                <span className="h-3 w-3 rounded-full bg-blush" />
-                <span className="h-3 w-3 rounded-full bg-lilac" />
-                <span className="h-3 w-3 rounded-full bg-sky" />
-                <span className="ml-auto font-mono">portfolio.ai</span>
-              </div>
+        {/* RIGHT — dashboard mockup */}
+        <div className="reveal relative">
+          <div className="absolute -inset-6 -z-10 rounded-[3rem] bg-gradient-brand opacity-20 blur-3xl" />
+          <div className="rounded-[2rem] border border-white/70 bg-white/80 p-4 shadow-glow backdrop-blur-xl md:p-5">
+            {/* window bar */}
+            <div className="flex items-center gap-2 px-2 pb-3">
+              <span className="h-3 w-3 rounded-full bg-red-300" />
+              <span className="h-3 w-3 rounded-full bg-amber-300" />
+              <span className="h-3 w-3 rounded-full bg-emerald-300" />
+              <span className="ml-auto font-mono text-xs text-plum">portfolio.ai</span>
+            </div>
 
-              <div className="grid grid-cols-3 gap-3">
-                {["📁", "🔎", "💬", "🤝", "🎬", "🛡️"].map((e) => (
+            <div className="grid grid-cols-[130px_1fr] gap-4">
+              {/* sidebar */}
+              <div className="flex flex-col gap-1 rounded-2xl bg-white/60 p-2">
+                {sidebar.map((s) => (
                   <div
-                    key={e}
-                    className="grid aspect-square place-items-center rounded-2xl bg-gradient-to-br from-white to-secondary text-3xl shadow-soft transition-transform hover:-translate-y-1 hover:rotate-3"
+                    key={s.label}
+                    className={`flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-medium transition ${
+                      s.active
+                        ? "bg-gradient-to-r from-violet-100 to-pink-100 text-plum shadow-soft"
+                        : "text-muted-foreground hover:bg-secondary/60"
+                    }`}
                   >
-                    {e}
+                    <span>{s.icon}</span>
+                    <span>{s.label}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="rounded-2xl bg-gradient-brand p-4 text-white">
-                <div className="text-xs opacity-80">Hoàn thành</div>
-                <div className="mt-1 flex items-end justify-between">
-                  <span className="font-display text-3xl">96%</span>
-                  <span className="text-xs opacity-80">6/6 nhiệm vụ</span>
+              {/* content */}
+              <div className="flex flex-col gap-3">
+                <div className="grid grid-cols-3 gap-3">
+                  {tiles.map((t) => (
+                    <div
+                      key={t.label}
+                      className={`flex aspect-square flex-col items-center justify-center gap-2 rounded-2xl bg-gradient-to-br ${t.bg} ring-1 ${t.ring} shadow-soft transition-transform hover:-translate-y-1`}
+                    >
+                      <span className="text-3xl">{t.icon}</span>
+                      <span className="text-[11px] font-medium text-plum">{t.label}</span>
+                    </div>
+                  ))}
                 </div>
-                <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/25">
-                  <div className="h-full w-[96%] rounded-full bg-white" />
+
+                <div className="rounded-2xl bg-gradient-brand p-4 text-white shadow-soft">
+                  <div className="text-xs opacity-90">Hoàn thành</div>
+                  <div className="mt-1 flex items-end justify-between">
+                    <span className="font-display text-3xl md:text-4xl">100%</span>
+                    <span className="inline-flex items-center gap-1 text-xs opacity-95">6/6 nhiệm vụ ✔</span>
+                  </div>
+                  <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-white/25">
+                    <div className="h-full w-full rounded-full bg-white" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* stats strip */}
+      <div className="mx-auto mt-12 max-w-6xl px-6">
+        <div className="reveal grid gap-4 rounded-[2rem] border border-white/70 bg-white/70 p-6 shadow-soft backdrop-blur-xl md:grid-cols-4">
+          {stats.map((s) => (
+            <div key={s.l} className="flex items-start gap-4">
+              <div className={`grid h-14 w-14 shrink-0 place-items-center rounded-2xl ${s.bg} text-2xl`}>{s.icon}</div>
+              <div>
+                <div className={`font-display text-3xl ${s.color}`}>{s.n}</div>
+                <div className="text-sm font-semibold text-foreground">{s.l}</div>
+                <div className="mt-0.5 text-xs text-muted-foreground">{s.sub}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
