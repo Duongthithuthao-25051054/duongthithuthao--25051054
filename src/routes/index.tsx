@@ -1773,22 +1773,23 @@ function Project6() {
     >
       <ReviewSection
         good={[
-          "Xây dựng bộ 7 nguyên tắc cá nhân sử dụng AI rõ ràng",
-          "Phân tích 6 vấn đề đạo đức kèm giải pháp cụ thể",
-          "Thiết kế infographic 4 bước dễ nhớ, dễ chia sẻ",
+          "Chuẩn bị đầy đủ dàn ý 10 phút + 5 ví dụ thực tế sinh viên dùng AI",
+          "Xây dựng bộ 7 nguyên tắc cá nhân sử dụng AI có trách nhiệm rõ ràng",
+          "Phân tích 3 vấn đề đạo đức trọng tâm + infographic 4 bước dễ chia sẻ",
         ]}
         improve={[
-          "Bổ sung ví dụ vi phạm học thuật thực tế để minh hoạ",
-          "Cập nhật chính sách AI mới nhất của nhà trường và UNESCO",
+          "Bổ sung dẫn chứng chính sách AI mới nhất của nhà trường và UNESCO",
+          "Đưa thêm ví dụ vi phạm học thuật thực tế để tăng tính cảnh báo",
         ]}
         takeaway={[
-          "Trách nhiệm số bảo vệ sự trung thực trong học thuật",
-          "AI là trợ lý — không thay thế được tư duy phản biện",
+          "AI là trợ lý — không thay thế được tư duy phản biện của người học",
           "Minh bạch khi dùng AI là chuẩn mực bắt buộc, không phải tuỳ chọn",
+          "Trách nhiệm cuối cùng về sản phẩm học tập luôn thuộc về người thực hiện",
         ]}
         aiUse={[
-          "Dùng ChatGPT lập dàn ý bài thuyết trình 10 phút",
-          "Dùng AI gợi ý 5 ví dụ thực tế sinh viên ứng dụng AI",
+          "Prompt 1 (ChatGPT): dàn ý bài thuyết trình 10 phút về AI trong GDĐH",
+          "Prompt 2 (ChatGPT): 5 ví dụ thực tế sinh viên ứng dụng AI trong học tập",
+          "Trích dẫn rõ trong sản phẩm cuối: một phần nội dung do ChatGPT hỗ trợ",
         ]}
         commit={[
           "Đã kiểm chứng thông tin AI bằng giáo trình và nguồn học thuật",
