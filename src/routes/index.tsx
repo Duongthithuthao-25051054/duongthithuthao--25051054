@@ -1489,18 +1489,19 @@ function Project4() {
     >
       <ReviewSection
         good={[
-          "Phân công 5 vai trò rõ ràng cho các thành viên trong nhóm",
-          "Kết hợp nhịp nhàng Asana + Google Docs + Drive + Meet",
-          "Áp dụng Zapier để tự động hoá email chào mừng thành viên",
+          "Phân công rõ 5 vai trò (Dẫn dắt · Chuyên gia 1 · Chuyên gia 2 · Người thực hành · Phân tích) cho từng thành viên",
+          "Kịch bản chi tiết theo bảng Thời lượng – Phân cảnh – Voice-over – B-roll trên Google Docs",
+          "Kết hợp nhịp nhàng Asana/Trello + Google Docs + Google Drive + Google Meet trong suốt dự án",
         ]}
         improve={[
-          "Thành viên cần cập nhật trạng thái trên Asana đều đặn hơn",
-          "Chuẩn hoá quy tắc đặt tên tệp trong Google Drive dùng chung",
+          "Thành viên cần cập nhật trạng thái công việc trên Asana/Trello đều đặn hơn",
+          "Chuẩn hoá quy tắc đặt tên tệp và phân thư mục trên Google Drive dùng chung",
+          "Bổ sung thêm phân cảnh Demo & Kết luận có mốc thời lượng cụ thể như hai phân cảnh đầu",
         ]}
         takeaway={[
           "Công cụ số minh bạch hoá tiến độ, giảm rủi ro bỏ sót đầu việc",
-          "Tự động hoá giải phóng thời gian cho công việc sáng tạo",
-          "Họp ngắn định kỳ hiệu quả hơn nhiều họp dài không có lịch",
+          "Chỉnh sửa đồng thời + lịch sử phiên bản giúp nhóm biên soạn nhanh và hạn chế sai sót",
+          "Lưu trữ tập trung theo quy tắc giúp mọi người luôn dùng đúng phiên bản mới nhất",
         ]}
         aiUse={[
           "Dùng ChatGPT gợi ý cấu trúc kịch bản video 4 phân cảnh",
