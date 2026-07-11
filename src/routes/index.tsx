@@ -170,7 +170,7 @@ function useReveal() {
 /* ============================================================
  *  PAGE
  * ============================================================ */
-function PortfolioPage() {
+export function PortfolioPage() {
   useReveal();
   const [showTop, setShowTop] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
