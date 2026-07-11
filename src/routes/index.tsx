@@ -1963,8 +1963,7 @@ function Conclusion() {
             { i: "💼", t: "Công việc", d: "Sử dụng AI có trách nhiệm như một cộng sự nghề nghiệp." },
           ].map((g) => (
             <div key={g.t} className="rounded-xl bg-gradient-hero p-4">
-              <div className="text-2xl">{g.i}</div>
-              <div className="mt-1 font-semibold">{g.t}</div>
+              <div className="font-semibold">{g.t}</div>
               <div className="mt-1 text-sm text-muted-foreground">{g.d}</div>
             </div>
           ))}
