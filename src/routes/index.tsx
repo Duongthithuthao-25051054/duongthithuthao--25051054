@@ -90,7 +90,7 @@ const TASKS = [
     icon: "🤝",
     title: "Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm",
     short: "Bảng Kanban giả định trên Trello/Notion với phân công, hạn chót, trạng thái và ghi chú phản hồi.",
-    progress: 95,
+    progress: 100,
     skills: ["Trello/Notion", "Teamwork", "Kanban"],
   },
   {
@@ -99,7 +99,7 @@ const TASKS = [
     icon: "🎬",
     title: "Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung",
     short: "Quy trình 6 bước sản xuất một video giải thích ngắn kết hợp AI viết kịch bản, tạo ảnh và giọng đọc.",
-    progress: 90,
+    progress: 100,
     skills: ["Canva", "CapCut", "DALL·E", "AI voice"],
   },
   {
