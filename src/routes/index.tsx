@@ -657,8 +657,6 @@ function Overview() {
                     </div>
                     <div className="flex items-center gap-3 text-xs text-muted-foreground">
                       <span>Mức độ: <b className="text-foreground/80">{m.level}</b></span>
-                      <span>·</span>
-                      <span>Thời lượng: <b className="text-foreground/80">{m.duration}</b></span>
                     </div>
                   </div>
                 </div>
