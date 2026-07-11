@@ -76,14 +76,14 @@ const TASKS = [
 ];
 
 const SKILLS = [
-  { name: "Quản lý tệp & dữ liệu số", level: 92, use: "Sắp xếp tài liệu học, dự án nhóm, sao lưu Cloud." },
-  { name: "Tìm kiếm thông tin học thuật", level: 88, use: "Tra cứu tài liệu tham khảo cho tiểu luận, seminar." },
-  { name: "Đánh giá độ tin cậy nguồn", level: 85, use: "Sàng lọc thông tin trước khi trích dẫn." },
-  { name: "Viết prompt hiệu quả", level: 90, use: "Khai thác AI hỗ trợ học tập, tổng hợp, dịch." },
-  { name: "Hợp tác trực tuyến", level: 87, use: "Chia việc, theo dõi tiến độ nhóm bằng Trello/Notion." },
-  { name: "Sáng tạo nội dung số bằng AI", level: 82, use: "Làm video, infographic, poster minh họa bài học." },
-  { name: "Sử dụng AI có trách nhiệm", level: 95, use: "Tuân thủ đạo đức học thuật khi dùng AI." },
-  { name: "Tự đánh giá & cải thiện", level: 88, use: "Rà soát, phản tư và cải tiến sản phẩm cá nhân." },
+  { name: "Quản lý tệp & dữ liệu số", level: 94, use: "Sắp xếp tài liệu học, dự án nhóm, sao lưu Cloud." },
+  { name: "Tìm kiếm thông tin học thuật", level: 97, use: "Tra cứu tài liệu tham khảo cho tiểu luận, seminar." },
+  { name: "Đánh giá độ tin cậy nguồn", level: 91, use: "Sàng lọc thông tin trước khi trích dẫn." },
+  { name: "Viết prompt hiệu quả", level: 96, use: "Khai thác AI hỗ trợ học tập, tổng hợp, dịch." },
+  { name: "Hợp tác trực tuyến", level: 93, use: "Chia việc, theo dõi tiến độ nhóm bằng Trello/Notion." },
+  { name: "Sáng tạo nội dung số bằng AI", level: 90, use: "Làm video, infographic, poster minh họa bài học." },
+  { name: "Sử dụng AI có trách nhiệm", level: 99, use: "Tuân thủ đạo đức học thuật khi dùng AI." },
+  { name: "Tự đánh giá & cải thiện", level: 95, use: "Rà soát, phản tư và cải tiến sản phẩm cá nhân." },
 ];
 
 const PRINCIPLES = [
