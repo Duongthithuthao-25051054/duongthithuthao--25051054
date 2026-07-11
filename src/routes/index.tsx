@@ -11,6 +11,13 @@ import bai1Img27 from "@/assets/bai1/bai1-27.png.asset.json";
 import bai1Img28 from "@/assets/bai1/bai1-28.png.asset.json";
 import bai1Img29 from "@/assets/bai1/bai1-29.png.asset.json";
 import bai1Img30 from "@/assets/bai1/bai1-30.png.asset.json";
+import bai1Img31 from "@/assets/bai1/bai1-31.png.asset.json";
+import bai1Img32 from "@/assets/bai1/bai1-32.png.asset.json";
+import bai1Img33 from "@/assets/bai1/bai1-33.png.asset.json";
+import bai1Img34 from "@/assets/bai1/bai1-34.png.asset.json";
+import bai1Img35 from "@/assets/bai1/bai1-35.png.asset.json";
+import bai1Img36 from "@/assets/bai1/bai1-36.png.asset.json";
+import bai1Img37 from "@/assets/bai1/bai1-37.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
