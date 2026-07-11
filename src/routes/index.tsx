@@ -1406,17 +1406,17 @@ function Project4() {
       icon="🤝"
       title="Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm"
       skills={["Asana / Trello", "Google Docs", "Google Drive", "Google Meet"]}
-      objective="Lập kế hoạch và sản xuất video nhóm “AI trong Giáo dục tại Việt Nam” — phân công 5 thành viên, quản lý tiến độ và tài liệu bằng bộ công cụ cộng tác."
+      objective="Lập kế hoạch và sản xuất video nhóm “AI trong Giáo dục tại Việt Nam” — phân công 5 vai trò (Dẫn dắt, Chuyên gia 1, Chuyên gia 2, Người thực hành, Phân tích) và quản lý tiến độ – tài liệu bằng bộ công cụ cộng tác."
       process={
         <ol className="ml-4 list-decimal space-y-1.5">
-          <li>Chia dự án thành 5 vai trò: Dẫn dắt, Chuyên gia 1, Chuyên gia 2, Người thực hành, Phân tích.</li>
-          <li>Lập bảng Asana theo trạng thái: <em>Chưa làm · Đang làm · Cần chỉnh sửa · Hoàn thành</em>.</li>
-          <li>Soạn thảo kịch bản 4 phân cảnh (Mở đầu → Ứng dụng thực tế → Demo → Kết luận) trên Google Docs.</li>
-          <li>Lưu trữ B-roll, ảnh minh họa và bản dựng video trên Google Drive dùng chung.</li>
-          <li>Họp Google Meet 30 phút/tuần để cập nhật tiến độ và gỡ khó.</li>
+          <li>Phân công 5 vai trò cố định: Dẫn dắt (mở đầu & kết luận), Chuyên gia 1 (AI cá nhân hoá học tập), Chuyên gia 2 (AI hỗ trợ giáo viên), Người thực hành (demo prompt), Phân tích (lợi ích & thách thức tại VN).</li>
+          <li>Lập bảng <strong>Asana / Trello</strong> theo trạng thái <em>Chưa làm · Đang làm · Cần chỉnh sửa · Hoàn thành</em>; mỗi người tự cập nhật tiến độ.</li>
+          <li>Soạn kịch bản chi tiết trên <strong>Google Docs</strong> với các cột: Thời lượng · Phân cảnh · Voice-over/Thoại · Hình ảnh & hiệu ứng B-roll (00:00 – 00:45 Mở đầu; 00:45 – 02:15 Ứng dụng thực tế; Demo; Kết luận).</li>
+          <li>Lưu trữ B-roll, ảnh minh hoạ và bản dựng video trên <strong>Google Drive</strong> dùng chung — phân thư mục theo nội dung, đặt tên tệp thống nhất.</li>
+          <li>Họp <strong>Google Meet</strong> định kỳ để cả nhóm cùng chỉnh sửa kịch bản, cập nhật tiến độ và gỡ khó.</li>
         </ol>
       }
-      tools={["Asana", "Google Docs", "Google Drive", "Google Meet", "Zapier (tự động hoá)"]}
+      tools={["Asana / Trello", "Google Docs", "Google Drive", "Google Meet"]}
       evidence={
         <div className="space-y-3">
           <div className="overflow-hidden rounded-xl border border-border">
