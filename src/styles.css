@@ -76,8 +76,8 @@
 :root {
   --radius: 1rem;
   /* Pastel pink + sky blue + violet palette */
-  --background: oklch(0.985 0.012 320);
-  --foreground: oklch(0.24 0.06 300);
+  --background: oklch(0.96 0.035 340);
+  --foreground: oklch(0.26 0.08 320);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.24 0.06 300);
   --popover: oklch(1 0 0);
