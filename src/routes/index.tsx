@@ -23,6 +23,10 @@ import bai3Img39 from "@/assets/bai3/bai3-39.png.asset.json";
 import bai3Img40 from "@/assets/bai3/bai3-40.png.asset.json";
 import bai3Img41 from "@/assets/bai3/bai3-41.png.asset.json";
 import bai3Doc from "@/assets/bai3/SoSanh_Prompt_3CapDo.docx.asset.json";
+import bai4Img43 from "@/assets/bai4/bai4-43.png.asset.json";
+import bai4Img44 from "@/assets/bai4/bai4-44.png.asset.json";
+import bai4Img45 from "@/assets/bai4/bai4-45.png.asset.json";
+import bai4Img46 from "@/assets/bai4/bai4-46.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
@@ -1423,11 +1427,10 @@ function Project4() {
       gallery={
         <EvidenceGallery
           items={[
-            "Bảng công việc Asana của nhóm",
-            "Google Docs — kịch bản video",
-            "Google Drive: thư mục dùng chung",
-            "Google Meet họp phân công",
-            "Zapier: luồng tự động hoá thông báo",
+            { label: "Google Meet — cả nhóm cùng chỉnh sửa kịch bản video", src: bai4Img43.url },
+            { label: "Google Docs — tài liệu 'Công nghệ số (Giữa kì)' đã mở", src: bai4Img44.url },
+            { label: "Kịch bản video: AI trong giáo dục tại Việt Nam", src: bai4Img45.url },
+            { label: "Asana — Content calendar phân công 5 nhiệm vụ", src: bai4Img46.url },
           ]}
           file="KichBan_Video_Nhom.docx"
         />
