@@ -378,14 +378,14 @@ function About() {
           <div className="relative mx-auto grid h-32 w-32 place-items-center overflow-hidden rounded-full bg-gradient-brand text-white shadow-glow">
             <span className="font-display text-5xl">SV</span>
           </div>
-          <h3 className="mt-6 text-center font-display text-2xl">[Điền tên của bạn]</h3>
-          <p className="mt-1 text-center text-sm text-muted-foreground">Sinh viên · [Điền ngành học]</p>
+          <h3 className="mt-6 text-center font-display text-2xl">Dương Thị Thu Thảo</h3>
+          <p className="mt-1 text-center text-sm text-muted-foreground">Sinh viên ·&nbsp;</p>
 
           <dl className="mt-6 space-y-3 text-sm">
-            <Row k="Trường / Lớp" v="[Điền trường / lớp]" />
+            <Row k="Trường&nbsp;" v="Trường Đại Học Kinh Tế-ĐHQGHN" />
             <Row k="Môn học" v="Nhập môn Công nghệ số & Ứng dụng AI" />
             <Row k="Năm học" v="2025 – 2026" />
-            <Row k="Email" v="[email@example.com]" />
+            <Row k="Email" v="25051054@vnu.edu.vn" />
           </dl>
 
           <div className="mt-6 flex flex-wrap gap-2">
