@@ -911,8 +911,17 @@ function Project1() {
       }
       tools={["File Explorer", "Notepad", "Recycle Bin", "OneDrive"]}
       evidence={
-        <div className="space-y-3">
-          <EvidencePlaceholder label="Ảnh chụp thư mục Thuchanh_Duongthithuthao trên ổ D:" />
+        <div className="space-y-4">
+          <EvidenceGallery
+            items={[
+              "Mở File Explorer từ thanh tác vụ (Win + E)",
+              "Truy cập PC này và ổ đĩa D:",
+              "Chuột phải → Mới → Cặp để tạo thư mục",
+              "Tệp GhiChuQuanTrong.txt sau khi đổi tên",
+              "Menu chuột phải: Sao chép (Ctrl+C) tệp tin",
+            ]}
+            file="GhiChuQuanTrong.docx"
+          />
           <div className="rounded-xl bg-muted/60 p-4 font-mono text-xs leading-relaxed">
             <div>📂 D:\Thuchanh_Duongthithuthao\</div>
             <div className="pl-4">📄 GhiChuQuanTrong.txt</div>
