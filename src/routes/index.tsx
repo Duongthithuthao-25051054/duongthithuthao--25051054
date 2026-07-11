@@ -443,49 +443,133 @@ function Row({ k, v }: { k: string; v: string }) {
  *  OVERVIEW — timeline 6 nhiệm vụ
  * ============================================================ */
 function Overview() {
+  const META = [
+    { level: "Cơ bản",    duration: "1–2 giờ", color: "#ec4899", bgIcon: "bg-pink-100",    textIcon: "text-pink-500" },
+    { level: "Cơ bản",    duration: "2–3 giờ", color: "#8b5cf6", bgIcon: "bg-violet-100",  textIcon: "text-violet-500" },
+    { level: "Trung bình",duration: "2–3 giờ", color: "#3b82f6", bgIcon: "bg-blue-100",    textIcon: "text-blue-500" },
+    { level: "Trung bình",duration: "2–3 giờ", color: "#f59e0b", bgIcon: "bg-amber-100",   textIcon: "text-amber-500" },
+    { level: "Nâng cao",  duration: "3–4 giờ", color: "#22c55e", bgIcon: "bg-green-100",   textIcon: "text-green-500" },
+    { level: "Nâng cao",  duration: "2–3 giờ", color: "#14b8a6", bgIcon: "bg-teal-100",    textIcon: "text-teal-500" },
+  ];
+
+  const completed = TASKS.filter((t) => t.progress === 100).length;
+  const avg = Math.round(TASKS.reduce((s, t) => s + t.progress, 0) / TASKS.length);
+
   return (
     <Section id="tong-quan" eyebrow="Learning Journey" title="Tổng quan 6 nhiệm vụ">
-      <p className="reveal max-w-2xl text-muted-foreground">
-        Sáu nhiệm vụ được tổ chức theo trình tự phát triển kỹ năng: từ nền tảng quản lý dữ liệu, tìm kiếm và đánh giá thông tin,
-        cho đến khai thác AI, hợp tác trực tuyến và sử dụng AI có trách nhiệm.
-      </p>
+      <div className="reveal mt-10 grid gap-10 lg:grid-cols-[280px_1fr]">
+        {/* Left title panel */}
+        <aside className="lg:sticky lg:top-24 lg:self-start">
+          <div className="text-4xl font-display font-bold tracking-tight text-foreground">
+            TỔNG QUAN
+          </div>
+          <div className="mt-1 text-4xl font-display font-black text-gradient-brand">
+            6 NHIỆM VỤ
+          </div>
+          <div className="mt-3 flex items-center gap-2">
+            <span className="h-1 w-8 rounded-full bg-pink-400" />
+            <span className="h-1 w-3 rounded-full bg-violet-400" />
+          </div>
+          <p className="mt-5 text-sm leading-relaxed text-muted-foreground max-w-xs">
+            Sáu nhiệm vụ được tổ chức theo trình tự phát triển kỹ năng: từ nền tảng
+            quản lý dữ liệu, tìm kiếm và đánh giá thông tin, cho đến khai thác AI,
+            hợp tác trực tuyến và sử dụng AI có trách nhiệm.
+          </p>
+          <div className="mt-8 hidden lg:block text-6xl">💻📋</div>
+        </aside>
 
-      <ol className="mt-12 relative border-l-2 border-dashed border-primary/30 pl-6 md:pl-10">
-        {TASKS.map((t, i) => (
-          <li key={t.id} className="reveal relative mb-10 last:mb-0">
-            <span className="absolute -left-[34px] md:-left-[54px] grid h-10 w-10 place-items-center rounded-full bg-gradient-brand text-white shadow-soft">
-              {i + 1}
-            </span>
-            <div className="rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-0.5 hover:shadow-soft">
-              <div className="flex flex-wrap items-center gap-3">
-                <span className="text-2xl">{t.icon}</span>
-                <span className="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-secondary-foreground">
-                  {t.tag}
-                </span>
-                <h3 className="font-display text-xl">{t.title}</h3>
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">{t.short}</p>
-              <div className="mt-4 flex items-center justify-between gap-4">
-                <div className="flex-1">
-                  <div className="h-1.5 w-full overflow-hidden rounded-full bg-muted">
-                    <div
-                      className="h-full rounded-full bg-gradient-brand"
-                      style={{ width: `${t.progress}%` }}
+        {/* Right timeline */}
+        <ol className="relative space-y-6">
+          {TASKS.map((t, i) => {
+            const m = META[i];
+            return (
+              <li
+                key={t.id}
+                className="reveal group relative flex items-start gap-4 rounded-2xl border border-border/50 bg-card/60 p-4 backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-soft md:gap-6 md:p-5"
+              >
+                {/* Step number */}
+                <div className="flex shrink-0 flex-col items-center">
+                  <span
+                    className="grid h-11 w-11 place-items-center rounded-full text-sm font-bold text-white shadow-soft"
+                    style={{ backgroundColor: m.color }}
+                  >
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  {i < TASKS.length - 1 && (
+                    <span
+                      className="mt-2 h-10 w-0.5 rounded-full opacity-40"
+                      style={{ backgroundColor: m.color }}
                     />
+                  )}
+                </div>
+
+                {/* Icon */}
+                <div
+                  className={`hidden sm:grid h-16 w-16 shrink-0 place-items-center rounded-full text-3xl ${m.bgIcon} ${m.textIcon}`}
+                >
+                  {t.icon}
+                </div>
+
+                {/* Body */}
+                <div className="min-w-0 flex-1 grid gap-3 md:grid-cols-[1fr_220px] md:items-center">
+                  <div className="min-w-0">
+                    <h3 className="font-display text-lg font-semibold leading-snug text-foreground">
+                      {t.title}
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{t.short}</p>
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <div className="flex items-center gap-2">
+                      <div className="h-2 flex-1 overflow-hidden rounded-full bg-muted">
+                        <div
+                          className="h-full rounded-full"
+                          style={{
+                            width: `${t.progress}%`,
+                            backgroundColor: m.color,
+                          }}
+                        />
+                      </div>
+                      <span
+                        className="text-sm font-bold tabular-nums"
+                        style={{ color: m.color }}
+                      >
+                        {t.progress}%
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                      <span className="inline-flex items-center gap-1">
+                        📊 <span>Mức độ: <b className="text-foreground/80">{m.level}</b></span>
+                      </span>
+                      <span className="inline-flex items-center gap-1">
+                        ⏱ <span>Thời lượng: <b className="text-foreground/80">{m.duration}</b></span>
+                      </span>
+                    </div>
                   </div>
                 </div>
-                <span className="text-xs font-medium text-plum">{t.progress}%</span>
-                <a
-                  href={`#${t.id}`}
-                  className="rounded-full border border-border px-4 py-1.5 text-xs font-medium transition-colors hover:bg-secondary"
-                >
-                  Xem chi tiết →
-                </a>
-              </div>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
+
+      {/* Bottom stats strip */}
+      <div className="reveal mt-10 grid grid-cols-2 gap-4 rounded-2xl border border-border/60 bg-card/70 p-5 backdrop-blur md:grid-cols-4">
+        {[
+          { icon: "⏱", label: "Tổng thời lượng ước tính", value: "12 – 18 giờ", color: "text-violet-500" },
+          { icon: "📈", label: "Tiến độ trung bình", value: `${avg}%`, color: "text-pink-500" },
+          { icon: "🎯", label: "Nhiệm vụ đã hoàn thành", value: `${completed} / ${TASKS.length}`, color: "text-blue-500" },
+          { icon: "🏅", label: "Mức độ kỹ năng", value: "Từ cơ bản đến nâng cao", color: "text-violet-600" },
+        ].map((s) => (
+          <div key={s.label} className="flex items-center gap-3">
+            <span className={`text-3xl ${s.color}`}>{s.icon}</span>
+            <div className="min-w-0">
+              <div className="text-xs text-muted-foreground">{s.label}</div>
+              <div className={`font-display text-lg font-bold ${s.color}`}>{s.value}</div>
             </div>
-          </li>
+          </div>
         ))}
-      </ol>
+      </div>
     </Section>
   );
 }
