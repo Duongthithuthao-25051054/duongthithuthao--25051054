@@ -1725,8 +1725,8 @@ function Footer() {
         <div className="text-sm">
           <div className="mb-2 font-semibold text-plum">Thông tin</div>
           <ul className="space-y-1.5 text-muted-foreground">
-            <li>Sinh viên: <span className="text-foreground">[Điền tên của bạn]</span></li>
-            <li>Ngành: <span className="text-foreground">[Điền ngành học]</span></li>
+            <li>Sinh viên: <span className="text-foreground">Dương Thị Thu Thảo</span><br />Lớp: KTQT6</li>
+            <li>Khoa: <span className="text-foreground">Kinh Tế Quốc Tế</span></li>
             <li>Môn: Nhập môn Công nghệ số & Ứng dụng AI</li>
             <li>Năm học: 2025 – 2026</li>
           </ul>
