@@ -1382,11 +1382,11 @@ function Project3() {
 /* ---------- Dự án 4 ---------- */
 function Project4() {
   const board = [
-    { m: "Thành viên 1", task: "Dẫn dắt · Giới thiệu & Kết luận video", due: "15/11", state: "Hoàn thành", note: "Đã duyệt kịch bản mở đầu" },
-    { m: "Thành viên 2", task: "Trình bày AI cá nhân hóa học tập", due: "16/11", state: "Đang làm", note: "Đang thu voice-over" },
-    { m: "Thành viên 3", task: "Trình bày AI hỗ trợ giáo viên chấm bài", due: "16/11", state: "Đang làm", note: "Chuẩn bị demo slide" },
-    { m: "Thành viên 4", task: "Demo prompt trên máy tính (B-roll)", due: "17/11", state: "Cần chỉnh sửa", note: "Cần quay lại phần thao tác" },
-    { m: "Thành viên 5", task: "Phân tích lợi ích & thách thức tại VN", due: "18/11", state: "Chưa làm", note: "Chờ nhận số liệu từ TV2" },
+    { m: "Thành viên 1 (Dẫn dắt)", task: "Giới thiệu & Kết luận video", due: "15/11", state: "Hoàn thành", note: "Đã duyệt kịch bản mở đầu (00:00 – 00:45)" },
+    { m: "Thành viên 2 (Chuyên gia 1)", task: "AI cá nhân hoá học tập (Elsa Speak, nền tảng tự học)", due: "16/11", state: "Đang làm", note: "Đang thu voice-over phân cảnh 2" },
+    { m: "Thành viên 3 (Chuyên gia 2)", task: "AI hỗ trợ giáo viên chấm bài / soạn giáo án", due: "16/11", state: "Đang làm", note: "Chuẩn bị demo slide" },
+    { m: "Thành viên 4 (Người thực hành)", task: "Demo công cụ & prompt trên máy tính (B-roll)", due: "17/11", state: "Cần chỉnh sửa", note: "Quay lại phần thao tác máy tính + giải thích" },
+    { m: "Thành viên 5 (Phân tích)", task: "Phân tích lợi ích & thách thức tại Việt Nam", due: "18/11", state: "Chưa làm", note: "Chờ nhận số liệu từ TV2" },
   ];
   const stateColor: Record<string, string> = {
     "Hoàn thành": "bg-emerald-100 text-emerald-700",
@@ -1395,9 +1395,9 @@ function Project4() {
     "Cần chỉnh sửa": "bg-blush/40 text-plum",
   };
   const challenges = [
-    { t: "Khó đồng bộ tiến độ giữa các thành viên", s: "Dùng Asana / Trello: mỗi người tự cập nhật trạng thái, tránh trùng lặp và bỏ sót." },
-    { t: "Khó chỉnh sửa tài liệu cùng lúc", s: "Làm việc trên Google Docs: chỉnh sửa đồng thời, lịch sử phiên bản, bình luận theo dòng." },
-    { t: "Quản lý & chia sẻ tài liệu chưa khoa học", s: "Lưu trữ tập trung trên Google Drive, đặt tên thống nhất, phân quyền theo vai trò." },
+    { t: "Khó đồng bộ tiến độ giữa các thành viên", s: "Dùng Trello/Asana phân chia nhiệm vụ, đặt thời hạn và cập nhật trạng thái. Mỗi thành viên chủ động đánh dấu tiến độ, tránh trùng lặp và bỏ sót nhiệm vụ." },
+    { t: "Khó chỉnh sửa tài liệu cùng lúc", s: "Google Docs cho phép nhiều người cùng chỉnh sửa; lịch sử phiên bản và bình luận giúp theo dõi đóng góp, khôi phục nội dung khi cần và hạn chế ghi đè." },
+    { t: "Quản lý & chia sẻ tài liệu chưa khoa học", s: "Lưu trữ tập trung trên Google Drive theo thư mục nội dung, đặt tên tệp thống nhất và cấp quyền phù hợp — đảm bảo luôn dùng phiên bản mới nhất." },
   ];
   return (
     <ProjectShell
