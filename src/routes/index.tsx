@@ -1365,6 +1365,18 @@ function Project4() {
         "Làm việc song song trên Google Docs tiết kiệm thời gian tổng hợp phiên bản.",
         "Tự động hoá (Zapier) giải phóng nhân lực khỏi tác vụ lặp đi lặp lại.",
       ]}
+      gallery={
+        <EvidenceGallery
+          items={[
+            "Bảng công việc Asana của nhóm",
+            "Google Docs — kịch bản video",
+            "Google Drive: thư mục dùng chung",
+            "Google Meet họp phân công",
+            "Zapier: luồng tự động hoá thông báo",
+          ]}
+          file="KichBan_Video_Nhom.docx"
+        />
+      }
     >
       <ReviewSection
         good={[
