@@ -1438,17 +1438,6 @@ function Project5() {
       tools={["ChatGPT", "Google Gemini", "Claude", "DALL·E", "Yeri AI", "Canva AI", "Adobe Firefly"]}
       evidence={
         <div className="space-y-3">
-          <EvidenceGallery
-            items={[
-              "Đầu ra của ChatGPT cho cùng câu hỏi",
-              "Đầu ra của Google Gemini",
-              "Đầu ra của Claude",
-              "Ảnh minh hoạ từ DALL·E",
-              "Ảnh minh hoạ từ Yeri AI",
-              "Poster hoàn thiện trong Canva AI",
-            ]}
-            file="SoSanh_AI_VanBan-HinhAnh.pdf"
-          />
           <div className="grid gap-3 md:grid-cols-2">
             <div className="rounded-xl bg-sky/25 p-4 text-xs">
               <div className="font-semibold text-plum">Kết luận công cụ văn bản</div>
