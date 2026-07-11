@@ -1468,9 +1468,9 @@ function Project4() {
         </div>
       }
       lesson={[
-        "Công cụ hợp tác giúp nhóm minh bạch hóa tiến độ, giảm rủi ro trùng lặp.",
-        "Làm việc song song trên Google Docs tiết kiệm thời gian tổng hợp phiên bản.",
-        "Tự động hoá (Zapier) giải phóng nhân lực khỏi tác vụ lặp đi lặp lại.",
+        "Công cụ hợp tác (Asana/Trello + Google Docs + Drive + Meet) giúp nhóm minh bạch hoá tiến độ, giảm rủi ro trùng lặp và bỏ sót nhiệm vụ.",
+        "Làm việc song song trên Google Docs cùng với lịch sử phiên bản & bình luận giúp tổng hợp nhanh, hạn chế ghi đè.",
+        "Lưu trữ tập trung trên Google Drive với quy tắc đặt tên & phân quyền giúp cả nhóm luôn dùng đúng phiên bản mới nhất.",
       ]}
       gallery={
         <EvidenceGallery
