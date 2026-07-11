@@ -749,25 +749,29 @@ function Block({ title, children }: { title: string; children: React.ReactNode }
   );
 }
 
-function EvidencePlaceholder({ label }: { label: string }) {
+function EvidencePlaceholder({ label, src }: { label: string; src?: string }) {
   return (
     <figure className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-      <div
-        className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-      >
-        <div
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 14px), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 22px)",
-          }}
-        />
-        <div className="absolute left-3 top-3 flex gap-1.5">
-          <span className="h-2 w-2 rounded-full bg-red-400/70" />
-          <span className="h-2 w-2 rounded-full bg-yellow-400/70" />
-          <span className="h-2 w-2 rounded-full bg-green-400/70" />
-        </div>
-        <div className="absolute inset-0 grid place-items-center text-3xl opacity-70">🖼️</div>
+      <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {src ? (
+          <img src={src} alt={label} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+        ) : (
+          <>
+            <div
+              className="absolute inset-0 opacity-40"
+              style={{
+                backgroundImage:
+                  "repeating-linear-gradient(0deg, rgba(255,255,255,0.06) 0 1px, transparent 1px 14px), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0 1px, transparent 1px 22px)",
+              }}
+            />
+            <div className="absolute left-3 top-3 flex gap-1.5">
+              <span className="h-2 w-2 rounded-full bg-red-400/70" />
+              <span className="h-2 w-2 rounded-full bg-yellow-400/70" />
+              <span className="h-2 w-2 rounded-full bg-green-400/70" />
+            </div>
+            <div className="absolute inset-0 grid place-items-center text-3xl opacity-70">🖼️</div>
+          </>
+        )}
       </div>
       <figcaption className="border-t border-border bg-secondary/40 px-3 py-2 text-xs font-medium leading-snug text-foreground">
         {label}
@@ -782,16 +786,17 @@ function EvidenceGallery({
   file,
 }: {
   title?: string;
-  items: string[];
+  items: (string | { label: string; src?: string })[];
   file?: string;
 }) {
   return (
     <div className="space-y-3">
       <div className="text-xs font-semibold uppercase tracking-wide text-plum">{title}</div>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((it, i) => (
-          <EvidencePlaceholder key={i} label={it} />
-        ))}
+        {items.map((it, i) => {
+          const obj = typeof it === "string" ? { label: it } : it;
+          return <EvidencePlaceholder key={i} label={obj.label} src={obj.src} />;
+        })}
       </div>
       {file && (
         <div className="pt-1">
@@ -803,6 +808,7 @@ function EvidenceGallery({
     </div>
   );
 }
+
 
 
 function ReviewSection({
