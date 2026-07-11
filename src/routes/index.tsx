@@ -837,7 +837,9 @@ function ProjectShell({
 function Block({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div className="mb-6 last:mb-0">
-      <h4 className="mb-2 text-sm font-semibold tracking-wide text-plum uppercase">{title}</h4>
+      {title && (
+        <h4 className="mb-2 text-sm font-semibold tracking-wide text-plum uppercase">{title}</h4>
+      )}
       <div className="text-sm leading-relaxed text-foreground/90">{children}</div>
     </div>
   );
