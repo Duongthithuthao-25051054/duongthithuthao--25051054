@@ -751,90 +751,101 @@ function Project1() {
       id="task-1"
       tag="Bài tập 1 · Mục 1.4"
       icon="📁"
-      title="Thao tác cơ bản với tệp tin và thư mục"
-      skills={["Quản lý dữ liệu", "Cloud Drive", "Đặt tên nhất quán"]}
-      objective="Biết tạo thư mục, lưu trữ tài liệu học tập một cách khoa học và đặt tên tệp nhất quán để quản lý dữ liệu lâu dài."
+      title="Thao tác cơ bản với tệp tin và thư mục trên Windows"
+      skills={["File Explorer", "Quản lý dữ liệu", "Recycle Bin", "Đặt tên nhất quán"]}
+      objective="Thành thạo 12 thao tác cơ bản trên File Explorer — từ tạo, đổi tên, sao chép, di chuyển đến xóa và khôi phục — để sắp xếp tài liệu học tập khoa học, an toàn."
       process={
         <ol className="ml-4 list-decimal space-y-1.5">
-          <li>Tạo thư mục gốc riêng cho môn học: <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs">NMCNS-AI_2026</code>.</li>
-          <li>Chia thành 4 thư mục con: <em>Bài tập</em>, <em>Tài liệu tham khảo</em>, <em>Minh chứng</em>, <em>Sản phẩm cuối kỳ</em>.</li>
-          <li>Đồng bộ lên Google Drive/OneDrive để sao lưu và truy cập nhiều thiết bị.</li>
-          <li>Áp dụng quy tắc đặt tên nhất quán cho từng phiên bản.</li>
+          <li>Mở File Explorer bằng <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs">Win + E</code>, truy cập ổ đĩa D:.</li>
+          <li>Tạo thư mục mới <em>Thuchanh_Duongthithuthao</em> bằng chuột phải → New → Folder.</li>
+          <li>Tạo tệp <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs">GhiChu.txt</code> → đổi tên thành <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs">GhiChuQuanTrong.txt</code>.</li>
+          <li>Tạo thư mục con <em>TaiLieu</em> để phân loại tài liệu.</li>
+          <li>Sao chép (Ctrl+C / Ctrl+V) và di chuyển (Ctrl+X / Ctrl+V) tệp giữa các thư mục.</li>
+          <li>Xóa mềm (Delete → Recycle Bin) và xóa vĩnh viễn (Shift + Delete).</li>
+          <li>Khôi phục tệp đã xóa từ Recycle Bin bằng lệnh <em>Restore</em>.</li>
         </ol>
       }
-      tools={["File Explorer", "Google Drive", "OneDrive"]}
+      tools={["File Explorer", "Notepad", "Recycle Bin", "OneDrive"]}
       evidence={
         <div className="space-y-3">
-          <EvidencePlaceholder label="Ảnh cấu trúc thư mục môn học" />
+          <EvidencePlaceholder label="Ảnh chụp thư mục Thuchanh_Duongthithuthao trên ổ D:" />
           <div className="rounded-xl bg-muted/60 p-4 font-mono text-xs leading-relaxed">
-            <div>📂 NMCNS-AI_2026/</div>
-            <div className="pl-4">📂 01_BaiTap/</div>
-            <div className="pl-8">📄 NMCNS_Bai01_QuanLyTep_2026-10-05_v1.docx</div>
-            <div className="pl-8">📄 NMCNS_Bai01_QuanLyTep_2026-10-08_v2.docx</div>
-            <div className="pl-4">📂 02_TaiLieuThamKhao/</div>
-            <div className="pl-4">📂 03_MinhChung/</div>
-            <div className="pl-4">📂 04_SanPhamCuoiKy/</div>
+            <div>📂 D:\Thuchanh_Duongthithuthao\</div>
+            <div className="pl-4">📄 GhiChuQuanTrong.txt</div>
+            <div className="pl-4">📄 DiChuyen.txt</div>
+            <div className="pl-4">📂 TaiLieu\</div>
+            <div className="pl-8">📄 GhiChuQuanTrong.txt <span className="text-muted-foreground">(bản sao chép)</span></div>
+          </div>
+          <div className="rounded-xl border border-border p-3 text-xs">
+            <span className="font-semibold text-plum">Nhật ký Recycle Bin: </span>
+            GhiChuQuanTrong.txt — xóa 3/7/2026 · vị trí gốc D:\Thuchanh_Duongthithuthao · đã <em>Restore</em>.
           </div>
         </div>
       }
       analysis={
         <div className="space-y-2">
           <p>
-            Quy tắc đặt tên <code className="rounded bg-muted px-1.5 py-0.5 font-mono text-xs">MonHoc_Bai_TenBaiTap_NgayThucHien_PhienBan</code>
-            giúp phân biệt phiên bản cũ – mới, hỗ trợ tìm kiếm bằng từ khóa và tránh nhầm lẫn khi làm việc nhóm.
+            Phân biệt <strong>Delete</strong> (đưa vào Recycle Bin — có thể khôi phục) và <strong>Shift + Delete</strong>
+            (xóa vĩnh viễn — không qua thùng rác) giúp em tránh mất dữ liệu quan trọng do thao tác nhầm.
           </p>
           <p>
-            Cấu trúc 4 nhánh khoa học vì tách rõ <strong>sản phẩm học tập</strong>, <strong>nguyên liệu đầu vào</strong> và <strong>minh chứng đầu ra</strong>,
-            phản ánh đúng vòng đời của một dự án học tập.
+            Đặt tên thư mục theo cú pháp <code className="rounded bg-muted px-1 font-mono text-xs">ThucHanh_HoTen</code>
+            và tệp dạng <code className="rounded bg-muted px-1 font-mono text-xs">TenTep_NgayThang_Version</code> giúp
+            tìm kiếm nhanh và không trùng lặp khi cộng tác.
           </p>
         </div>
       }
       lesson={[
-        "Quản lý dữ liệu khoa học là kỹ năng nền tảng của công dân số.",
-        "Một cấu trúc thư mục tốt tiết kiệm thời gian tìm kiếm và giảm rủi ro mất dữ liệu.",
-        "Đồng bộ Cloud giúp làm việc liên tục ngay cả khi đổi thiết bị.",
+        "Kỹ năng quản lý tệp – thư mục là nền tảng của mọi công việc số.",
+        "Hiểu rõ Recycle Bin giúp giảm rủi ro mất dữ liệu bất ngờ.",
+        "Đặt tên nhất quán và có cấu trúc là thói quen tiết kiệm thời gian lâu dài.",
       ]}
     />
   );
 }
 
+
 /* ---------- Dự án 2 ---------- */
 function Project2() {
   const operators = [
-    { op: "site:", ex: "site:edu.vn AI trong giáo dục", why: "Giới hạn tìm kiếm ở tên miền học thuật" },
-    { op: "filetype:", ex: "filetype:pdf trí tuệ nhân tạo", why: "Chỉ tìm tài liệu PDF chính thống" },
-    { op: "intitle:", ex: "intitle:\"prompt engineering\"", why: "Từ khóa xuất hiện ở tiêu đề trang" },
-    { op: "\"...\"", ex: "\"generative AI ethics\"", why: "Cụm từ chính xác, tránh kết quả rời rạc" },
-    { op: "OR", ex: "ChatGPT OR Gemini học tập", why: "Mở rộng kết quả sang công cụ thay thế" },
-    { op: "-", ex: "AI giáo dục -quảng cáo", why: "Loại bỏ từ khóa gây nhiễu" },
-    { op: "after:", ex: "AI education after:2023", why: "Chỉ lấy tài liệu cập nhật" },
+    { op: "site:", ex: "site:imf.org AI economy", why: "Giới hạn tìm kiếm ở tổ chức uy tín (IMF, OECD, .edu…)" },
+    { op: "filetype:", ex: "filetype:pdf AI international trade", why: "Chỉ tìm tài liệu PDF chính thống, dễ trích dẫn" },
+    { op: "intitle:", ex: "intitle:\"artificial intelligence\" trade", why: "Từ khóa phải nằm ở tiêu đề bài báo" },
+    { op: "\"...\"", ex: "\"AI and international trade\"", why: "Khớp chính xác cụm từ nghiên cứu" },
+    { op: "OR", ex: "AI OR \"machine learning\" FDI", why: "Mở rộng sang thuật ngữ đồng nghĩa" },
+    { op: "-", ex: "AI economy -blog -marketing", why: "Loại bỏ nội dung quảng cáo, blog nhiễu" },
+    { op: "after:", ex: "AI global trade after:2023", why: "Chỉ lấy tài liệu cập nhật 2023 trở lại" },
   ];
   const sources = [
-    { name: "UNESCO — Guidance on Generative AI in Education", org: "UNESCO", year: 2023, trust: "Rất cao", why: "Tổ chức quốc tế, quy trình biên tập chặt.", limit: "Khái quát, chưa đi sâu bối cảnh Việt Nam." },
-    { name: "Bài giảng NMCNS-AI của trường", org: "Đại học · Khoa CNTT", year: 2026, trust: "Cao", why: "Chính thống, sát chương trình học.", limit: "Chỉ áp dụng trong phạm vi môn." },
-    { name: "Bài báo Scholar về Prompt Engineering", org: "IEEE / ACM", year: 2024, trust: "Cao", why: "Peer-reviewed, có DOI.", limit: "Yêu cầu nền tảng kỹ thuật để đọc." },
-    { name: "Blog cá nhân về ChatGPT", org: "Tác giả ẩn danh", year: "n/a", trust: "Trung bình – Thấp", why: "Chỉ dùng tham khảo ý tưởng.", limit: "Không rõ tác giả, không nguồn dẫn." },
+    { name: "AI and International Trade (NBER/WITA)", org: "Goldfarb & Trefler — Univ. of Toronto", year: 2024, trust: "8/10", limit: "Có yếu tố quảng bá giải pháp của hãng." },
+    { name: "IMF Blog — AI & Global Economy", org: "Kristalina Georgieva (IMF)", year: 2024, trust: "10/10", limit: "Chuẩn mực nhất về tác động vĩ mô toàn cầu." },
+    { name: "Artificial Intelligence & International Economic Law", org: "Cambridge University Press", year: 2024, trust: "10/10", limit: "Uy tín học thuật cao, nền tảng pháp lý." },
+    { name: "Research on AI Impact (ResearchGate)", org: "Nhóm nghiên cứu độc lập", year: 2024, trust: "7/10", limit: "Cần kiểm tra kỹ lý lịch tác giả." },
+    { name: "AI's Impact on the Global Economy", org: "Cerity Partners", year: 2024, trust: "6/10", limit: "Mang tính định hướng thị trường tài chính." },
+    { name: "OECD — AI and International Trade", org: "OECD Publishing, Paris", year: 2024, trust: "10/10", limit: "Nguồn thống kê đa quốc gia gốc." },
+    { name: "MIT Sloan — New Look at Economics of AI", org: "MIT Sloan / Ideas Made to Matter", year: 2024, trust: "9/10", limit: "Kết hợp công nghệ và kinh tế học." },
+    { name: "NBER Working Paper — AI & Global Economy", org: "National Bureau of Economic Research", year: 2024, trust: "10/10", limit: "Tiêu chuẩn vàng về kinh tế lượng." },
   ];
   return (
     <ProjectShell
       id="task-2"
       tag="Bài tập 2 · Mục 2.4"
       icon="🔎"
-      title="Tìm kiếm và đánh giá thông tin học thuật"
-      skills={["Search operators", "Đánh giá nguồn", "Tư duy phản biện"]}
-      objective="Sử dụng toán tử tìm kiếm nâng cao và xây dựng bảng đánh giá đa tiêu chí để chọn nguồn thông tin đáng tin cậy."
+      title="Tìm kiếm và đánh giá thông tin học thuật — chủ đề AI & Kinh tế Quốc tế"
+      skills={["Search operators", "Đánh giá nguồn 6 tiêu chí", "Trích dẫn Harvard"]}
+      objective="Nghiên cứu chủ đề “Ảnh hưởng của Trí tuệ Nhân tạo đến Kinh tế Quốc tế”: khai thác toán tử tìm kiếm nâng cao, thu thập 10 nguồn và đánh giá độ tin cậy theo thang 10/10."
       process={
         <ol className="ml-4 list-decimal space-y-1.5">
-          <li>Chọn chủ đề học thuật: <em>“Ứng dụng AI tạo sinh trong giáo dục đại học”</em>.</li>
-          <li>Áp dụng &gt; 6 toán tử tìm kiếm nâng cao trên Google & Google Scholar.</li>
-          <li>Thu thập 8 nguồn, sau đó sàng lọc còn 4 nguồn có giá trị.</li>
-          <li>Đánh giá theo 5 tiêu chí: tác giả, năm, độ tin cậy, lý do chọn, hạn chế.</li>
+          <li>Xác định 4 khía cạnh phân tích: <em>thương mại, đầu tư FDI, thị trường lao động, chuỗi cung ứng</em>.</li>
+          <li>Áp dụng &gt; 6 toán tử tìm kiếm trên Google Search & Google Scholar.</li>
+          <li>Thu thập 10 nguồn từ IMF, OECD, NBER, Cambridge, MIT Sloan, WITA…</li>
+          <li>Đánh giá theo 6 tiêu chí: tác giả, cơ quan xuất bản, phương pháp, tính cập nhật, điểm tin cậy, ghi chú.</li>
+          <li>Trích dẫn tất cả 10 nguồn theo chuẩn <strong>Harvard</strong>.</li>
         </ol>
       }
-      tools={["Google Search", "Google Scholar", "Website .edu / .gov", "Zotero"]}
+      tools={["Google Search", "Google Scholar", "IMF / OECD / NBER", "Cambridge University Press", "Zotero"]}
       evidence={
         <div className="space-y-3">
-          <EvidencePlaceholder label="Ảnh chụp kết quả tìm kiếm với operator" />
           <div className="overflow-hidden rounded-xl border border-border">
             <table className="w-full text-xs">
               <thead className="bg-secondary text-secondary-foreground">
@@ -855,24 +866,30 @@ function Project2() {
               </tbody>
             </table>
           </div>
+          <div className="rounded-xl bg-muted/60 p-4 text-xs leading-relaxed">
+            <div className="font-semibold text-plum mb-1">Trích dẫn Harvard (mẫu):</div>
+            <p><strong>Georgieva, K.</strong> (2024) ‘AI Will Transform the Global Economy. Let’s Make Sure It Benefits Humanity’, <em>IMF Blog</em>.</p>
+            <p><strong>Goldfarb, A. and Trefler, D.</strong> (2018) ‘AI and International Trade’, in <em>The Economics of Artificial Intelligence: An Agenda</em>. NBER.</p>
+            <p><strong>OECD</strong> (2024) <em>Artificial Intelligence and International Trade</em>. OECD Publishing, Paris.</p>
+          </div>
         </div>
       }
       analysis={
         <div className="space-y-3">
           <p>
-            Chiến lược tìm kiếm được xây dựng theo tầng: <strong>khoanh vùng miền</strong> (<code className="rounded bg-muted px-1 font-mono text-xs">site:</code>,
-            <code className="rounded bg-muted px-1 font-mono text-xs">filetype:</code>) → <strong>khớp chính xác</strong> (<code className="rounded bg-muted px-1 font-mono text-xs">"..."</code>, <code className="rounded bg-muted px-1 font-mono text-xs">intitle:</code>)
-            → <strong>lọc nhiễu</strong> (<code className="rounded bg-muted px-1 font-mono text-xs">-</code>, <code className="rounded bg-muted px-1 font-mono text-xs">after:</code>).
+            Bốn nguồn đạt <strong>10/10</strong> (IMF, Cambridge, OECD, NBER) đều là tổ chức toàn cầu hoặc peer-reviewed —
+            được ưu tiên trích dẫn. Ba nguồn 7–9/10 (MIT Sloan, WITA, arXiv) dùng bổ trợ. Nguồn 6/10 (Cerity Partners)
+            chỉ tham khảo góc nhìn thị trường.
           </p>
           <div className="overflow-hidden rounded-xl border border-border">
             <table className="w-full text-xs">
               <thead className="bg-secondary">
                 <tr>
                   <th className="px-2 py-2 text-left">Nguồn</th>
-                  <th className="px-2 py-2 text-left">Tác giả</th>
+                  <th className="px-2 py-2 text-left">Cơ quan</th>
                   <th className="px-2 py-2 text-left">Năm</th>
                   <th className="px-2 py-2 text-left">Tin cậy</th>
-                  <th className="px-2 py-2 text-left">Hạn chế</th>
+                  <th className="px-2 py-2 text-left">Ghi chú</th>
                 </tr>
               </thead>
               <tbody>
@@ -881,7 +898,7 @@ function Project2() {
                     <td className="px-2 py-2 font-medium">{s.name}</td>
                     <td className="px-2 py-2 text-muted-foreground">{s.org}</td>
                     <td className="px-2 py-2">{s.year}</td>
-                    <td className="px-2 py-2 text-plum">{s.trust}</td>
+                    <td className="px-2 py-2 font-semibold text-plum">{s.trust}</td>
                     <td className="px-2 py-2 text-muted-foreground">{s.limit}</td>
                   </tr>
                 ))}
@@ -891,23 +908,23 @@ function Project2() {
         </div>
       }
       lesson={[
-        "Tìm kiếm là một chiến lược, không phải một cú click.",
-        "Nguồn học thuật, cơ quan chính thống và tài liệu peer-reviewed thường đáng tin hơn.",
-        "Luôn kiểm chứng bằng ≥ 2 nguồn độc lập trước khi trích dẫn.",
+        "Tìm kiếm là một chiến lược nhiều tầng, không chỉ là một cú click.",
+        "Nguồn peer-reviewed và tổ chức quốc tế (IMF, OECD, NBER) là chuẩn vàng.",
+        "Trích dẫn Harvard đúng chuẩn giúp bảo vệ tính học thuật và minh bạch.",
       ]}
     />
   );
 }
 
+
 /* ---------- Dự án 3 ---------- */
 function Project3() {
   const compare = [
-    { c: "Vai trò", a: "Không nêu", b: "“Bạn là gia sư đại học môn Lịch sử Việt Nam”" },
-    { c: "Bối cảnh", a: "Không có", b: "Sinh viên năm nhất, cần tóm tắt để ôn thi cuối kỳ" },
-    { c: "Yêu cầu đầu ra", a: "“Tóm tắt bài này”", b: "Tóm tắt 5 ý chính, ≤ 200 từ, ngôn ngữ dễ hiểu, gạch đầu dòng" },
-    { c: "Tiêu chí đánh giá", a: "Không đề cập", b: "Chính xác, không thêm sự kiện, giữ được mốc thời gian" },
-    { c: "Định dạng", a: "Đoạn văn chung", b: "Markdown với heading & bullet" },
-    { c: "Khả năng kiểm soát", a: "Thấp — kết quả lan man", b: "Cao — dễ so sánh và chấm điểm" },
+    { c: "Độ rõ ràng", a: "Câu hỏi chung chung, thiếu định hướng", b: "Có bối cảnh cụ thể (sinh viên năm 1, nhanh 200–300 từ)", c2: "Đầy đủ vai trò + cấu trúc bảng 4 cột" },
+    { c: "Cấu trúc", a: "Đoạn văn dài, khó tra cứu", b: "Phân tách ý theo yêu cầu", c2: "Chain-of-Thought 5 bước rõ ràng" },
+    { c: "Chất lượng học thuật", a: "Khái quát, thiếu ví dụ", b: "Có ví dụ minh họa, phù hợp học tập", c2: "Chuyên sâu, có bảng biểu, giải thích chi tiết" },
+    { c: "Ưu điểm", a: "Nhanh, dễ viết", b: "Có định hướng, dễ hiểu", c2: "Chuyên nghiệp, dễ tra cứu, tái sử dụng" },
+    { c: "Nhược điểm", a: "Thiếu chiều sâu", b: "Vẫn còn dạng đoạn văn dài", c2: "Prompt dài, tốn thời gian soạn" },
   ];
   return (
     <ProjectShell
@@ -915,35 +932,40 @@ function Project3() {
       tag="Bài tập 3 · Mục 3.4"
       icon="💬"
       title="Viết Prompt hiệu quả cho các tác vụ học tập"
-      skills={["Prompt engineering", "Framework R-C-T-F", "So sánh phiên bản"]}
-      objective="Biết viết prompt rõ ràng theo khung Vai trò – Bối cảnh – Yêu cầu – Định dạng để AI trả lời đúng mục tiêu học tập hơn."
+      skills={["Prompt engineering", "Role prompting", "Chain-of-Thought", "Few-shot"]}
+      objective="Thiết kế và thử nghiệm prompt cho 3 tác vụ học tập phổ biến ở 3 cấp độ (Cơ bản → Cải tiến → Nâng cao) để so sánh chất lượng phản hồi của AI."
       process={
         <ol className="ml-4 list-decimal space-y-1.5">
-          <li>Chọn tác vụ: <em>tóm tắt bài học lịch sử phục vụ ôn thi</em>.</li>
-          <li>Viết prompt phiên bản 1 (sơ khai, ngắn gọn).</li>
-          <li>Áp dụng khung R-C-T-F để nâng cấp thành prompt phiên bản 2.</li>
-          <li>Chạy trên 2 mô hình khác nhau và so sánh kết quả.</li>
+          <li>Chọn 3 tác vụ: <em>Tóm tắt bài nghiên cứu “Impact of Social Media on Student Learning”</em>, <em>Giải thích Tháp nhu cầu Maslow</em>, <em>Tạo 20 câu hỏi ôn tập Cung – Cầu (Kinh tế vi mô)</em>.</li>
+          <li>Viết Prompt Cơ bản → Cải tiến (thêm bối cảnh, độ dài) → Nâng cao (Role + Cấu trúc / Few-shot + Analogy / Chain-of-Thought).</li>
+          <li>Chạy trên ChatGPT, ghi lại phản hồi cho từng cấp độ.</li>
+          <li>Đánh giá theo tiêu chí: độ rõ ràng, cấu trúc, chất lượng học thuật.</li>
         </ol>
       }
       tools={["ChatGPT", "Gemini", "Claude"]}
       evidence={
         <div className="space-y-3">
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-3 md:grid-cols-3">
             <div className="rounded-xl bg-blush/20 p-4">
-              <div className="text-xs font-semibold text-plum">PROMPT V1 (sơ khai)</div>
+              <div className="text-xs font-semibold text-plum">CƠ BẢN</div>
               <p className="mt-1 font-mono text-xs leading-relaxed">
-                “Tóm tắt bài Chiến dịch Điện Biên Phủ giúp mình.”
+                “Hãy tóm tắt tài liệu ‘Impact of Social Media on Student Learning’ giúp tôi.”
               </p>
             </div>
             <div className="rounded-xl bg-sky/25 p-4">
-              <div className="text-xs font-semibold text-plum">PROMPT V2 (cải tiến)</div>
+              <div className="text-xs font-semibold text-plum">CẢI TIẾN</div>
               <p className="mt-1 font-mono text-xs leading-relaxed">
-                “Bạn là gia sư đại học môn Lịch sử. Hãy tóm tắt Chiến dịch Điện Biên Phủ cho sinh viên năm 1 dưới dạng markdown,
-                gồm 5 ý chính (bối cảnh, diễn biến, kết quả, ý nghĩa, bài học), ≤ 200 từ, giữ nguyên mốc thời gian, không thêm sự kiện.”
+                “Tóm tắt trong 200–300 từ, giới thiệu nhanh cho sinh viên năm 1, tập trung vào luận điểm chính & phương pháp nghiên cứu.”
+              </p>
+            </div>
+            <div className="rounded-xl bg-gradient-to-br from-violet-100 to-fuchsia-100 p-4">
+              <div className="text-xs font-semibold text-plum">NÂNG CAO (Role + Cấu trúc)</div>
+              <p className="mt-1 font-mono text-xs leading-relaxed">
+                “Đóng vai giảng viên giáo dục học, tóm tắt tài liệu theo bảng 4 cột: <em>Mục tiêu · Phương pháp · Kết quả · Hạn chế</em>. Văn phong khách quan, dễ hiểu.”
               </p>
             </div>
           </div>
-          <EvidencePlaceholder label="Ảnh chụp phản hồi của AI cho 2 prompt" />
+          <EvidencePlaceholder label="Ảnh chụp phản hồi ChatGPT cho 3 cấp độ prompt" />
         </div>
       }
       analysis={
@@ -952,8 +974,9 @@ function Project3() {
             <thead className="bg-secondary">
               <tr>
                 <th className="px-3 py-2 text-left">Tiêu chí</th>
-                <th className="px-3 py-2 text-left">Prompt V1</th>
-                <th className="px-3 py-2 text-left">Prompt V2</th>
+                <th className="px-3 py-2 text-left">Cơ bản</th>
+                <th className="px-3 py-2 text-left">Cải tiến</th>
+                <th className="px-3 py-2 text-left">Nâng cao</th>
               </tr>
             </thead>
             <tbody>
@@ -962,6 +985,7 @@ function Project3() {
                   <td className="px-3 py-2 font-medium text-plum">{r.c}</td>
                   <td className="px-3 py-2 text-muted-foreground">{r.a}</td>
                   <td className="px-3 py-2">{r.b}</td>
+                  <td className="px-3 py-2 font-medium">{r.c2}</td>
                 </tr>
               ))}
             </tbody>
@@ -969,22 +993,23 @@ function Project3() {
         </div>
       }
       lesson={[
-        "Muốn AI trả lời tốt — cần đặt câu hỏi tốt.",
-        "Prompt hiệu quả có Vai trò, Bối cảnh, Yêu cầu, Tiêu chí và Định dạng đầu ra.",
-        "AI phản hồi dựa trên ngữ cảnh: càng cụ thể thì càng ít suy đoán, ít sai lệch.",
+        "Prompt càng có Vai trò – Bối cảnh – Cấu trúc – Định dạng, kết quả AI càng học thuật.",
+        "Kỹ thuật Chain-of-Thought giúp AI đi qua từng bước tư duy, hạn chế bịa thông tin.",
+        "Đầu tư thời gian viết prompt tốt là đầu tư vào chất lượng đầu ra học tập.",
       ]}
     />
   );
 }
 
+
 /* ---------- Dự án 4 ---------- */
 function Project4() {
   const board = [
-    { m: "An", task: "Nghiên cứu tài liệu tham khảo", due: "10/11", state: "Hoàn thành", note: "Đã tổng hợp 6 nguồn" },
-    { m: "Bình", task: "Viết kịch bản video", due: "13/11", state: "Đang làm", note: "Đang chờ AI review" },
-    { m: "Chi", task: "Thiết kế slide & poster", due: "15/11", state: "Chưa làm", note: "Chờ nhận content" },
-    { m: "Duy", task: "Dựng video & lồng tiếng", due: "18/11", state: "Đang làm", note: "Đã có draft 1" },
-    { m: "Em", task: "Tổng hợp Portfolio & báo cáo", due: "20/11", state: "Cần chỉnh sửa", note: "Đợi feedback nhóm" },
+    { m: "Thành viên 1", task: "Dẫn dắt · Giới thiệu & Kết luận video", due: "15/11", state: "Hoàn thành", note: "Đã duyệt kịch bản mở đầu" },
+    { m: "Thành viên 2", task: "Trình bày AI cá nhân hóa học tập", due: "16/11", state: "Đang làm", note: "Đang thu voice-over" },
+    { m: "Thành viên 3", task: "Trình bày AI hỗ trợ giáo viên chấm bài", due: "16/11", state: "Đang làm", note: "Chuẩn bị demo slide" },
+    { m: "Thành viên 4", task: "Demo prompt trên máy tính (B-roll)", due: "17/11", state: "Cần chỉnh sửa", note: "Cần quay lại phần thao tác" },
+    { m: "Thành viên 5", task: "Phân tích lợi ích & thách thức tại VN", due: "18/11", state: "Chưa làm", note: "Chờ nhận số liệu từ TV2" },
   ];
   const stateColor: Record<string, string> = {
     "Hoàn thành": "bg-emerald-100 text-emerald-700",
@@ -992,26 +1017,32 @@ function Project4() {
     "Chưa làm": "bg-muted text-muted-foreground",
     "Cần chỉnh sửa": "bg-blush/40 text-plum",
   };
+  const challenges = [
+    { t: "Khó đồng bộ tiến độ giữa các thành viên", s: "Dùng Asana / Trello: mỗi người tự cập nhật trạng thái, tránh trùng lặp và bỏ sót." },
+    { t: "Khó chỉnh sửa tài liệu cùng lúc", s: "Làm việc trên Google Docs: chỉnh sửa đồng thời, lịch sử phiên bản, bình luận theo dòng." },
+    { t: "Quản lý & chia sẻ tài liệu chưa khoa học", s: "Lưu trữ tập trung trên Google Drive, đặt tên thống nhất, phân quyền theo vai trò." },
+  ];
   return (
     <ProjectShell
       id="task-4"
-      tag="Bài tập 3 · Mục 4.4"
+      tag="Bài tập 4 · Mục 4.4"
       icon="🤝"
       title="Sử dụng công cụ hợp tác trực tuyến cho dự án nhóm"
-      skills={["Kanban", "Trello / Notion", "Phân công", "Theo dõi tiến độ"]}
-      objective="Lập kế hoạch, phân công công việc, theo dõi tiến độ và tối ưu quy trình làm việc nhóm bằng công cụ số."
+      skills={["Asana / Trello", "Google Docs", "Google Drive", "Google Meet"]}
+      objective="Lập kế hoạch và sản xuất video nhóm “AI trong Giáo dục tại Việt Nam” — phân công 5 thành viên, quản lý tiến độ và tài liệu bằng bộ công cụ cộng tác."
       process={
         <ol className="ml-4 list-decimal space-y-1.5">
-          <li>Chia dự án thành 5 đầu việc lớn theo vòng đời sản phẩm.</li>
-          <li>Tạo bảng Kanban trên Trello/Notion với 4 cột trạng thái.</li>
-          <li>Phân công theo thế mạnh của mỗi thành viên, gắn hạn hoàn thành.</li>
-          <li>Họp nhanh 15 phút/tuần để cập nhật, gỡ khó và nhắc hạn.</li>
+          <li>Chia dự án thành 5 vai trò: Dẫn dắt, Chuyên gia 1, Chuyên gia 2, Người thực hành, Phân tích.</li>
+          <li>Lập bảng Asana theo trạng thái: <em>Chưa làm · Đang làm · Cần chỉnh sửa · Hoàn thành</em>.</li>
+          <li>Soạn thảo kịch bản 4 phân cảnh (Mở đầu → Ứng dụng thực tế → Demo → Kết luận) trên Google Docs.</li>
+          <li>Lưu trữ B-roll, ảnh minh họa và bản dựng video trên Google Drive dùng chung.</li>
+          <li>Họp Google Meet 30 phút/tuần để cập nhật tiến độ và gỡ khó.</li>
         </ol>
       }
-      tools={["Trello", "Notion", "Google Sheets", "Microsoft Planner"]}
+      tools={["Asana", "Google Docs", "Google Drive", "Google Meet", "Zapier (tự động hoá)"]}
       evidence={
         <div className="space-y-3">
-          <EvidencePlaceholder label="Ảnh bảng Kanban thực tế của nhóm" />
+          <EvidencePlaceholder label="Ảnh bảng Asana + Google Docs kịch bản video" />
           <div className="overflow-hidden rounded-xl border border-border">
             <table className="w-full text-xs">
               <thead className="bg-secondary">
@@ -1040,77 +1071,90 @@ function Project4() {
               </tbody>
             </table>
           </div>
+          <div className="rounded-xl bg-gradient-to-br from-rose-50 to-fuchsia-50 p-4 text-xs">
+            <div className="font-semibold text-plum mb-1">💡 Tự động hoá bổ sung với Zapier</div>
+            <p>
+              Kết nối <strong>Google Forms → Gmail</strong>: khi có thành viên đăng ký mới, hệ thống tự gửi email chào mừng —
+              hoạt động 24/7, không cần thao tác thủ công.
+            </p>
+          </div>
         </div>
       }
       analysis={
         <div className="space-y-2">
-          <p>
-            Công cụ trực tuyến giúp nhóm <strong>minh bạch hóa tiến độ</strong>, tránh trùng lặp và bỏ sót đầu việc.
-            Mỗi thành viên đều thấy công việc của người khác, tạo áp lực đồng đội tích cực.
-          </p>
-          <p>
-            Việc chia nhỏ trạng thái “Cần chỉnh sửa” giúp phát hiện vấn đề sớm và trả bài đúng chất lượng, thay vì đợi đến deadline mới sửa.
-          </p>
+          {challenges.map((c) => (
+            <div key={c.t} className="rounded-xl border border-border bg-card p-3">
+              <div className="text-sm font-semibold text-plum">⚠️ {c.t}</div>
+              <p className="mt-1 text-xs text-muted-foreground">✅ {c.s}</p>
+            </div>
+          ))}
         </div>
       }
       lesson={[
-        "Làm việc nhóm hiệu quả cần kế hoạch rõ ràng và cột mốc cụ thể.",
-        "Công cụ số nâng cao tính trách nhiệm cá nhân trong nhóm.",
-        "Feedback thường xuyên tốt hơn feedback cuối kỳ.",
+        "Công cụ hợp tác giúp nhóm minh bạch hóa tiến độ, giảm rủi ro trùng lặp.",
+        "Làm việc song song trên Google Docs tiết kiệm thời gian tổng hợp phiên bản.",
+        "Tự động hoá (Zapier) giải phóng nhân lực khỏi tác vụ lặp đi lặp lại.",
       ]}
     />
   );
 }
 
+
 /* ---------- Dự án 5 ---------- */
 function Project5() {
   const steps = [
-    { t: "1. Lên ý tưởng", ai: "Gợi ý outline & góc nhìn", me: "Chốt thông điệp phù hợp môn học" },
-    { t: "2. Viết kịch bản", ai: "Draft lời thoại", me: "Chỉnh giọng văn, thêm ví dụ Việt Nam" },
-    { t: "3. Tạo hình ảnh", ai: "DALL·E vẽ minh họa", me: "Chọn ảnh, chỉnh bố cục Canva" },
-    { t: "4. Lồng giọng", ai: "AI voice đọc tiếng Việt", me: "Cắt nhịp, thêm nhạc nền phù hợp" },
-    { t: "5. Dựng video", ai: "CapCut auto-cut", me: "Timeline, phụ đề, thương hiệu cá nhân" },
-    { t: "6. Kiểm tra", ai: "AI gợi ý sửa", me: "Rà soát chính xác học thuật, xuất bản" },
+    { t: "ChatGPT", ai: "Xây dựng dàn ý logic, diễn đạt mạch lạc", me: "Chỉnh giọng văn, bổ sung ví dụ Việt Nam" },
+    { t: "Gemini", ai: "Cập nhật số liệu, tra cứu thông tin mới", me: "Kiểm chứng lại từ nguồn gốc" },
+    { t: "Claude", ai: "Phân tích văn bản dài, diễn đạt tự nhiên", me: "Rút gọn, biên tập cho phù hợp bài thuyết trình" },
+    { t: "DALL·E", ai: "Vẽ minh họa 4 góc nhìn về “Tồn tại xã hội”", me: "Chọn ảnh phù hợp, chỉnh bố cục trong Canva" },
+    { t: "Yeri AI", ai: "Tạo hình ảnh nhanh theo mô tả", me: "Sửa lỗi chính tả trong ảnh, chọn khung 16:9" },
+    { t: "Canva", ai: "Đề xuất mẫu slide, tự động phối màu", me: "Tùy biến theo phong cách cá nhân" },
   ];
   return (
     <ProjectShell
       id="task-5"
-      tag="Bài tập 2 · Mục 5.4"
+      tag="Bài tập 5 · Mục 5.4"
       icon="🎬"
-      title="Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung"
-      skills={["Video AI", "Kịch bản", "Canva", "CapCut", "DALL·E"]}
-      objective="Sản xuất một video giải thích khái niệm học tập ≤ 5 phút với sự hỗ trợ của AI tạo sinh, giữ nguyên vai trò biên tập của con người."
+      title="Sử dụng AI tạo sinh để hỗ trợ sáng tạo nội dung học tập"
+      skills={["ChatGPT", "Gemini", "Claude", "DALL·E", "Canva", "So sánh công cụ"]}
+      objective="Ứng dụng 3 nhóm AI tạo sinh (văn bản – hình ảnh – thiết kế) để chuẩn bị bài học chủ đề “Tồn tại xã hội & Ý thức xã hội” trong Triết học Mác – Lênin."
       process={
         <ol className="ml-4 list-decimal space-y-1.5">
-          <li>Chọn khái niệm: <em>“Prompt Engineering trong học tập”</em>.</li>
-          <li>Thực hiện quy trình 6 bước AI – Con người song song.</li>
-          <li>Xuất bản video, ảnh minh họa và infographic bổ trợ.</li>
+          <li>Chọn chủ đề: <em>“Tồn tại xã hội và Ý thức xã hội — Liên hệ Việt Nam”</em>.</li>
+          <li>Dùng 3 AI văn bản (ChatGPT, Gemini, Claude) để tạo dàn ý, so sánh đầu ra.</li>
+          <li>Dùng 2 AI hình ảnh (DALL·E, Yeri AI) tạo 4 minh họa theo góc nhìn khác nhau.</li>
+          <li>Dùng Canva AI thiết kế slide, phối hợp ảnh minh họa từ DALL·E.</li>
+          <li>Biên tập lại toàn bộ, kiểm chứng thông tin và ghi rõ công cụ đã sử dụng.</li>
         </ol>
       }
-      tools={["ChatGPT", "Gemini", "DALL·E", "Canva", "CapCut", "AI voice"]}
+      tools={["ChatGPT", "Google Gemini", "Claude", "DALL·E", "Yeri AI", "Canva AI", "Adobe Firefly"]}
       evidence={
         <div className="space-y-3">
-          <EvidencePlaceholder label="Video / Infographic sản phẩm AI" />
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 rounded-full bg-gradient-brand px-4 py-2 text-xs font-semibold text-white shadow-soft"
-          >
-            ▶ Xem sản phẩm (thay bằng link thật)
-          </a>
+          <EvidencePlaceholder label="Ảnh so sánh đầu ra của ChatGPT / Gemini / Claude cho cùng câu hỏi" />
+          <div className="grid gap-3 md:grid-cols-2">
+            <div className="rounded-xl bg-sky/25 p-4 text-xs">
+              <div className="font-semibold text-plum">Kết luận công cụ văn bản</div>
+              <p className="mt-1">ChatGPT dùng cho dàn ý & nội dung chính · Gemini để tra cứu · Claude để biên tập câu văn.</p>
+            </div>
+            <div className="rounded-xl bg-blush/20 p-4 text-xs">
+              <div className="font-semibold text-plum">Kết luận công cụ hình ảnh</div>
+              <p className="mt-1">DALL·E cho chất lượng ổn định, ít lỗi chính tả · Yeri AI cần chỉnh sửa lại phần chữ trong ảnh.</p>
+            </div>
+          </div>
         </div>
       }
       analysis={
         <div className="space-y-3">
           <p>
-            Quy trình chia rõ <strong>“AI làm gì – Con người làm gì”</strong> ở từng bước, đảm bảo sản phẩm cuối cùng
-            luôn có dấu ấn biên tập cá nhân.
+            Quy trình chia rõ <strong>“AI làm gì – Con người làm gì”</strong> ở từng công cụ, đảm bảo sản phẩm cuối
+            luôn có dấu ấn biên tập cá nhân và kiểm chứng học thuật.
           </p>
           <div className="overflow-hidden rounded-xl border border-border">
             <table className="w-full text-xs">
               <thead className="bg-secondary">
                 <tr>
-                  <th className="px-3 py-2 text-left">Bước</th>
-                  <th className="px-3 py-2 text-left">Vai trò AI</th>
+                  <th className="px-3 py-2 text-left">Công cụ</th>
+                  <th className="px-3 py-2 text-left">AI hỗ trợ</th>
                   <th className="px-3 py-2 text-left">Vai trò của em</th>
                 </tr>
               </thead>
@@ -1128,41 +1172,49 @@ function Project5() {
         </div>
       }
       lesson={[
-        "AI là công cụ tăng tốc, không phải máy làm hộ.",
-        "Sản phẩm tốt luôn có bước con người biên tập và kiểm chứng.",
-        "Cần ghi nguồn/công cụ AI đã dùng để minh bạch với người xem.",
+        "Mỗi AI có thế mạnh riêng — biết chọn đúng công cụ cho đúng tác vụ.",
+        "AI tạo sinh là trợ lý, không thay thế vai trò biên tập và kiểm chứng của người học.",
+        "Luôn ghi rõ công cụ AI đã dùng để đảm bảo minh bạch học thuật.",
       ]}
     />
   );
 }
 
+
 /* ---------- Dự án 6 ---------- */
 function Project6() {
   const issues = [
-    { i: "Đạo văn / gian lận học thuật", s: "Tự viết lại bằng ngôn ngữ cá nhân, kiểm tra qua Turnitin." },
-    { i: "Phụ thuộc AI, thui chột tư duy", s: "Dùng AI ở bước brainstorm, không ở bước ra quyết định." },
-    { i: "Sai lệch / thông tin ảo (hallucination)", s: "Đối chiếu với ≥ 2 nguồn chính thống." },
-    { i: "Quyền riêng tư & dữ liệu cá nhân", s: "Không nhập họ tên đầy đủ, mã sinh viên, dữ liệu nhạy cảm vào AI." },
-    { i: "Thiên kiến thuật toán (bias)", s: "Nhận diện góc nhìn thiếu, chủ động bổ sung nguồn đa dạng." },
-    { i: "Vi phạm bản quyền", s: "Chỉ dùng hình ảnh, giọng đọc AI được cấp phép cho mục đích học tập." },
+    { i: "Ranh giới hỗ trợ hợp lý ↔ gian lận học thuật", s: "Chỉ dùng AI để gợi ý ý tưởng và chỉnh ngôn ngữ, không để AI làm toàn bộ bài." },
+    { i: "Quyền sở hữu trí tuệ & trích dẫn", s: "Ghi rõ việc dùng AI khi có đóng góp đáng kể; kiểm chứng lại thông tin qua nguồn tin cậy." },
+    { i: "Tác động đến tư duy phản biện", s: "Dùng AI ở bước brainstorm, tự phân tích & kết luận để giữ kỹ năng tư duy." },
+    { i: "Thông tin sai / hallucination", s: "Đối chiếu với ≥ 2 nguồn học thuật (IMF, OECD, Cambridge…) trước khi trích dẫn." },
+    { i: "Quyền riêng tư & dữ liệu cá nhân", s: "Không nhập họ tên, mã sinh viên, tài liệu nội bộ vào công cụ AI." },
+    { i: "Phụ thuộc AI, thui chột kỹ năng viết", s: "Duy trì thói quen tự viết bản nháp đầu tiên trước khi tham khảo AI." },
+  ];
+  const info4 = [
+    { t: "Hiểu rõ công cụ AI", d: "Biết khả năng & giới hạn của mô hình ngôn ngữ, nhận biết rủi ro sai sót." },
+    { t: "Minh bạch & trích dẫn", d: "Khai báo khi dùng AI, trích nguồn thông tin AI tạo ra theo quy định." },
+    { t: "Tư duy phản biện là chính", d: "Kiểm tra kỹ, đánh giá tính xác thực & phù hợp của thông tin AI." },
+    { t: "Sáng tạo nội dung gốc", d: "AI là trợ lý; kết hợp ý tưởng riêng, phân tích cá nhân và lập luận sâu." },
   ];
   return (
     <ProjectShell
       id="task-6"
-      tag="Bài tập 4 · Mục 6.4"
+      tag="Bài tập 6 · Mục 6.4"
       icon="🛡️"
-      title="Sử dụng AI có trách nhiệm trong học tập và nghiên cứu"
-      skills={["AI Ethics", "Đạo đức học thuật", "Tự phản biện"]}
-      objective="Hiểu các vấn đề đạo đức khi sử dụng AI và xây dựng bộ nguyên tắc cá nhân để sử dụng AI có trách nhiệm."
+      title="Sử dụng AI có trách nhiệm — Bài thuyết trình “Vai trò của AI trong Giáo dục Đại học”"
+      skills={["AI Ethics", "Đạo đức học thuật", "Infographic", "Tự phản biện"]}
+      objective="Chuẩn bị bài thuyết trình 10 phút về vai trò AI trong giáo dục đại học, đồng thời xây dựng bộ 7 nguyên tắc cá nhân và infographic “Sử dụng AI có trách nhiệm trong học thuật”."
       process={
         <ol className="ml-4 list-decimal space-y-1.5">
-          <li>Đọc chính sách sử dụng AI của nhà trường & tài liệu học thuật quốc tế.</li>
-          <li>Phân tích 6 vấn đề đạo đức AI phổ biến trong môi trường đại học.</li>
-          <li>Đề xuất giải pháp cụ thể cho từng vấn đề.</li>
-          <li>Tổng hợp thành bộ 7 nguyên tắc cá nhân, cam kết áp dụng.</li>
+          <li>Dùng ChatGPT để lập dàn ý 3 phần (Mở đầu · 8’ nội dung · Kết luận).</li>
+          <li>Dùng prompt bổ sung để lấy 5 ví dụ thực tế sinh viên ứng dụng AI.</li>
+          <li>Đánh giá, chỉnh sửa và tích hợp đầu ra AI — bổ sung ví dụ Việt Nam, kiểm chứng qua giáo trình.</li>
+          <li>Phân tích 3 vấn đề đạo đức: ranh giới hỗ trợ, sở hữu trí tuệ, tác động đến tư duy.</li>
+          <li>Tổng hợp thành 7 nguyên tắc cá nhân + infographic 4 bước.</li>
         </ol>
       }
-      tools={["Chính sách nhà trường", "UNESCO AI Guidance", "Học liệu Coursera"]}
+      tools={["ChatGPT", "Chính sách nhà trường", "UNESCO AI Guidance", "Canva (Infographic)"]}
       evidence={
         <div className="space-y-3">
           <div className="rounded-2xl bg-gradient-hero p-5">
@@ -1177,6 +1229,20 @@ function Project6() {
                 </li>
               ))}
             </ol>
+          </div>
+          <div className="rounded-2xl border border-border p-4">
+            <div className="mb-3 text-sm font-semibold text-plum">🖼️ Infographic “Sử dụng AI có trách nhiệm” — 4 bước</div>
+            <div className="grid gap-2 sm:grid-cols-2">
+              {info4.map((x, i) => (
+                <div key={x.t} className="rounded-xl bg-gradient-to-br from-violet-50 to-fuchsia-50 p-3 text-xs">
+                  <div className="font-semibold text-plum">{i + 1}. {x.t}</div>
+                  <p className="mt-1 text-muted-foreground">{x.d}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-3 text-center text-xs font-semibold text-plum">
+              → HƯỚNG TỚI THÀNH CÔNG HỌC THUẬT BỀN VỮNG VÀ CHÍNH TRỰC
+            </p>
           </div>
         </div>
       }
@@ -1201,13 +1267,14 @@ function Project6() {
         </div>
       }
       lesson={[
-        "AI đem lại cơ hội nhưng cũng kèm rủi ro đạo đức học thuật.",
-        "Trách nhiệm số là kỹ năng thiết yếu trong thời đại AI.",
-        "Sử dụng AI đúng cách bảo vệ tính trung thực và sáng tạo của người học.",
+        "AI mang lại cơ hội lớn nhưng cũng kèm rủi ro đạo đức học thuật.",
+        "Trách nhiệm số là kỹ năng bắt buộc trong thời đại AI.",
+        "Sử dụng AI có trách nhiệm bảo vệ tính trung thực và sự sáng tạo cá nhân.",
       ]}
     />
   );
 }
+
 
 /* ============================================================
  *  EVIDENCE GALLERY
