@@ -18,6 +18,7 @@ import bai1Img34 from "@/assets/bai1/bai1-34.png.asset.json";
 import bai1Img35 from "@/assets/bai1/bai1-35.png.asset.json";
 import bai1Img36 from "@/assets/bai1/bai1-36.png.asset.json";
 import bai1Img37 from "@/assets/bai1/bai1-37.png.asset.json";
+import bai1Doc from "@/assets/bai1/GhiChuQuanTrong.docx.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
@@ -801,10 +802,12 @@ function EvidenceGallery({
   title = "📸 Ảnh minh chứng thực hành",
   items,
   file,
+  fileUrl,
 }: {
   title?: string;
   items: (string | { label: string; src?: string })[];
   file?: string;
+  fileUrl?: string;
 }) {
   return (
     <div className="space-y-3">
@@ -817,9 +820,21 @@ function EvidenceGallery({
       </div>
       {file && (
         <div className="pt-1">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-plum">
-            📄 Tải tệp minh chứng: {file}
-          </span>
+          {fileUrl ? (
+            <a
+              href={fileUrl}
+              download={file}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-plum transition hover:bg-primary/20"
+            >
+              📄 Tải tệp minh chứng: {file}
+            </a>
+          ) : (
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-plum">
+              📄 Tải tệp minh chứng: {file}
+            </span>
+          )}
         </div>
       )}
     </div>
@@ -1002,6 +1017,7 @@ function Project1() {
             { label: "Khôi phục tệp từ Recycle Bin (Restore all items)", src: bai1Img21.url },
           ]}
           file="GhiChuQuanTrong.docx"
+          fileUrl={bai1Doc.url}
         />
       }
     >
