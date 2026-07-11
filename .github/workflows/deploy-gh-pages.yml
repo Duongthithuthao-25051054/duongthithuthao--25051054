@@ -30,38 +30,55 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile || bun install
 
-      - name: Build
-        run: bun run build
+      - name: Prefix public asset URLs for GitHub Pages
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          base = os.environ.get("BASE_PATH", "/").strip() or "/"
+          if not base.startswith("/"):
+              base = "/" + base
+          base = base.rstrip("/")
+
+          for path in Path("src/assets").rglob("*.asset.json"):
+              data = json.loads(path.read_text(encoding="utf-8"))
+              url = data.get("url")
+              if isinstance(url, str) and url.startswith("/lov-assets/"):
+                  data["url"] = f"{base}{url}"
+                  path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          PY
+
+      - name: Build static site for GitHub Pages
+        run: bun run build:gh-pages
         env:
           BASE_PATH: ${{ env.BASE_PATH }}
 
       - name: Prepare static output
         run: |
-          # Nitro TanStack Start ghi output ra .output/public (client bundle + assets)
-          if [ ! -d ".output/public" ]; then
-            echo "Không tìm thấy .output/public — build có thể đã đổi cấu trúc." >&2
-            ls -la .output || true
+          if [ ! -d "dist-gh-pages" ]; then
+            echo "Không tìm thấy dist-gh-pages sau khi build." >&2
             exit 1
           fi
 
-          # Copy toàn bộ public/ (chứa ảnh .lov-assets) vào output nếu chưa có
-          if [ -d "public" ]; then
-            cp -rn public/. .output/public/ 2>/dev/null || true
+          if [ ! -f "dist-gh-pages/index.html" ]; then
+            echo "Thiếu index.html trong dist-gh-pages." >&2
+            ls -la dist-gh-pages || true
+            exit 1
           fi
 
           # SPA fallback: index.html -> 404.html để refresh route sâu không 404
-          if [ -f ".output/public/index.html" ]; then
-            cp .output/public/index.html .output/public/404.html
-          fi
+          cp dist-gh-pages/index.html dist-gh-pages/404.html
 
           # Chặn Jekyll xử lý (nếu có tên bắt đầu bằng _)
-          touch .output/public/.nojekyll
+          touch dist-gh-pages/.nojekyll
 
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .output/public
+          path: dist-gh-pages
 
   deploy:
     needs: build
