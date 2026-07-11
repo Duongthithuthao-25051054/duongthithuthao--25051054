@@ -345,7 +345,7 @@ function Hero() {
               <span className="h-3 w-3 rounded-full bg-red-300" />
               <span className="h-3 w-3 rounded-full bg-amber-300" />
               <span className="h-3 w-3 rounded-full bg-emerald-300" />
-              <span className="ml-auto font-mono text-xs text-plum">{"\n"}</span>
+              <span className="ml-auto font-mono text-xs text-plum">portfolio · digital</span>
             </div>
 
             <div className="grid grid-cols-[130px_1fr] gap-4">
@@ -433,7 +433,7 @@ function About() {
             />
           </div>
           <h3 className="mt-6 text-center font-display text-2xl">Dương Thị Thu Thảo</h3>
-          <p className="mt-1 text-center text-sm text-muted-foreground">Sinh viên ·&nbsp;</p>
+          <p className="mt-1 text-center text-sm text-muted-foreground">Sinh viên · Kinh tế Quốc tế</p>
 
           <dl className="mt-6 space-y-3 text-sm">
             <Row k="Trường&nbsp;" v="Trường Đại Học Kinh Tế-ĐHQGHN" />
@@ -460,12 +460,7 @@ function About() {
         <div className="space-y-8">
           {/* Mục tiêu học tập */}
           <div className="reveal rounded-3xl border border-rose-200/70 bg-gradient-to-br from-rose-50 via-pink-50 to-fuchsia-50 p-7 shadow-soft">
-            <div className="flex items-center gap-3">
-              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-rose-400 to-fuchsia-500 text-xl text-white shadow-glow">
-                🎯
-              </div>
-              <h3 className="font-display text-2xl text-foreground">Mục tiêu học tập</h3>
-            </div>
+            <h3 className="font-display text-2xl text-foreground">Mục tiêu học tập</h3>
             <ul className="mt-5 space-y-3 text-sm leading-relaxed text-foreground/85">
               {[
                 "Phát triển kỹ năng số để thích ứng với thời đại công nghệ 4.0 và nhu cầu của thị trường lao động.",
@@ -484,28 +479,22 @@ function About() {
 
           {/* Mục tiêu Portfolio */}
           <div className="reveal rounded-3xl border border-border bg-card p-7 shadow-soft">
-            <div className="flex items-center gap-3">
-              <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-violet-400 to-fuchsia-500 text-xl text-white shadow-glow">
-                📖
-              </div>
-              <h3 className="font-display text-2xl">Mục tiêu Portfolio</h3>
-            </div>
+            <h3 className="font-display text-2xl">Mục tiêu Portfolio</h3>
             <p className="mt-3 text-sm text-muted-foreground">
               Portfolio này được tạo ra với những mục đích sau:
             </p>
             <div className="mt-4 space-y-3">
               {[
-                { i: "🧭", t: "Tổng hợp quá trình học tập", d: "Ghi lại toàn bộ hành trình học tập qua các bài tập và dự án của môn học." },
-                { i: "💾", t: "Lưu trữ sản phẩm học tập", d: "Xây dựng kho lưu trữ các minh chứng và sản phẩm đã hoàn thành." },
-                { i: "📈", t: "Thể hiện sự tiến bộ", d: "Minh họa rõ ràng sự phát triển và tiến bộ qua từng bài học." },
-                { i: "🌸", t: "Dấu ấn cá nhân", d: "Thể hiện phong cách, sự tỉ mỉ và tinh thần trách nhiệm của riêng em." },
+                { t: "Tổng hợp quá trình học tập", d: "Ghi lại toàn bộ hành trình học tập qua các bài tập và dự án của môn học." },
+                { t: "Lưu trữ sản phẩm học tập", d: "Xây dựng kho lưu trữ các minh chứng và sản phẩm đã hoàn thành." },
+                { t: "Thể hiện sự tiến bộ", d: "Minh họa rõ ràng sự phát triển và tiến bộ qua từng bài học." },
+                { t: "Dấu ấn cá nhân", d: "Thể hiện phong cách, sự tỉ mỉ và tinh thần trách nhiệm của riêng em." },
               ].map((g) => (
                 <div
                   key={g.t}
                   className="group rounded-2xl border border-border bg-background/60 p-4 transition-all hover:border-rose-300"
                 >
-                  <div className="flex items-center gap-2 font-semibold text-foreground">
-                    <span className="text-lg">{g.i}</span>
+                  <div className="font-semibold text-foreground">
                     <span className="bg-gradient-to-r from-rose-500 to-fuchsia-500 bg-clip-text text-transparent">
                       {g.t}
                     </span>
@@ -593,26 +582,19 @@ function Overview() {
   const avg = Math.round(TASKS.reduce((s, t) => s + t.progress, 0) / TASKS.length);
 
   return (
-    <Section id="tong-quan" eyebrow={"\n"} title="Tổng quan 6 nhiệm vụ">
+    <Section id="tong-quan" eyebrow="Overview" title="Tổng quan 6 nhiệm vụ">
       <div className="reveal mt-10 grid gap-10 lg:grid-cols-[280px_1fr]">
         {/* Left title panel */}
         <aside className="lg:sticky lg:top-24 lg:self-start">
-          <div className="text-4xl font-display font-bold tracking-tight text-foreground">
-            TỔNG QUAN
-          </div>
-          <div className="mt-1 text-4xl font-display font-black text-gradient-brand">
-            6 NHIỆM VỤ
-          </div>
-          <div className="mt-3 flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <span className="h-1 w-8 rounded-full bg-pink-400" />
             <span className="h-1 w-3 rounded-full bg-violet-400" />
           </div>
-          <p className="mt-5 text-sm leading-relaxed text-muted-foreground max-w-xs">
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground max-w-xs">
             6 nhiệm vụ được tổ chức theo trình tự phát triển kỹ năng: từ nền tảng
             quản lý dữ liệu, tìm kiếm và đánh giá thông tin, cho đến khai thác AI,
             hợp tác trực tuyến và sử dụng AI có trách nhiệm.
           </p>
-          <div className="mt-8 hidden lg:block text-6xl">{"\n"}</div>
         </aside>
 
         {/* Right timeline */}
@@ -1087,7 +1069,6 @@ function Project1() {
             <div className="pl-4">📂 TaiLieu\</div>
             <div className="pl-8">📄 GhiChuQuanTrong.txt <span className="text-muted-foreground">(bản sao chép)</span></div>
           </div>
-          {"\n"}
         </div>
       }
       analysis={
@@ -1825,32 +1806,28 @@ function Project6() {
  *  SKILLS
  * ============================================================ */
 function Skills() {
-  const icons = ["📁", "🔍", "🛡️", "💬", "👥", "💡", "🤖", "🎯"];
-  const left = SKILLS.slice(0, 4).map((s, i) => ({ ...s, icon: icons[i], no: i + 1 }));
-  const right = SKILLS.slice(4).map((s, i) => ({ ...s, icon: icons[i + 4], no: i + 5 }));
+  const left = SKILLS.slice(0, 4).map((s, i) => ({ ...s, no: i + 1 }));
+  const right = SKILLS.slice(4).map((s, i) => ({ ...s, no: i + 5 }));
 
   const Pod = ({
     s,
     side,
   }: {
-    s: { name: string; level: number; use: string; icon: string; no: number };
+    s: { name: string; level: number; use: string; no: number };
     side: "left" | "right";
   }) => (
     <div
-      className={`group flex items-center gap-4 rounded-full border border-violet-200/70 bg-white/80 p-3 pr-5 shadow-[0_8px_30px_-12px_rgba(139,92,246,0.35)] backdrop-blur transition-all hover:shadow-[0_12px_40px_-12px_rgba(139,92,246,0.55)] ${
-        side === "right" ? "md:flex-row-reverse md:pl-5 md:pr-3" : ""
+      className={`group flex items-center gap-4 rounded-2xl border border-violet-200/70 bg-white/80 p-4 backdrop-blur transition-all ${
+        side === "right" ? "md:flex-row-reverse" : ""
       }`}
     >
-      <div className="grid h-16 w-16 shrink-0 place-items-center rounded-full border-2 border-violet-300 bg-gradient-to-br from-violet-50 to-white text-2xl text-violet-700 shadow-inner">
-        {s.icon}
+      <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-violet-200 bg-gradient-to-br from-violet-50 to-white font-display text-xl font-black text-violet-500">
+        {String(s.no).padStart(2, "0")}
       </div>
       <div className={`min-w-0 flex-1 ${side === "right" ? "md:text-right" : ""}`}>
         <div
           className={`flex items-baseline gap-2 ${side === "right" ? "md:justify-end" : ""}`}
         >
-          <span className="font-display text-2xl font-black text-violet-300">
-            {String(s.no).padStart(2, "0")}
-          </span>
           <h4 className="font-display text-base font-bold leading-tight text-plum">
             {s.name}
           </h4>
@@ -1892,13 +1869,12 @@ function Skills() {
             <div className="relative grid h-56 w-56 place-items-center rounded-full bg-gradient-to-br from-violet-200 via-fuchsia-100 to-violet-100 shadow-[0_20px_60px_-20px_rgba(139,92,246,0.6)]">
               <div className="grid h-44 w-44 place-items-center rounded-full bg-white text-center">
                 <div>
-                  <div className="text-4xl">📈</div>
+                  <div className="font-display text-3xl font-black text-plum">100%</div>
                   <div className="mt-2 font-display text-sm font-black tracking-wider text-plum">
                     NĂNG LỰC
                     <br />
                     TOÀN DIỆN
                   </div>
-                  <div className="mt-1 text-violet-400">• • •</div>
                 </div>
               </div>
             </div>
@@ -1980,8 +1956,7 @@ function Conclusion() {
             { i: "💼", t: "Công việc", d: "Sử dụng AI có trách nhiệm như một cộng sự nghề nghiệp." },
           ].map((g) => (
             <div key={g.t} className="rounded-xl bg-gradient-hero p-4">
-              <div className="text-2xl">{g.i}</div>
-              <div className="mt-1 font-semibold">{g.t}</div>
+              <div className="font-semibold">{g.t}</div>
               <div className="mt-1 text-sm text-muted-foreground">{g.d}</div>
             </div>
           ))}
