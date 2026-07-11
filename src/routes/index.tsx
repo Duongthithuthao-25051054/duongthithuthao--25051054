@@ -261,8 +261,10 @@ function Hero() {
             <span className="grid h-5 w-5 place-items-center rounded-full bg-gradient-brand text-[10px] text-white">🎓</span>
             Học kỳ · Nhập môn CNS & Ứng dụng AI
           </span>
-          <h1 className="mt-6 font-display text-5xl leading-[1.05] md:text-6xl lg:text-7xl">
-            Portfolio <span className="text-gradient-brand italic">Kỹ thuật số</span> cá nhân
+          <h1 className="mt-6 font-display text-5xl leading-[1.15] md:text-6xl lg:text-7xl">
+            Portfolio{" "}
+            <span className="text-gradient-brand italic inline-block pr-2 pb-2 leading-[1.2]">Kỹ thuật số</span>{" "}
+            cá nhân
           </h1>
           <div className="mt-6 h-1 w-32 rounded-full bg-gradient-brand" />
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
