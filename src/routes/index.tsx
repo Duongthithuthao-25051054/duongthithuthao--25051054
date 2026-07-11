@@ -22,6 +22,7 @@ import bai1Doc from "@/assets/bai1/GhiChuQuanTrong.docx.asset.json";
 import bai3Img39 from "@/assets/bai3/bai3-39.png.asset.json";
 import bai3Img40 from "@/assets/bai3/bai3-40.png.asset.json";
 import bai3Img41 from "@/assets/bai3/bai3-41.png.asset.json";
+import bai3Doc from "@/assets/bai3/SoSanh_Prompt_3CapDo.docx.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
