@@ -199,7 +199,7 @@ function PortfolioPage() {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className={`fixed bottom-6 right-6 z-50 grid h-12 w-12 place-items-center rounded-full bg-gradient-brand text-white shadow-glow transition-all duration-300 ${
           showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-        } hover:scale-110`}
+        }`}
       >
         <span className="text-lg">↑</span>
       </button>
@@ -321,7 +321,7 @@ function Hero() {
             <strong className="text-foreground">Ứng dụng Trí tuệ nhân tạo</strong> — nơi em lưu trữ, trình bày và tự đánh giá quá trình rèn luyện năng lực số qua sáu sản phẩm học tập hoàn chỉnh.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#gioi-thieu" className="inline-flex items-center gap-2 rounded-2xl bg-gradient-brand px-5 py-3 text-sm font-semibold text-white shadow-soft transition-all hover:shadow-glow hover:-translate-y-0.5">
+            <a href="#gioi-thieu" className="inline-flex items-center gap-2 rounded-2xl bg-gradient-brand px-5 py-3 text-sm font-semibold text-white shadow-soft transition-all">
               📖 Giới thiệu
             </a>
             <a href="#du-an" className="inline-flex items-center gap-2 rounded-2xl border border-border bg-white/80 px-5 py-3 text-sm font-semibold backdrop-blur transition-colors hover:bg-white">
@@ -372,7 +372,7 @@ function Hero() {
                   {tiles.map((t) => (
                     <div
                       key={t.label}
-                      className={`flex aspect-square flex-col items-center justify-center gap-2 rounded-2xl bg-gradient-to-br ${t.bg} ring-1 ${t.ring} shadow-soft transition-transform hover:-translate-y-1`}
+                      className={`flex aspect-square flex-col items-center justify-center gap-2 rounded-2xl bg-gradient-to-br ${t.bg} ring-1 ${t.ring} shadow-soft transition-transform`}
                     >
                       <span className="text-3xl">{t.icon}</span>
                       <span className="text-[11px] font-medium text-plum">{t.label}</span>
@@ -504,7 +504,7 @@ function About() {
               ].map((g) => (
                 <div
                   key={g.t}
-                  className="group rounded-2xl border border-border bg-background/60 p-4 transition-all hover:-translate-y-0.5 hover:border-rose-300 hover:shadow-soft"
+                  className="group rounded-2xl border border-border bg-background/60 p-4 transition-all hover:border-rose-300"
                 >
                   <div className="flex items-center gap-2 font-semibold text-foreground">
                     <span className="text-lg">{g.i}</span>
@@ -537,7 +537,7 @@ function About() {
             ].map((h) => (
               <div
                 key={h.t}
-                className="rounded-2xl border border-white/70 bg-white/70 p-3 backdrop-blur transition hover:-translate-y-0.5 hover:shadow-soft"
+                className="rounded-2xl border border-white/70 bg-white/70 p-3 backdrop-blur transition"
               >
                 <div className="font-semibold text-foreground">{h.t}</div>
                 <p className="mt-1 text-xs text-muted-foreground">{h.d}</p>
@@ -624,7 +624,7 @@ function Overview() {
             return (
               <li
                 key={t.id}
-                className="reveal group relative flex items-start gap-4 rounded-2xl border border-border/50 bg-card/60 p-4 backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-soft md:gap-6 md:p-5"
+                className="reveal group relative flex items-start gap-4 rounded-2xl border border-border/50 bg-card/60 p-4 backdrop-blur transition-all md:gap-6 md:p-5"
               >
                 {/* Step number */}
                 <div className="flex shrink-0 flex-col items-center">
@@ -847,7 +847,7 @@ function Block({ title, children }: { title: string; children: React.ReactNode }
 
 function EvidencePlaceholder({ label, src }: { label: string; src?: string }) {
   return (
-    <figure className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+    <figure className="group overflow-hidden rounded-xl border border-border bg-card shadow-sm transition">
       <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {src ? (
           <img src={src} alt={label} className="absolute inset-0 h-full w-full object-contain p-1" loading="lazy" />
@@ -1845,7 +1845,7 @@ function Skills() {
     side: "left" | "right";
   }) => (
     <div
-      className={`group flex items-center gap-4 rounded-full border border-violet-200/70 bg-white/80 p-3 pr-5 shadow-[0_8px_30px_-12px_rgba(139,92,246,0.35)] backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-[0_12px_40px_-12px_rgba(139,92,246,0.55)] ${
+      className={`group flex items-center gap-4 rounded-full border border-violet-200/70 bg-white/80 p-3 pr-5 shadow-[0_8px_30px_-12px_rgba(139,92,246,0.35)] backdrop-blur transition-all hover:shadow-[0_12px_40px_-12px_rgba(139,92,246,0.55)] ${
         side === "right" ? "md:flex-row-reverse md:pl-5 md:pr-3" : ""
       }`}
     >
