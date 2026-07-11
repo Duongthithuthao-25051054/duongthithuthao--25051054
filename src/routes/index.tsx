@@ -33,6 +33,10 @@ import bai5Img50 from "@/assets/bai5/bai5-50.png.asset.json";
 import bai5Img51 from "@/assets/bai5/bai5-51.png.asset.json";
 import bai5Img52 from "@/assets/bai5/bai5-52.png.asset.json";
 import bai5Doc from "@/assets/bai5/BaoCao_AI_TonTaiXaHoi.docx.asset.json";
+import bai6Img54 from "@/assets/bai6/bai6-54.png.asset.json";
+import bai6Img55 from "@/assets/bai6/bai6-55.png.asset.json";
+import bai6Img56 from "@/assets/bai6/bai6-56.png.asset.json";
+import bai6Img57 from "@/assets/bai6/bai6-57.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: PortfolioPage,
@@ -1759,11 +1763,10 @@ function Project6() {
       gallery={
         <EvidenceGallery
           items={[
-            "Slide bài thuyết trình ‘Vai trò của AI trong GDĐH’",
-            "ChatGPT: dàn ý 3 phần cho bài thuyết trình",
-            "Infographic 4 bước ‘Sử dụng AI có trách nhiệm’ trên Canva",
-            "Trích dẫn hướng dẫn của UNESCO về AI trong GD",
-            "Bảng đối chiếu 6 vấn đề đạo đức & giải pháp",
+            { label: "Infographic 'Sử dụng AI có trách nhiệm trong học thuật' (bản hoàn thiện)", src: bai6Img54.url },
+            { label: "Prompt yêu cầu tạo infographic 4 bước & kết quả trên ChatGPT", src: bai6Img55.url },
+            { label: "5 ví dụ thực tế về việc sinh viên sử dụng AI trong học tập", src: bai6Img56.url },
+            { label: "Dàn ý bài thuyết trình 10 phút 'Vai trò của AI trong giáo dục đại học'", src: bai6Img57.url },
           ]}
           file="ThuyetTrinh_AI_GDDH.pptx"
         />
