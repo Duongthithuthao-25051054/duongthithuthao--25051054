@@ -1835,9 +1835,6 @@ function Skills() {
         <div
           className={`flex items-baseline gap-2 ${side === "right" ? "md:justify-end" : ""}`}
         >
-          <span className="font-display text-2xl font-black text-violet-300">
-            {String(s.no).padStart(2, "0")}
-          </span>
           <h4 className="font-display text-base font-bold leading-tight text-plum">
             {s.name}
           </h4>
