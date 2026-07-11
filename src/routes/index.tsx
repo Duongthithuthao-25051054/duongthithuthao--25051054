@@ -1543,25 +1543,48 @@ function Project5() {
       objective="Ứng dụng 3 nhóm AI tạo sinh (văn bản – hình ảnh – thiết kế) để chuẩn bị bài học chủ đề “Tồn tại xã hội & Ý thức xã hội” trong Triết học Mác – Lênin."
       process={
         <ol className="ml-4 list-decimal space-y-1.5">
-          <li>Chọn chủ đề: <em>“Tồn tại xã hội và Ý thức xã hội — Liên hệ Việt Nam”</em>.</li>
-          <li>Dùng 3 AI văn bản (ChatGPT, Gemini, Claude) để tạo dàn ý, so sánh đầu ra.</li>
-          <li>Dùng 2 AI hình ảnh (DALL·E, Yeri AI) tạo 4 minh họa theo góc nhìn khác nhau.</li>
-          <li>Dùng Canva AI thiết kế slide, phối hợp ảnh minh họa từ DALL·E.</li>
-          <li>Biên tập lại toàn bộ, kiểm chứng thông tin và ghi rõ công cụ đã sử dụng.</li>
+          <li>Chọn chủ đề: <em>“Tồn tại xã hội và Ý thức xã hội — Mối quan hệ biện chứng · Liên hệ Việt Nam”</em>.</li>
+          <li>Dùng 3 AI văn bản (<strong>ChatGPT, Gemini, Claude</strong>) cùng đặt một câu hỏi để so sánh cách trình bày của từng công cụ.</li>
+          <li>Dùng 2 AI hình ảnh (<strong>DALL·E, Yeri AI</strong>) tạo 4 minh hoạ khung 16:9 theo 4 góc nhìn về “Tồn tại xã hội”.</li>
+          <li>Dùng <strong>Canva AI</strong> thiết kế slide, phối hợp ảnh minh hoạ từ DALL·E; tham khảo thêm Adobe Firefly cho phần đồ hoạ chuyên sâu.</li>
+          <li>Biên tập lại toàn bộ, kiểm chứng thông tin, ghi rõ công cụ AI đã dùng và chịu trách nhiệm về sản phẩm cuối.</li>
         </ol>
       }
       tools={["ChatGPT", "Google Gemini", "Claude", "DALL·E", "Yeri AI", "Canva AI", "Adobe Firefly"]}
       evidence={
         <div className="space-y-3">
-          <div className="grid gap-3 md:grid-cols-2">
+          <div className="grid gap-3 md:grid-cols-3">
             <div className="rounded-xl bg-sky/25 p-4 text-xs">
-              <div className="font-semibold text-plum">Kết luận công cụ văn bản</div>
-              <p className="mt-1">ChatGPT dùng cho dàn ý & nội dung chính · Gemini để tra cứu · Claude để biên tập câu văn.</p>
+              <div className="font-semibold text-plum">📝 AI văn bản</div>
+              <p className="mt-1">
+                <strong>ChatGPT</strong> dựng dàn ý logic, mạch lạc, dễ chỉnh sửa.<br />
+                <strong>Gemini</strong> tra cứu & cập nhật thông tin mới nhanh.<br />
+                <strong>Claude</strong> diễn đạt tự nhiên, tốt cho biên tập câu văn dài.
+              </p>
             </div>
             <div className="rounded-xl bg-blush/20 p-4 text-xs">
-              <div className="font-semibold text-plum">Kết luận công cụ hình ảnh</div>
-              <p className="mt-1">DALL·E cho chất lượng ổn định, ít lỗi chính tả · Yeri AI cần chỉnh sửa lại phần chữ trong ảnh.</p>
+              <div className="font-semibold text-plum">🖼️ AI hình ảnh</div>
+              <p className="mt-1">
+                <strong>DALL·E</strong> — bố cục hài hoà, hầu như không lỗi chính tả trong ảnh, dùng trực tiếp được.<br />
+                <strong>Yeri AI</strong> — tạo ảnh nhanh nhưng chữ chèn hay sai/thiếu ký tự, cần chỉnh sửa lại.
+              </p>
             </div>
+            <div className="rounded-xl bg-gradient-to-br from-rose-50 to-fuchsia-50 p-4 text-xs">
+              <div className="font-semibold text-plum">🎨 AI thiết kế</div>
+              <p className="mt-1">
+                <strong>Canva AI</strong> — nhiều mẫu đẹp, thao tác đơn giản, phù hợp bài thuyết trình.<br />
+                <strong>Adobe Firefly</strong> — hiệu ứng cao cấp, hợp dự án đồ hoạ chuyên sâu (một số tính năng trả phí).
+              </p>
+            </div>
+          </div>
+          <div className="rounded-xl border border-border bg-card p-4 text-xs">
+            <div className="font-semibold text-plum mb-1">⚖️ Vấn đề đạo đức khi dùng AI</div>
+            <ul className="ml-4 list-disc space-y-1 text-muted-foreground">
+              <li>Dùng AI như công cụ hỗ trợ, không sao chép hay phụ thuộc hoàn toàn vào nội dung do AI tạo ra.</li>
+              <li>Kiểm chứng thông tin từ nguồn đáng tin cậy trước khi đưa vào bài học/nghiên cứu.</li>
+              <li>Minh bạch khi được yêu cầu; tôn trọng bản quyền hình ảnh và tài liệu tham khảo.</li>
+              <li>Chịu trách nhiệm về sản phẩm cuối, đảm bảo có tư duy và đóng góp cá nhân.</li>
+            </ul>
           </div>
         </div>
       }
