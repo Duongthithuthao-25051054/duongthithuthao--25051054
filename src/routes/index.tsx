@@ -1313,16 +1313,6 @@ function Project4() {
       tools={["Asana", "Google Docs", "Google Drive", "Google Meet", "Zapier (tự động hoá)"]}
       evidence={
         <div className="space-y-3">
-          <EvidenceGallery
-            items={[
-              "Bảng công việc Asana của nhóm",
-              "Google Docs — kịch bản video",
-              "Google Drive: thư mục dùng chung",
-              "Google Meet họp phân công",
-              "Zapier: luồng tự động hoá thông báo",
-            ]}
-            file="KichBan_Video_Nhom.docx"
-          />
           <div className="overflow-hidden rounded-xl border border-border">
             <table className="w-full text-xs">
               <thead className="bg-secondary">
