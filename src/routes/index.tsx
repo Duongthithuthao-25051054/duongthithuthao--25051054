@@ -730,6 +730,12 @@ function ProjectShell({
 
 
       {children}
+
+      {gallery && (
+        <div className="border-t border-border bg-gradient-to-b from-transparent to-secondary/30 p-8 md:p-10">
+          {gallery}
+        </div>
+      )}
     </article>
   );
 }
